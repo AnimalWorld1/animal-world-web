@@ -1,0 +1,32 @@
+/* .......Pagination.js.......... */
+
+.pagination-container{
+    margin-right: 10px;
+    height: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* .............PaginationBtn.js........ */
+.pageBtn {
+    padding: 6px 8px;
+    margin: 3px; 
+    min-width: 1.7em;
+    background-color: rgba(253, 121, 4,0.2);
+    cursor: pointer;
+    border-radius: 5px;
+}
+.pageBtn.active {
+    background-color: rgba(253, 121, 4,0.9);
+}
+.pageBtn:hover {
+    background-color: rgba(253, 121, 4,0.7);
+}
