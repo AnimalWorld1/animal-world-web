@@ -51,7 +51,7 @@ function Staking({user,handler,w_type})     {
             name: 'claim',
             authorization: [handler.auth],
             data: {
-              _user: handler.userAccount
+              _user: user
             }
           },
         });
