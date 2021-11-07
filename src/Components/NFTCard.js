@@ -99,7 +99,7 @@ let unstktransaction = async () => {
         {data.data.name}
       </span>
       <img
-        src={`https://ipfs.atomichub.io/ipfs/${data.data.img}`}
+        src={`https://ipfs.wecan.dev/ipfs/${data.data.img}`}
         style={{ width: "80%", margin: "10px 10px" }}
       />
       <div style={{textAlign:"center"}}>
