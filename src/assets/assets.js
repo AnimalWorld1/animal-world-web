@@ -51,8 +51,8 @@ Assets.getassetdata=function (username)
 
 async function getuser(user) {
   const wax = new waxjs.WaxJS({
-    rpcEndpoint: "http://wax.eosphere.io",
-    tryAutoLogin: true,
+    rpcEndpoint: "https://wax.eosphere.io",
+    tryAutoLogin: false,
   });
 
   const r = await wax.rpc.get_table_rows({
@@ -76,8 +76,8 @@ async function getuser(user) {
 
 async function getconfig() {
   const wax = new waxjs.WaxJS({
-    rpcEndpoint: "http://wax.eosphere.io",
-    tryAutoLogin: true,
+    rpcEndpoint: "https://wax.eosphere.io",
+    tryAutoLogin: false,
   });
 
   const r = await wax.rpc.get_table_rows({
@@ -126,8 +126,8 @@ async function unstakedassets(assets,user) {
 
 async function checkasset(assetID,user) {
   const wax = new waxjs.WaxJS({
-    rpcEndpoint: "http://wax.eosphere.io",
-    tryAutoLogin: true,
+    rpcEndpoint: "https://wax.eosphere.io",
+    tryAutoLogin: false,
   });
 
   const r = await wax.rpc.get_table_rows({
@@ -146,8 +146,8 @@ async function checkasset(assetID,user) {
 
 async function checktemplate(templateID) {
   const wax = new waxjs.WaxJS({
-    rpcEndpoint: "http://wax.eosphere.io",
-    tryAutoLogin: true,
+    rpcEndpoint: "https://wax.eosphere.io",
+    tryAutoLogin: false,
   });
 
   const r = await wax.rpc.get_table_rows({
