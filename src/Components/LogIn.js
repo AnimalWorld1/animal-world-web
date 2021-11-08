@@ -2,26 +2,29 @@
   import * as waxjs from "@waxio/waxjs/dist";
   import AnchorLink from 'anchor-link';
   import AnchorLinkBrowserTransport from 'anchor-link-browser-transport';
+  const Assets= require('../assets/assets')
 
   const LogIn = (props) => {
     const wax_loginHandler = async ()=>{
       const wax = new waxjs.WaxJS({
-        rpcEndpoint: 'https://wax.greymass.com',
+        rpcEndpoint: 'https://api.wax.alohaeos.com',
         tryAutoLogin: false
       });
 
       const userAccount = await wax.login();
       props.sessionHandler(wax,userAccount,"w");
       props.onClose();
+      Assets.functions.getassetdata(userAccount);
       props.handleLogin();
     }
+
     const anchor_loginHandler = async ()=>{
         const transport = new AnchorLinkBrowserTransport();
         const link = new AnchorLink({
           transport,
           chains: [{
             chainId: '1064487b3cd1a897ce03ae5b6a865651747e2e152090f99c1d19d44e01aea5a4',
-            nodeUrl: 'https://wax.eosphere.io',
+            nodeUrl: 'https://api.wax.alohaeos.com',
           }],
         });
         await link.login('animalworld').then((result) => {
@@ -29,6 +32,8 @@
         props.sessionHandler(result.session,anchorAccount,"a");
         props.onClose();
         props.handleLogin();
+      Assets.functions.getassetdata(anchorAccount);
+
       });
     }
 

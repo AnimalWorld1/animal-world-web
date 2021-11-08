@@ -34,11 +34,11 @@ Assets.getassetdata=  function (username)
       unstakedassets(res.data.data,username,config).then((v) => {
         module.exports.assets = v.staked;
         module.exports.unstaked = v.unstaked
+return username;
         
       });
     });
   });
-  return username;
 });
 
 
@@ -49,7 +49,7 @@ Assets.getassetdata=  function (username)
 async function getuser(user) {
   try{
   const wax = new waxjs.WaxJS({
-    rpcEndpoint: "https://wax.eosphere.io",
+    rpcEndpoint: "https://api.wax.alohaeos.com",
     tryAutoLogin: false,
   });
 
@@ -58,7 +58,7 @@ async function getuser(user) {
     code: "stakeanimal1",
     scope: "stakeanimal1",
     table: "user",
-    limit: 10000,
+    limit: 100,
   });
 
     for(let i=0;i<r.rows.length;i++)
@@ -74,6 +74,7 @@ async function getuser(user) {
   return empty;
 }
 catch(e){
+  return empty;
 
 }
 }
@@ -81,7 +82,7 @@ catch(e){
 async function getconfig() {
   try{
   const wax = new waxjs.WaxJS({
-    rpcEndpoint: "https://wax.eosphere.io",
+    rpcEndpoint: "https://api.wax.alohaeos.com",
     tryAutoLogin: false,
   });
 
@@ -106,6 +107,8 @@ async function getassets(user) {
     `https://wax.api.atomicassets.io/atomicassets/v1/assets?collection_name=animalworld1&owner=${user}&page=1&limit=1000&order=desc&sort=asset_id`
   );
   return data;
+
+  
 }
 
 async function unstakedassets(assets,user,config) {
@@ -114,10 +117,8 @@ async function unstakedassets(assets,user,config) {
   let stake = [];
 
   Object.values(assets).forEach(function (v) {
-    console.log(v);
     checktemplate(v,config).then((q)=>{
     checkasset(v.asset_id,user).then((r) => {
-      console.log(q);
       if (!r && q.rate!=0 ) unstake.push(q);
       if (r)stake.push(q);
     });
@@ -138,7 +139,7 @@ catch(e){
 async function checkasset(assetID,user) {
   try{
   const wax = new waxjs.WaxJS({
-    rpcEndpoint: "https://wax.eosphere.io",
+    rpcEndpoint: "https://api.wax.alohaeos.com",
     tryAutoLogin: false,
   });
 
@@ -164,12 +165,12 @@ catch(e){
 async function checktemplate(asset,config) {
   try{
   const wax = new waxjs.WaxJS({
-    rpcEndpoint: "https://wax.eosphere.io",
+    rpcEndpoint: "https://api.wax.alohaeos.com",
     tryAutoLogin: false,
   });
 
   var tID= asset.template.template_id;
-  var rate=0;
+  var rate=parseFloat("0");
   const r = await wax.rpc.get_table_rows({
     json: true,
     code: "stakeanimal1",
@@ -184,7 +185,6 @@ async function checktemplate(asset,config) {
     {
       if(tID==v.template_ids[i])
       {
-        console.log(config);
         for(let j=0;j<config.levels.length;j++)
       {
         if(config.levels[j].key==v.level)

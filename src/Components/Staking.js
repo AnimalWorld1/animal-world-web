@@ -13,6 +13,7 @@ function Staking({user,handler,w_type})     {
     if( Assets.unstaked==null )
     var response =Assets.functions.getassetdata(user);
     
+    console.log(response);
     console.log(Assets.assets);
 
     const now = new Date()  
@@ -29,7 +30,7 @@ function Staking({user,handler,w_type})     {
         stakePower=Assets.user_data.stakePower;
 }
 console.log(seconds);
-
+console.log(Assets.unstaked);
 
     let transaction=async () => {
         try {
@@ -91,7 +92,7 @@ console.log(seconds);
             </div>
            {user && Assets.unstaked? (staked ? <StakedNFT perPage={12} assets={Assets.assets} handler={handler} w_type={w_type}/> :
             <UnStakedNFT perPage={12} unstaked_data={Assets.unstaked} handler={handler} w_type={w_type}/>):
-            
+
             ""}
             </div>
 
