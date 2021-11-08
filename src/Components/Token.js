@@ -30,7 +30,7 @@ function Token() {
             color: "#ffbd11",
             position: "absolute",
             top: "1em",
-            left: "22%",
+            left: "31.5%",
           }}
         >
           TOTAL SUPPLY- 10,000,000,000

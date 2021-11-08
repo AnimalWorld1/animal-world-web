@@ -4,6 +4,7 @@ import Twitter from "../assets/twitter.webp";
 import Telegram from "../assets/telegram.webp";
 import OwnMssg from "../assets/ownMssg.webp";
 import Insta from "../assets/insta.webp";
+import img_aboutus_5 from "../assets/aboutus5.png";
 
 function Footer() {
   return (
@@ -14,8 +15,10 @@ function Footer() {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
+        zindex:3
       }}
     >
+      <img src={img_aboutus_5} style={{ width: "100vw" }} alt="wood" />
       <img src={Logo2} alt="logo2" />
       <h2 style={{fontSize:"2vw"}}>FOLLOW US ON SOCIAL MEDIA</h2>
       <h3 style={{fontSize:"1.7vw"}}>stay up-to-date with the latest in ANIMAL WORLD</h3>
@@ -33,7 +36,13 @@ function Footer() {
           <img src={Insta} alt="insta" style={{ width: "2.5em" }} />
         </a>
       </div>
-
+      <a
+        href="https://www.smstechcorp.com/"
+        target="_blank"
+        class="btnC"
+      >
+        <span>Company Info</span>
+      </a>
       <p
         style={{
           margin: "3% 22%",

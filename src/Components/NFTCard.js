@@ -33,7 +33,6 @@ function NFTCard({data,type,handler,w_type}) {
     });
     await new Promise(r => setTimeout(r, 3000));
         alert("Staking successfull !");
-    window.location.reload();
   }
   catch(e){
     alert(e.message);
@@ -69,7 +68,6 @@ let unstktransaction = async () => {
     });
     await new Promise(r => setTimeout(r, 3000));
         alert("Asset Removed Successfully !");
-    window.location.reload();
   }
   catch(e){
     alert(e.message);

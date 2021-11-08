@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Navbar.css";
+import "../styles/Navbar.css";;
 function PlayCard({text_c,bannerStyle, title_img, para,commonImg }) {
   return (
     <div

@@ -47,17 +47,17 @@ const Home = ({ login }) => {
     <>
       <BannerImg />
       <a
-        href="https://ec569f18-8cd3-4521-9ac8-8c6dc1faf833.filesusr.com/ugd/09983c_dcc20644b51d42eb85668c694f6d9fe5.pdf"
+        href="https://pdfhost.io/v/ASFrJYDno_09983c_dcc20644b51d42eb85668c694f6d9fe5_6"
         target="_blank"
         class="btn_normal"
       >
         <span> White Paper</span>
       </a>
-      <div style={{ height: "16em", width: "100vw" }}>
+      <div style={{ height: "19m", width: "100vw" }}>
         <img
           src={nft_meet_real}
           className="animate__animated animate__flip"
-          style={{ width: "11em", position: "relative"}}
+          style={{ width: "18em", position: "relative"}}
           alt="Where NFT meet Real World"
         />
         <p
@@ -87,7 +87,7 @@ const Home = ({ login }) => {
           src={game}
           className="animate__animated animate__flip"
           style={{
-            width: "11em",
+            width: "12em",
             position: "relative",
             margin: "1em 0",
           }}
@@ -107,8 +107,7 @@ const Home = ({ login }) => {
           <Banner titleText={i[0]} para={i[1]} />
         ))}
       </div>
-      <Divider />
-      <div class="slideshow-container" style={{margin:0,height:"13em"}}>
+      <div class="slideshow-container" style={{margin:0,height:"12em"}}>
         <Carousel autoPlay>
           {howToPlayData.map((i, idx) => (
             <PlayCard
@@ -124,8 +123,7 @@ const Home = ({ login }) => {
       </div>
       <Divider />
       <Treepack />
-      <Divider />
-      <div class="slideshow-container" style={{margin:0,height:"13em"}}>
+      <div class="slideshow-container" style={{margin:0,height:"12.7em"}}>
         <Carousel autoPlay>
           {collectAllData.map((i, idx) => (
             <PlayCard
@@ -150,7 +148,6 @@ const Home = ({ login }) => {
       <Token />
       <Divider/>
       <Roadmap />
-      <Divider/>
     </>
   );
 };

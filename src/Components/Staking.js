@@ -75,7 +75,7 @@ function Staking({user,handler,w_type})     {
                         </div>
                         <tr><td>----------------------------</td><td>----------------------------</td></tr>
                         <tr><td>User</td><td>{user}</td></tr>
-                        <tr><td> Stake Power</td><td> {stakePower.toFixed(4)} AWC</td></tr>
+                        <tr><td> Stake Power</td><td> {stakePower.toFixed(4)} AWC per Day</td></tr>
                         <tr><td>Time To Reward</td><td>{timeLeft}</td></tr>
 
                     </tbody>

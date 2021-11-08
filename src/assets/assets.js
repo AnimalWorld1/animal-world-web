@@ -7,8 +7,6 @@ class Assets{}
 Assets.getassetdata=function (username)
 {
   if(username==null)return;
-
-  console.log(username);
   getconfig().then((config) => {
     
     getuser(username).then((res) => {
@@ -27,7 +25,6 @@ Assets.getassetdata=function (username)
            }
           }
           else res.last_claim=0;
-    console.log(res.last_claim);
     res.stakePower = stakePower;
     module.exports.user_data = res;
   
@@ -50,9 +47,10 @@ Assets.getassetdata=function (username)
 
 
 async function getuser(user) {
+  try{
   const wax = new waxjs.WaxJS({
     rpcEndpoint: "https://wax.eosphere.io",
-    tryAutoLogin: false,
+    tryAutoLogin: true,
   });
 
   const r = await wax.rpc.get_table_rows({
@@ -64,7 +62,6 @@ async function getuser(user) {
     lower_bound: user,
   });
 
-  console.log(r.rows[0])
 
   var empty={
     account : user,
@@ -73,11 +70,16 @@ async function getuser(user) {
   if(r.rows.length==0 || r.rows[0].account!=user) return empty;
   return r.rows[0];
 }
+catch(e){
+
+}
+}
 
 async function getconfig() {
+  try{
   const wax = new waxjs.WaxJS({
     rpcEndpoint: "https://wax.eosphere.io",
-    tryAutoLogin: false,
+    tryAutoLogin: true,
   });
 
   const r = await wax.rpc.get_table_rows({
@@ -88,9 +90,12 @@ async function getconfig() {
     limit: 1,
   });
 
-  console.log(r.rows[0]);
 
   return r.rows[0];
+}
+catch(e){
+
+}
 }
 
 async function getassets(user) {
@@ -101,18 +106,15 @@ async function getassets(user) {
 }
 
 async function unstakedassets(assets,user) {
+  try{
   let unstake = [];
   let stake = [];
 
-    console.log(assets);
   Object.values(assets).forEach(function (v) {
     checktemplate(v.template.template_id).then((q)=>{
-    console.log(q);
-    if(q)
-    {}
     checkasset(v.asset_id,user).then((r) => {
-      if (!r) unstake.push(v);
-      else stake.push(v);
+      if (!r &&q ) unstake.push(v);
+      else if(q)stake.push(v);
     });
 
 });
@@ -123,11 +125,16 @@ async function unstakedassets(assets,user) {
   }
   return object;
 }
+catch(e){
+
+}
+}
 
 async function checkasset(assetID,user) {
+  try{
   const wax = new waxjs.WaxJS({
     rpcEndpoint: "https://wax.eosphere.io",
-    tryAutoLogin: false,
+    tryAutoLogin: true,
   });
 
   const r = await wax.rpc.get_table_rows({
@@ -142,14 +149,20 @@ async function checkasset(assetID,user) {
   if (r.rows[0].asset_id == assetID && r.rows[0].account==user) {
     return true;
   } else return false;
+
+}
+catch(e){
+
+}
 }
 
 async function checktemplate(templateID) {
+  try{
   const wax = new waxjs.WaxJS({
     rpcEndpoint: "https://wax.eosphere.io",
-    tryAutoLogin: false,
+    tryAutoLogin: true,
   });
-
+  var check=false;
   const r = await wax.rpc.get_table_rows({
     json: true,
     code: "stakeanimal1",
@@ -157,18 +170,23 @@ async function checktemplate(templateID) {
     table: "leveltemp",
     limit: 100,
   });
-  if(r.rows.length==0) return false;
+  if(r.rows.length==0) check= false;
   r.rows.forEach(function(v)
   {
     for(let i=0;i<v.template_ids.length;i++)
     {
-    console.log(templateID)
-
       if(templateID==v.template_ids[i])
-      return true;
+      {
+        check= true;
+      }
     }
-  return false;
 });
+
+return check;
+}
+catch(e){
+
+}
 }
 
 module.exports = {

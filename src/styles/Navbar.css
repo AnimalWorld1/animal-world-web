@@ -163,6 +163,20 @@
     font-family: "AnimalFont", Verdana, Tahoma;;
   }
 
+  .btnC {
+    border: 2px solid #ff5640;
+    border-radius: 25px;
+    width: 150px;
+    height: 25px;
+    color:#292929;
+    background-color: Transparent;
+    font-size: 18px;
+    color: #ff5640;
+    font-family: "AnimalFont", Verdana, Tahoma;
+    text-align: center;
+  }
+
+
   #waxBtn {
     padding:1em 4em;
     border:none;
