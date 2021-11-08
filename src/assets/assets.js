@@ -50,7 +50,7 @@ async function getuser(user) {
   try{
   const wax = new waxjs.WaxJS({
     rpcEndpoint: "https://wax.eosphere.io",
-    tryAutoLogin: true,
+    tryAutoLogin: false,
   });
 
   const r = await wax.rpc.get_table_rows({
@@ -79,7 +79,7 @@ async function getconfig() {
   try{
   const wax = new waxjs.WaxJS({
     rpcEndpoint: "https://wax.eosphere.io",
-    tryAutoLogin: true,
+    tryAutoLogin: false,
   });
 
   const r = await wax.rpc.get_table_rows({
@@ -134,7 +134,7 @@ async function checkasset(assetID,user) {
   try{
   const wax = new waxjs.WaxJS({
     rpcEndpoint: "https://wax.eosphere.io",
-    tryAutoLogin: true,
+    tryAutoLogin: false,
   });
 
   const r = await wax.rpc.get_table_rows({
@@ -160,7 +160,7 @@ async function checktemplate(templateID) {
   try{
   const wax = new waxjs.WaxJS({
     rpcEndpoint: "https://wax.eosphere.io",
-    tryAutoLogin: true,
+    tryAutoLogin: false,
   });
   var check=false;
   const r = await wax.rpc.get_table_rows({
