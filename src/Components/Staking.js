@@ -16,18 +16,19 @@ function Staking({user,handler,w_type})     {
     console.log(Assets.assets);
 
     const now = new Date()  
-    const utcMilllisecondsSinceEpoch = now.getTime() + (now.getTimezoneOffset() * 60 * 1000)  
+    const utcMilllisecondsSinceEpoch = now.getTime();
     const utcSecondsSinceEpoch = Math.round(utcMilllisecondsSinceEpoch / 1000)  
 
     var timeLeft,stakePower=0;
     if( Assets.user_data!=null)
     {
-    console.log(Assets.user_data.last_claim);
+    console.log(Assets.user_data.last_claim+3600);
     var seconds=(Assets.user_data.last_claim+3600)-utcSecondsSinceEpoch;
     var g=new Date(seconds * 1000).toISOString().substr(14, 5);
      timeLeft= utcSecondsSinceEpoch>=Assets.user_data.last_claim+3600?"Claim now":g;
         stakePower=Assets.user_data.stakePower;
 }
+console.log(seconds);
 
 
     let transaction=async () => {
@@ -58,7 +59,7 @@ function Staking({user,handler,w_type})     {
           },
         });
         await response;
-            alert("Claim successfull !");
+            alert("Claim successful !");
       return response;
 
       }
@@ -77,7 +78,7 @@ function Staking({user,handler,w_type})     {
                         </div>
                         <tr><td>----------------------------</td><td>----------------------------</td></tr>
                         <tr><td>User</td><td>{user}</td></tr>
-                        <tr><td> Stake Power</td><td> {stakePower.toFixed(4)} AWC</td></tr>
+                        <tr><td> Stake Power</td><td> {stakePower.toFixed(4)} AWC /DAY</td></tr>
                         <tr><td>Time To Reward</td><td>{timeLeft}</td></tr>
 
                     </tbody>
@@ -86,7 +87,7 @@ function Staking({user,handler,w_type})     {
 
             <div style={{display: "flex",justifyContent: "center",alignItems: "center"}}>
                 <button className="nav-item nav-links btnStk" onClick={staking}>Staked NFT</button>
-                <button className="nav-item nav-links btnStk" onClick={unstaking} font-color="blue">UnStaked NFT</button>
+                <button className="nav-item nav-links btnStk" onClick={unstaking} >UnStaked NFT</button>
             </div>
            {user && Assets.unstaked? (staked ? <StakedNFT perPage={12} assets={Assets.assets} handler={handler} w_type={w_type}/> :
             <UnStakedNFT perPage={12} unstaked_data={Assets.unstaked} handler={handler} w_type={w_type}/>):""}
