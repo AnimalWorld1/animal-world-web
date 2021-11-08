@@ -10,8 +10,10 @@ function Staking({user,handler,w_type})     {
     const staking =()=>{setStaked(true);}
     const unstaking =()=>{setStaked(false);}
 
-    if( Assets.assets==null )
-    Assets.functions.getassetdata(user);
+    if( Assets.unstaked==null )
+    var response =Assets.functions.getassetdata(user);
+    
+    console.log(Assets.assets);
 
     const now = new Date()  
     const utcMilllisecondsSinceEpoch = now.getTime() + (now.getTimezoneOffset() * 60 * 1000)  
@@ -71,11 +73,11 @@ function Staking({user,handler,w_type})     {
                 <table id="dashboard" style={{display:"flex",justifyContent:"center",textAlign:"left"}}>
                     <tbody>            
                       <div style={{display: "flex",justifyContent: "center",alignItems: "center"}}>
-                        <button className="nav-item nav-links btnStk" onClick={transaction}>Claim</button>
+                        <button className="nav-item nav-links btnClaim" onClick={transaction}>Claim</button>
                         </div>
                         <tr><td>----------------------------</td><td>----------------------------</td></tr>
                         <tr><td>User</td><td>{user}</td></tr>
-                        <tr><td> Stake Power</td><td> {stakePower.toFixed(4)} AWC per Day</td></tr>
+                        <tr><td> Stake Power</td><td> {stakePower.toFixed(4)} AWC</td></tr>
                         <tr><td>Time To Reward</td><td>{timeLeft}</td></tr>
 
                     </tbody>
@@ -86,7 +88,7 @@ function Staking({user,handler,w_type})     {
                 <button className="nav-item nav-links btnStk" onClick={staking}>Staked NFT</button>
                 <button className="nav-item nav-links btnStk" onClick={unstaking} font-color="blue">UnStaked NFT</button>
             </div>
-           {user && Assets.assets? (staked ? <StakedNFT perPage={12} assets={Assets.assets} handler={handler} w_type={w_type}/> :
+           {user && Assets.unstaked? (staked ? <StakedNFT perPage={12} assets={Assets.assets} handler={handler} w_type={w_type}/> :
             <UnStakedNFT perPage={12} unstaked_data={Assets.unstaked} handler={handler} w_type={w_type}/>):""}
             </div>
 

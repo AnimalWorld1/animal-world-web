@@ -68,6 +68,7 @@ let unstktransaction = async () => {
     });
     await new Promise(r => setTimeout(r, 3000));
         alert("Asset Removed Successfully !");
+    window.location.reload();
   }
   catch(e){
     alert(e.message);
@@ -89,15 +90,26 @@ let unstktransaction = async () => {
     >
       <span
         style={{
-          fontSize: "0.5em",
-          padding: "20px 10px",
-          borderRadius: "5px",
+          fontSize: "0.4em",
+          padding: "5px 5px",
+          borderRadius: "1px",
         }}
       >
         {data.data.name}
       </span>
+
+      <span
+        style={{
+          fontSize: "0.3em",
+          color:"red",
+          padding: "5px 5px",
+          borderRadius: "5px",
+        }}
+      >
+        {data.rate + "/day"}
+      </span>
       <img
-        src={`https://ipfs.wecan.dev/ipfs/${data.data.img}`}
+        src={`https://ipfs.atomichub.io/ipfs/${data.data.img}`}
         style={{ width: "80%", margin: "10px 10px" }}
       />
       <div style={{textAlign:"center"}}>
