@@ -4,7 +4,7 @@ const axios = require("axios");
 class Assets{}
 
 
-Assets.getassetdata=function (username)
+Assets.getassetdata=  function (username)
 {
   if(username==null)return;
   getconfig().then((config) => {
@@ -31,14 +31,14 @@ Assets.getassetdata=function (username)
 
     getassets(username).then((res) => {
 
-      unstakedassets(res.data.data,username).then((v) => {
+      unstakedassets(res.data.data,username,config).then((v) => {
         module.exports.assets = v.staked;
         module.exports.unstaked = v.unstaked
         
       });
     });
   });
-  
+  return username;
 });
 
 
@@ -58,17 +58,20 @@ async function getuser(user) {
     code: "stakeanimal1",
     scope: "stakeanimal1",
     table: "user",
-    limit: 1,
-    lower_bound: user,
+    limit: 10000,
   });
 
-
-  var empty={
-    account : user,
-    data :[]
-  }
-  if(r.rows.length==0 || r.rows[0].account!=user) return empty;
-  return r.rows[0];
+    for(let i=0;i<r.rows.length;i++)
+    {
+      if(r.rows[i].account==user)
+      return r.rows[i];
+    }
+    var empty= {
+      data:[],
+      account:user
+    };
+  if(r.rows.length==0 ) return empty;
+  return empty;
 }
 catch(e){
 
@@ -105,16 +108,18 @@ async function getassets(user) {
   return data;
 }
 
-async function unstakedassets(assets,user) {
+async function unstakedassets(assets,user,config) {
   try{
   let unstake = [];
   let stake = [];
 
   Object.values(assets).forEach(function (v) {
-    checktemplate(v.template.template_id).then((q)=>{
+    console.log(v);
+    checktemplate(v,config).then((q)=>{
     checkasset(v.asset_id,user).then((r) => {
-      if (!r &&q ) unstake.push(v);
-      else if(q)stake.push(v);
+      console.log(q);
+      if (!r && q.rate!=0 ) unstake.push(q);
+      if (r)stake.push(q);
     });
 
 });
@@ -156,13 +161,15 @@ catch(e){
 }
 }
 
-async function checktemplate(templateID) {
+async function checktemplate(asset,config) {
   try{
   const wax = new waxjs.WaxJS({
     rpcEndpoint: "https://wax.eosphere.io",
     tryAutoLogin: false,
   });
-  var check=false;
+
+  var tID= asset.template.template_id;
+  var rate=0;
   const r = await wax.rpc.get_table_rows({
     json: true,
     code: "stakeanimal1",
@@ -170,19 +177,26 @@ async function checktemplate(templateID) {
     table: "leveltemp",
     limit: 100,
   });
-  if(r.rows.length==0) check= false;
+  if(r.rows.length==0) rate= 0;
   r.rows.forEach(function(v)
   {
     for(let i=0;i<v.template_ids.length;i++)
     {
-      if(templateID==v.template_ids[i])
+      if(tID==v.template_ids[i])
       {
-        check= true;
+        console.log(config);
+        for(let j=0;j<config.levels.length;j++)
+      {
+        if(config.levels[j].key==v.level)
+        {
+          rate=parseFloat(config.levels[j].value);
+        }
+      }
       }
     }
 });
-
-return check;
+asset.rate=rate.toFixed(4);
+return asset;
 }
 catch(e){
 
