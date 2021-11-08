@@ -90,7 +90,9 @@ console.log(seconds);
                 <button className="nav-item nav-links btnStk" onClick={unstaking} >UnStaked NFT</button>
             </div>
            {user && Assets.unstaked? (staked ? <StakedNFT perPage={12} assets={Assets.assets} handler={handler} w_type={w_type}/> :
-            <UnStakedNFT perPage={12} unstaked_data={Assets.unstaked} handler={handler} w_type={w_type}/>):""}
+            <UnStakedNFT perPage={12} unstaked_data={Assets.unstaked} handler={handler} w_type={w_type}/>):
+            
+            ""}
             </div>
 
     );

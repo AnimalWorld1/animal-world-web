@@ -31,7 +31,7 @@ function NFTCard({data,type,handler,w_type}) {
         }
       },
     });
-    await new Promise(r => setTimeout(r, 3000));
+    await response;
         alert("Staking successfull !");
   }
   catch(e){
@@ -66,7 +66,7 @@ let unstktransaction = async () => {
         }
       },
     });
-    await new Promise(r => setTimeout(r, 3000));
+    await response;
         alert("Asset Removed Successfully !");
   }
   catch(e){
