@@ -32,6 +32,7 @@ function UnStakedNFT(props) {
           renderComponent={PaginationBtn}
           changePage={changePage}
           total={totalPage}
+          assetsLength = {props.unstaked_data.length}
         />
       </div>
     </div>

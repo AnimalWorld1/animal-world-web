@@ -30,6 +30,8 @@ function Pagination(props) {
     props.changePage(currentPage);
   }, [currentPage]);
   return (
+    <div style={{width:"100%"}}>
+      { props.assetsLength > 0?
     <div className="pagination-container" style={{ padding:"3% 20%", textAlign: "center",}}>
       <div style={{ display: "flex", justifyContent: "center",  }}>
         {props.renderComponent({
@@ -53,7 +55,8 @@ function Pagination(props) {
           pageclickcallback,
           item: "Last",
         })}
-      </div>
+        </div>
+      </div>:<div></div>}
     </div>
   );
 }

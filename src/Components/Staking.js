@@ -71,7 +71,7 @@ function Staking({user,handler,w_type})     {
                 <table id="dashboard" style={{display:"flex",justifyContent:"center",textAlign:"left"}}>
                     <tbody>            
                       <div style={{display: "flex",justifyContent: "center",alignItems: "center"}}>
-                        <button className="nav-item nav-links btnClaim" onClick={transaction}>Claim</button>
+                        <button className="nav-item nav-links btnStk" onClick={transaction}>Claim</button>
                         </div>
                         <tr><td>----------------------------</td><td>----------------------------</td></tr>
                         <tr><td>User</td><td>{user}</td></tr>

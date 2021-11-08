@@ -30,6 +30,7 @@ function StakedNFT(props) {
           renderComponent={PaginationBtn}
           changePage={changePage}
           total={totalPage}
+          assetsLength = {props.assets.length}
         />
       </div>
     </div>
