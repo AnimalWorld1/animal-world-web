@@ -68,7 +68,6 @@ let unstktransaction = async () => {
     });
     await new Promise(r => setTimeout(r, 3000));
         alert("Asset Removed Successfully !");
-    window.location.reload();
   }
   catch(e){
     alert(e.message);
