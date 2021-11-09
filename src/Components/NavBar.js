@@ -43,8 +43,8 @@ function NavBar(props) {
               src={logo}
               style={{
                 position: "absolute",
-                left: "3em",
-                top: "0.2em",
+                left: "0.1em",
+                top: "0.1em",
                 height: "2.5em",
                 width: "2.5em",
               }}

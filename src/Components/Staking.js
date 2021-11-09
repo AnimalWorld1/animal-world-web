@@ -61,7 +61,7 @@ console.log(Assets.unstaked);
             }
           },
         });
-        Assets.functions.getbalancedata(user,null);
+        Assets.functions.getbalancedata(user);
         await response;
             alert("Claim successful !");
       return response;
@@ -79,26 +79,24 @@ console.log(Assets.unstaked);
                     <tbody>            
 
                       <tr>
-                      <td>
                         <img 
           src={wax}
           className="imgclass"
-          style={{ width: "2.2em", position: "relative" ,padding:"10px 30px"}}
+          style={{ width: "2.2em", position: "relative" ,padding:"5px 3px"}}
           alt="Where NFT meet Real World"
         />
-                  <td><div style={{padding:"1px 30px"}}>{Assets.wax?Assets.wax:"0"}</div></td>
+                  <td><div style={{padding:"1px 3px"}}>{Assets.wax?Assets.wax:"0"}</div></td>
 
 
-        </td>
-                  <td>
+                  
                   <img 
           src={awc}
           className="imgclass"
-          style={{ width: "2.2em", position: "relative" ,padding:"10px 30px"}}
+          style={{ width: "2.2em", position: "relative" ,padding:"5px 3px"}}
+
           alt="Where NFT meet Real World"
         />  
-         <td> <div style={{padding:"1px 30px"}}>{Assets.wax?Assets.awc:"0"}</div></td> 
-         </td>
+       <td>  <div style={{padding:"1px 3px"}}>{Assets.wax?Assets.awc:"0"}</div></td>
          </tr>
                       <div style={{display: "flex",justifyContent: "center",alignItems: "center"}}>
 
