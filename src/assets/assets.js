@@ -14,6 +14,7 @@ Assets.getbalancedata=  function (username,props)
         module.exports.wax=x;
         module.exports.awc=r;
         console.log(x,r);
+        if(props!=null)
      props.GetBalance(true);
       });
   });

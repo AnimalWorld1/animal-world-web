@@ -12,7 +12,7 @@ function Possesion() {
         flexDirection: "column",
       }}
     >
-      <img src={possession} alt="possession" style={{width: "12em", height: "5em" }} />
+      <img src={possession} alt="possession" style={{width: "12em", height: "5  em" }} />
 
       <div
         style={{ display: "flex", flexWrap:"wrap",justifyContent: "center", margin: "0 10%" }}

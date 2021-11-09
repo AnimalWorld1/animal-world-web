@@ -25,7 +25,7 @@ function PlayCard({text_c,bannerStyle, title_img, para,commonImg }) {
           src={commonImg}
           style={{
             position: "absolute",
-            width: "16em",
+            width: "13em",
             marginBottom:"1em",
             top: "1%",
           }}
@@ -36,8 +36,8 @@ function PlayCard({text_c,bannerStyle, title_img, para,commonImg }) {
             height: "6em",
             width: "4.5em",
             position: "absolute",
-            top: "6.5em",
-            left: "28%",
+            top: "5em",
+            left: "13%",
           }}
           className="episodes-title"
         />
@@ -46,10 +46,10 @@ function PlayCard({text_c,bannerStyle, title_img, para,commonImg }) {
           style={{
             color: text_c,
             height: "50%",
-            width: "35%",
+            width: "40%",
             position: "absolute",
-            top: "60%",
-            left: "70%",
+            top: "50%",
+            left: "55%",
             textAlign: "justify",
           }}
         >

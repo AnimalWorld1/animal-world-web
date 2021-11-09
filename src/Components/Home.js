@@ -21,7 +21,7 @@ import final from '../assets/final.png';
 import howtoplay_img from "../assets/howtoplay.png";
 import mythic from "../assets/mythic.gif"
 import mangotree from "../assets/mangotree.webp"
-import lemon from "../assets/lemon.gif"
+import lemon from "../assets/lemon.jpg"
 import fig from "../assets/fig.gif";
 import coconut from "../assets/coconut.gif"
 import collectall from "../assets/collectall.webp";

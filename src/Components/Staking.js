@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import StakedNFT from './StakedNFT'
 import UnStakedNFT from './UnStakedNFT'
+import awc from "../assets/awc.png";
+import wax from "../assets/wax.png";
 
 const Assets= require('../assets/assets')
 
@@ -59,6 +61,7 @@ console.log(Assets.unstaked);
             }
           },
         });
+        Assets.functions.getbalancedata(user);
         await response;
             alert("Claim successful !");
       return response;
@@ -74,12 +77,29 @@ console.log(Assets.unstaked);
             {user && (<div>
                 <table id="dashboard" style={{display:"flex",justifyContent:"center",textAlign:"left"}}>
                     <tbody>            
-                      <div style={{display: "flex",justifyContent: "center",alignItems: "center"}}>
 
                       <tr>
-                        <td><div style={{padding:"10px 10px"}}>{Assets.wax?Assets.wax:"0"}</div></td>
-                      <td> <div>{Assets.wax?Assets.awc:"0"}</div></td></tr>
-                      </div>
+                      <td>
+                        <img 
+          src={wax}
+          className="imgclass"
+          style={{ width: "2.2em", position: "relative" ,padding:"10px 30px"}}
+          alt="Where NFT meet Real World"
+        />
+                  <td><div style={{padding:"1px 30px"}}>{Assets.wax?Assets.wax:"0"}</div></td>
+
+
+        </td>
+                  <td>
+                  <img 
+          src={awc}
+          className="imgclass"
+          style={{ width: "2.2em", position: "relative" ,padding:"10px 30px"}}
+          alt="Where NFT meet Real World"
+        />  
+         <td> <div style={{padding:"1px 30px"}}>{Assets.wax?Assets.awc:"0"}</div></td> 
+         </td>
+         </tr>
                       <div style={{display: "flex",justifyContent: "center",alignItems: "center"}}>
 
                       <button className=" btnClaim" onClick={transaction}>Claim</button>
