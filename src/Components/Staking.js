@@ -61,7 +61,7 @@ console.log(Assets.unstaked);
             }
           },
         });
-        Assets.functions.getbalancedata(user);
+        Assets.functions.getbalancedata(user,null);
         await response;
             alert("Claim successful !");
       return response;

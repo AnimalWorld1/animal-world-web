@@ -42,7 +42,7 @@ else
    balance.awc= (x.rows[0].balance);   
 
 console.log(balance);
-
+      Assets.functions.getassetdata(userAccount);
      Assets.functions.getbalancedata(userAccount,props);
       props.handleLogin();
       props.onClose();
@@ -59,14 +59,15 @@ console.log(balance);
           }],
         });
         await link.login('animalworld').then((result) => {
-        const anchorAccount = result.session.auth.actor.toString();
-        props.sessionHandler(result.session,anchorAccount,"a");
-        props.onClose();
+          const anchorAccount = result.session.auth.actor.toString();
+  
+          props.sessionHandler(result.session,anchorAccount,"a");
+        Assets.functions.getassetdata(anchorAccount);
+     Assets.functions.getbalancedata(anchorAccount,props);
+  
         props.handleLogin();
-      Assets.functions.getassetdata(anchorAccount);
-      Assets.functions.getbalancedata(anchorAccount);
-      console.log(Assets.wax);
-      console.log(Assets.awc);
+        props.onClose();
+            
       });
     }
 
