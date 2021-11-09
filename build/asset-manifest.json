@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.47ef7481.chunk.css",
-    "main.js": "/static/js/main.568a4ec1.chunk.js",
-    "main.js.map": "/static/js/main.568a4ec1.chunk.js.map",
+    "main.js": "/static/js/main.f38a1887.chunk.js",
+    "main.js.map": "/static/js/main.f38a1887.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c2e8e232.js",
     "runtime-main.js.map": "/static/js/runtime-main.c2e8e232.js.map",
     "static/css/2.ed1298f3.chunk.css": "/static/css/2.ed1298f3.chunk.css",
@@ -21,6 +21,7 @@
     "static/media/aboutus6.4cec4bbc.webp": "/static/media/aboutus6.4cec4bbc.webp",
     "static/media/aboutus7.ef4a6bc4.webp": "/static/media/aboutus7.ef4a6bc4.webp",
     "static/media/animalworld1.8d146799.webp": "/static/media/animalworld1.8d146799.webp",
+    "static/media/awc.35ada3d4.png": "/static/media/awc.35ada3d4.png",
     "static/media/blendingImg1.3db1d601.webp": "/static/media/blendingImg1.3db1d601.webp",
     "static/media/blendingImg2.265506ff.webp": "/static/media/blendingImg2.265506ff.webp",
     "static/media/blendingImg3.3a948e15.webp": "/static/media/blendingImg3.3a948e15.webp",
@@ -49,7 +50,7 @@
     "static/media/greenleaf.44049059.webp": "/static/media/greenleaf.44049059.webp",
     "static/media/howtoplay.2240c2d4.png": "/static/media/howtoplay.2240c2d4.png",
     "static/media/insta.4a5376dd.webp": "/static/media/insta.4a5376dd.webp",
-    "static/media/lemon.cf231ef7.gif": "/static/media/lemon.cf231ef7.gif",
+    "static/media/lemon.30d2d971.jpg": "/static/media/lemon.30d2d971.jpg",
     "static/media/logo.3b0a00b5.webp": "/static/media/logo.3b0a00b5.webp",
     "static/media/logo2.11fd052f.webp": "/static/media/logo2.11fd052f.webp",
     "static/media/mango.419f2210.png": "/static/media/mango.419f2210.png",
@@ -71,6 +72,7 @@
     "static/media/tree.89b6e3ca.png": "/static/media/tree.89b6e3ca.png",
     "static/media/treepack.62d345e4.png": "/static/media/treepack.62d345e4.png",
     "static/media/twitter.29b8ecfc.webp": "/static/media/twitter.29b8ecfc.webp",
+    "static/media/wax.267f5cd6.png": "/static/media/wax.267f5cd6.png",
     "static/media/yeildCard.681f45f7.png": "/static/media/yeildCard.681f45f7.png",
     "static/media/yellowFlower.d918fbda.webp": "/static/media/yellowFlower.d918fbda.webp",
     "static/media/yieldCard1.81749a59.webp": "/static/media/yieldCard1.81749a59.webp"
@@ -80,6 +82,6 @@
     "static/css/2.ed1298f3.chunk.css",
     "static/js/2.95fbacba.chunk.js",
     "static/css/main.47ef7481.chunk.css",
-    "static/js/main.568a4ec1.chunk.js"
+    "static/js/main.f38a1887.chunk.js"
   ]
 }
