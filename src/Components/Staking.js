@@ -75,8 +75,16 @@ console.log(Assets.unstaked);
                 <table id="dashboard" style={{display:"flex",justifyContent:"center",textAlign:"left"}}>
                     <tbody>            
                       <div style={{display: "flex",justifyContent: "center",alignItems: "center"}}>
-                        <button className="nav-item nav-links btnClaim" onClick={transaction}>Claim</button>
-                        </div>
+
+                      <tr>
+                        <td><div style={{padding:"10px 10px"}}>{Assets.wax?Assets.wax:"0"}</div></td>
+                      <td> <div>{Assets.wax?Assets.awc:"0"}</div></td></tr>
+                      </div>
+                      <div style={{display: "flex",justifyContent: "center",alignItems: "center"}}>
+
+                      <button className=" btnClaim" onClick={transaction}>Claim</button>
+                      </div>
+                      
                         <tr><td>----------------------------</td><td>----------------------------</td></tr>
                         <tr><td>User</td><td>{user}</td></tr>
                         <tr><td> Stake Power</td><td> {stakePower.toFixed(4)} AWC /DAY</td></tr>

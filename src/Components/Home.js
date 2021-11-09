@@ -54,10 +54,10 @@ const Home = ({ login }) => {
         <span> White Paper</span>
       </a>
       <div style={{ height: "19m", width: "100vw" }}>
-        <img
+        <img 
           src={nft_meet_real}
-          className="animate__animated animate__flip"
-          style={{ width: "18em", position: "relative"}}
+          className="imgclass"
+          style={{ width: "12em", position: "relative" ,padding:"15px 5px"}}
           alt="Where NFT meet Real World"
         />
         <p

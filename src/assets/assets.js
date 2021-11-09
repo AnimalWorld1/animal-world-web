@@ -3,6 +3,74 @@ const axios = require("axios");
 
 class Assets{}
 
+Assets.getbalancedata=  function (username,props)
+{
+  if(username==null)return;
+
+  getawcbalance(username).then((r)=>
+  {
+      getwaxbalance(username).then((x)=>
+      {
+        module.exports.wax=x;
+        module.exports.awc=r;
+        console.log(x,r);
+     props.GetBalance(true);
+      });
+  });
+}
+
+async function getwaxbalance(user) {
+  try{
+  const wax = new waxjs.WaxJS({
+    rpcEndpoint: "https://api.wax.alohaeos.com",
+    tryAutoLogin: false,
+  });
+console.log(user);
+  const r = await wax.rpc.get_table_rows({
+    json: true,
+    code: "eosio.token",
+    scope: user,
+    table: "accounts",
+  });
+  var empty="0.00000000 WAX";
+
+  if(r.rows.length==0 ) return empty;
+
+  return (r.rows[0].balance);
+}
+catch(e){
+  return "0.00000000 WAX";
+
+}
+}
+async function getawcbalance(user) {
+  try{
+console.log(user);
+
+  const wax = new waxjs.WaxJS({
+    rpcEndpoint: "https://api.wax.alohaeos.com",
+    tryAutoLogin: false,
+  });
+
+  const r = await wax.rpc.get_table_rows({
+    json: true,
+    code: "tokenanimal1",
+    scope: user,
+    table: "accounts",
+    limit:1
+  });
+  var empty="0.0000 AWC";
+
+  if(r.rows.length==0 ) return empty;
+
+  return (r.rows[0].balance);
+}
+catch(e){
+  return "0.0000 AWC";
+
+}
+}
+
 
 Assets.getassetdata=  function (username)
 {

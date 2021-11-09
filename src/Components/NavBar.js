@@ -12,15 +12,24 @@ import LogIn from "./LogIn";
 import logo from "../assets/logo.webp";
 import { Overlay } from "react-portal-overlay";
 //import Transaction from "./Transaction"
+const Assets= require('../assets/assets')
 
 function NavBar(props) {
   const [click, setClick] = React.useState(false);
   const [isOpen, setIsOpen] = React.useState(false);
   const [loggedin, setLogin] = React.useState(false);
+  const [balance, setBalance] = React.useState(false);
 
   const handleClick = () => setClick(!click);
   const handleLogin = () => setLogin(true);
   const Close = () => setClick(false);
+
+  const GetBalance=()=>
+  {setBalance(true);
+    console.log(Assets.wax);
+    console.log(Assets.awc);
+  };
+
   const showPopup = () => {
     setIsOpen(true);
   };
@@ -106,7 +115,7 @@ function NavBar(props) {
           justifyContent: "center",
         }}
       >
-        <LogIn onClose={() => setIsOpen(false)} handleLogin={() => setLogin(true)} sessionHandler={props.sessionHandler} />
+        <LogIn onClose={() => setIsOpen(false)} handleLogin={() => setLogin(true)} GetBalance={() => GetBalance(true)}sessionHandler={props.sessionHandler} />
         
       </Overlay>
     </div>

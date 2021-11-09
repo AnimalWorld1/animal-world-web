@@ -14,7 +14,7 @@ function Token() {
       }}
     >
       <img src={Token1} alt="Token1" style={{ width: "11em" }} />
-      <p style={{ fontSize: "0.8em", padding: "0 15% 5%", lineHeight: "1.3" }}>
+      <p style={{ fontSize: "0.4em", padding: "0 15% 5%", lineHeight: "1.3" }}>
         A highly prized token in the entire ANIMAL WORLD. It is earned through a
         series of processes. Whenever a particular Tree is planted it will reap
         the respective commodity in a few hours’ time. That commodity is then
@@ -72,7 +72,7 @@ function Token() {
 
       <ol
         style={{
-          fontSize: "0.7em",
+          fontSize: "0.4em",
           padding: "0 25%",
           textAlign:"left",
           textShadow: "#ffffff 3px 3px 0px, rgb(0 0 0 / 20%) 6px 6px 0px",

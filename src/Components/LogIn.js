@@ -13,9 +13,40 @@
 
       const userAccount = await wax.login();
       props.sessionHandler(wax,userAccount,"w");
-      props.onClose();
-      Assets.functions.getassetdata(userAccount);
+
+      var balance={awc:0,wax:0};
+
+      const r = await wax.rpc.get_table_rows({
+        json: true,
+        code: "eosio.token",
+        scope: userAccount,
+        table: "accounts",
+      });
+      var empty="0.00000000 WAX";
+    
+      if(r.rows.length==0 ) balance.wax=empty;
+else
+     balance.wax= (r.rows[0].balance);
+     
+
+     const x = await wax.rpc.get_table_rows({
+      json: true,
+      code: "tokenanimal1",
+      scope: userAccount,
+      table: "accounts",
+    });
+    var empty="0.0000 AWC";
+  
+    if(x.rows.length==0 ) balance.wax=empty;
+else
+   balance.awc= (x.rows[0].balance);   
+
+console.log(balance);
+
+     Assets.functions.getbalancedata(userAccount,props);
       props.handleLogin();
+      props.onClose();
+
     }
 
     const anchor_loginHandler = async ()=>{
@@ -33,7 +64,9 @@
         props.onClose();
         props.handleLogin();
       Assets.functions.getassetdata(anchorAccount);
-
+      Assets.functions.getbalancedata(anchorAccount);
+      console.log(Assets.wax);
+      console.log(Assets.awc);
       });
     }
 

@@ -49,7 +49,7 @@ function PlayCard({text_c,bannerStyle, title_img, para,commonImg }) {
             width: "35%",
             position: "absolute",
             top: "60%",
-            left: "50%",
+            left: "70%",
             textAlign: "justify",
           }}
         >

@@ -183,6 +183,11 @@
     color:#292929;
 
   }
+
+  #imgclass
+  {
+    width: 10px;
+  }
   .total{
     font-size: 2.1vw;
     padding: 0 25%;
@@ -247,7 +252,12 @@
       color: #ff5640;
       border: none;
     }
-  
+  .paratext{
+    text-align: center;
+    font-family: "AnimalFont", Verdana, Tahoma;
+    font-size: 20px;
+    margin-top: 2%;
+  }
     .nav-icon {
       display: block;
       position: absolute;

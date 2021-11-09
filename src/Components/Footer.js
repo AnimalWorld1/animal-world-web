@@ -53,8 +53,10 @@ function Footer() {
         All rights reserved by: SMS Tech Corp., REG NR: 890515712/ PS Ward/
         Commercial II ,Under Maharashtra Shops and Establishment Act of 2017. De
         Elmas Sonawala Cross Road no 2 , Sonawala Industrial Estate, Goregaon
-        EAST, Maharashtra, Mumbai- 400063.
+        EAST, Maharashtra, Mumbai- 400063, India.
+        Contact email:- smstechcorp@gmail.com
       </p>
+
       <p>© 2021 Animalworld.io All rights reserved</p>
     </div>
   );

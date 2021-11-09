@@ -2,7 +2,7 @@ import React from 'react'
 import treepack from '../assets/treepack.png'
 import photo1 from '../assets/photo1.png'
 import photo2 from '../assets/photo2.webp'
-import photo3 from '../assets/photo3.webp'
+import photo3 from '../assets/photo3.png'
 
 function Treepack() {
     return (
