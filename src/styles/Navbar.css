@@ -206,6 +206,10 @@
     font-size: 2vw;
     margin-bottom: 3%;
   }
+
+  .team-data{
+    width: 50%;
+  }
   @media screen and (max-width: 960px) {
     .head-image {
       padding:3% 0;
@@ -268,6 +272,10 @@
       cursor: pointer;
       color: #ffdd40;
       top: "0.2em";
+    }
+
+    .team-data{
+     width:50%
     }
   }
   
