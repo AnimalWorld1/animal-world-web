@@ -83,6 +83,8 @@ const Home = ({ login }) => {
           <span className="orangeText"> real-time basis </span>with
           user-friendly accessibility and consistent monitoring.
         </p>
+      <Divider />
+
         <img
           src={game}
           className="animate__animated animate__flip"
@@ -94,7 +96,7 @@ const Home = ({ login }) => {
           alt="the Game"
         />
       </div>
-      <Divider />
+      
       <div
         style={{
           display: "flex",
@@ -107,6 +109,8 @@ const Home = ({ login }) => {
           <Banner titleText={i[0]} para={i[1]} />
         ))}
       </div>
+      <Divider />
+
       <div class="slideshow-container" style={{margin:0,height:"12em"}}>
         <Carousel autoPlay>
           {howToPlayData.map((i, idx) => (
@@ -123,6 +127,8 @@ const Home = ({ login }) => {
       </div>
       <Divider />
       <Treepack />
+      <Divider />
+
       <div class="slideshow-container" style={{margin:0,height:"12.7em"}}>
         <Carousel autoPlay>
           {collectAllData.map((i, idx) => (

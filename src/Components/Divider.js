@@ -11,9 +11,9 @@ function Divider() {
         className="animate__animated animate__slideInDown"
         style={{
           position: "absolute",
-          width: "6.4em",
+          width: "5.4em",
           left: "10%",
-          top: "10%",
+          top: "5%",
           zIndex:3
         }}
         alt="leaf"

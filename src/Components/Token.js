@@ -23,10 +23,10 @@ function Token() {
         return the player will receive AWC Tokens.
       </p>
       <div style={{ position: "relative" }}>
-        <img src={TokenBrd} alt="tokenbrd" style={{ width: "70%" }} />
+        <img src={TokenBrd} alt="tokenbrd" style={{ width: "80%" ,height:"90%"}} />
         <h1
           style={{
-            fontSize: "2.6vw",
+            fontSize: "2.8vw",
             color: "#ffbd11",
             position: "absolute",
             top: "1em",

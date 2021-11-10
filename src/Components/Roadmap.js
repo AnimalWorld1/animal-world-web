@@ -14,9 +14,9 @@ function Roadmap() {
         fontSize:'2.4vw',whiteSpace:"nowrap",color:"white"
       }}
     >
-      <img src={Roadmap1} alt="roadmap" style={{ width: "45vw" }} />
+      <img className="rimg" src={Roadmap1} alt="roadmap" />
       <div style={{position:"relative"}}>
-      <img src={RoadmapBrd} alt="roadmapbrd" style={{ width: "50vw" }} />
+      <img className="rmimg" src={RoadmapBrd} alt="roadmapbrd"  />
       {/* <p style={{,position:"absolute"}}> */}
       <div className="rmap" style={{marginBottom:"1%",position:"absolute",top:"22%",left:"22%"}}>PHASE 1 : 2021 Q3 & Q4</div>
       <div className="rmap" style={{position:"absolute",top:"28%",left:"8%"}}>

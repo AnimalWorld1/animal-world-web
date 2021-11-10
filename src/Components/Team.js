@@ -11,9 +11,9 @@ function Team() {
   return (
     
       <div>
-      <img src={team_img} alt="roadmap" style={{ width: "45vw" }} />
+      <img className="rimg" src={team_img} alt="roadmap"  />
 
-      < div style={{display:'flex',flexWrap:'wrap',justifyContent:'center',padding:'20px 0px'}}>
+      < div style={{display:'flex',flexWrap:'wrap',justifyContent:'center',padding:'50px 0px'}}>
 
 <div  style={{width:"300px"}}>
   <img className="team-img"  src={mohammed} alt="mohammed" />

@@ -189,7 +189,7 @@
     width: 10px;
   }
   .total{
-    font-size: 2.1vw;
+    font-size: 2.5vw;
     padding: 0 25%;
     color: white;
     position: absolute;
@@ -200,7 +200,10 @@
   }
   .total div {
     white-space: nowrap;
-
+  }
+  .bimg {
+width:35vw;
+padding:'0 5%';
   }
   .team-txt{
     font-size: 22px;
@@ -218,6 +221,12 @@
   .team-data{
     width: 4vw;
   }
+  .rimg {
+    width:45vw;
+      }
+      .rmimg {
+        width:55vw;
+          }
   @media screen and (max-width: 960px) {
     .head-image {
       padding:3% 0;
@@ -270,6 +279,17 @@
     font-size: 20px;
     margin-top: 2%;
   }
+  .bimg {
+    width:85vw;
+    padding:'0 5%';
+      }
+
+          .rimg {
+            width:80vw;
+              }
+              .rmimg {
+                width:80vw;
+                  }
     .nav-icon {
       display: block;
       position: absolute;
