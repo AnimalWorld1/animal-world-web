@@ -38,6 +38,7 @@ function NFTCard({data,type,handler,w_type}) {
         alert("Staking successfull !");
 
         var res =w_type=="w"? Assets.functions.getassetdata(handler.userAccount):Assets.functions.getassetdata(handler.auth.actor);
+        
   }
   catch(e){
     alert(e.message);
@@ -45,7 +46,6 @@ function NFTCard({data,type,handler,w_type}) {
 }
 let unstktransaction = async () => {
     try {
-      var res =w_type=="w"? Assets.functions.getassetdata(handler.userAccount):Assets.functions.getassetdata(handler.auth.actor);
 
       let response = w_type=="w"?await handler.api.transact({
       actions: [{
@@ -75,6 +75,7 @@ let unstktransaction = async () => {
     });
     await response;
         alert("Asset Removed Successfully !");
+        var res =w_type=="w"? Assets.functions.getassetdata(handler.userAccount):Assets.functions.getassetdata(handler.auth.actor);
 
   }
   catch(e){
