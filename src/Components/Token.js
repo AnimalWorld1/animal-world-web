@@ -14,7 +14,7 @@ function Token() {
       }}
     >
       <img src={Token1} alt="Token1" style={{ width: "11em" }} />
-      <p style={{ fontSize: "0.4em", padding: "0 15% 5%", lineHeight: "1.3" }}>
+      <p style={{ fontSize: "0.4em", padding: "5% 15% 5%", lineHeight: "1.3" }}>
         A highly prized token in the entire ANIMAL WORLD. It is earned through a
         series of processes. Whenever a particular Tree is planted it will reap
         the respective commodity in a few hours’ time. That commodity is then
@@ -23,14 +23,14 @@ function Token() {
         return the player will receive AWC Tokens.
       </p>
       <div style={{ position: "relative" }}>
-        <img src={TokenBrd} alt="tokenbrd" style={{ width: "80%" ,height:"90%"}} />
+        <img src={TokenBrd} alt="tokenbrd" style={{ width: "90%" ,height:"90%"}} />
         <h1
           style={{
-            fontSize: "2.8vw",
+            fontSize: "4vw",
             color: "#ffbd11",
             position: "absolute",
-            top: "1em",
-            left: "31.5%",
+            top: ".7em",
+            left: "21.5%",
           }}
         >
           TOTAL SUPPLY- 10,000,000,000

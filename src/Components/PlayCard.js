@@ -25,7 +25,7 @@ function PlayCard({text_c,bannerStyle, title_img, para,commonImg }) {
           src={commonImg}
           style={{
             position: "absolute",
-            width: "13em",
+            width: "12em",
             marginBottom:"1em",
             top: "1%",
           }}
