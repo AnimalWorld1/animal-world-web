@@ -25,7 +25,7 @@ import lemon from "../assets/lemon.jpg"
 import fig from "../assets/fig.gif";
 import coconut from "../assets/coconut.gif"
 import collectall from "../assets/collectall.webp";
-
+import Team from "./Team"; 
 
 const howToPlayData = [
   ["Plant a Tree", "linear-gradient(315deg, #000000 0%, #958e69 74%)","white", tree],
@@ -148,6 +148,8 @@ const Home = ({ login }) => {
       <Token />
       <Divider/>
       <Roadmap />
+      <Divider/>
+      <Team />
     </>
   );
 };

@@ -13,7 +13,7 @@ function Divider() {
           position: "absolute",
           width: "6.4em",
           left: "10%",
-          top: "20%",
+          top: "10%",
           zIndex:3
         }}
         alt="leaf"
@@ -25,7 +25,7 @@ function Divider() {
           width: "2.5em",
           position: "relative",
           right: "-30%",
-          bottom: "-4em",
+          bottom: "-0.5em",
         }}
         alt="smallleaf"
       />

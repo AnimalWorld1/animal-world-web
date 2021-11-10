@@ -12,6 +12,10 @@ function Staking({user,handler,w_type})     {
     const staking =()=>{setStaked(true);}
     const unstaking =()=>{setStaked(false);}
 
+    const [data, setData] = useState(false);
+
+    const fetch_data= ()=>{setData(true);}
+    
     if( Assets.unstaked==null )
     var response =Assets.functions.getassetdata(user);
     

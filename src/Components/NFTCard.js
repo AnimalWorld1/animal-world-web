@@ -1,9 +1,11 @@
 import React from "react";
 import "../styles/Navbar.css";
+const Assets= require('../assets/assets')
 
 function NFTCard({data,type,handler,w_type}) {
   let stktransaction = async () => {
     try {
+
       let response = w_type=="w"?await handler.api.transact({
       actions: [{
         account: 'stakeanimal1',
@@ -20,7 +22,8 @@ function NFTCard({data,type,handler,w_type}) {
     }, {
       blocksBehind: 3,
       expireSeconds: 1200,
-    }):await handler.transact({
+    })
+    :await handler.transact({
       action: {
         account: 'stakeanimal1',
         name: 'stakeassets',
@@ -33,6 +36,8 @@ function NFTCard({data,type,handler,w_type}) {
     });
     await response;
         alert("Staking successfull !");
+
+        var res =w_type=="w"? Assets.functions.getassetdata(handler.userAccount):Assets.functions.getassetdata(handler.auth.actor);
   }
   catch(e){
     alert(e.message);
@@ -40,6 +45,8 @@ function NFTCard({data,type,handler,w_type}) {
 }
 let unstktransaction = async () => {
     try {
+      var res =w_type=="w"? Assets.functions.getassetdata(handler.userAccount):Assets.functions.getassetdata(handler.auth.actor);
+
       let response = w_type=="w"?await handler.api.transact({
       actions: [{
         account: 'stakeanimal1',
@@ -68,6 +75,7 @@ let unstktransaction = async () => {
     });
     await response;
         alert("Asset Removed Successfully !");
+
   }
   catch(e){
     alert(e.message);

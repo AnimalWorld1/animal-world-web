@@ -54,9 +54,9 @@ function Footer() {
         Commercial II ,Under Maharashtra Shops and Establishment Act of 2017. De
         Elmas Sonawala Cross Road no 2 , Sonawala Industrial Estate, Goregaon
         EAST, Maharashtra, Mumbai- 400063, India.
-        Contact email:- smstechcorp@gmail.com
+        Contact email:- 
       </p>
-
+      <a href="mailto:smstechcorp@gmail.com?subject=subject">smstechcorp@gmail.com</a>
       <p>© 2021 Animalworld.io All rights reserved</p>
     </div>
   );
