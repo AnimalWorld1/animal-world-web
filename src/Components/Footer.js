@@ -56,7 +56,7 @@ function Footer() {
         EAST, Maharashtra, Mumbai- 400063, India.
         Contact email:- 
       </p>
-      <a href="mailto:smstechcorp@gmail.com?subject=subject">smstechcorp@gmail.com</a>
+      <a class="btnC" href="mailto:smstechcorp@gmail.com?subject=subject">smstechcorp@gmail.com</a>
       <p>© 2021 Animalworld.io All rights reserved</p>
     </div>
   );

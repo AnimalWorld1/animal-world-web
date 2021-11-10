@@ -164,7 +164,7 @@
   .btnC {
     border: 2px solid #ff5640;
     border-radius: 25px;
-    width: 150px;
+    width: fit-content;
     height: 25px;
     color:#292929;
     background-color: Transparent;
@@ -202,13 +202,21 @@
     white-space: nowrap;
 
   }
+  .team-txt{
+    font-size: 22px;
+   }
+   .team-txt1{
+    font-size: 26px;
+   } 
   .total .rmap{
     font-size: 2vw;
     margin-bottom: 3%;
   }
-
+  .team-img{
+    width:15vw;
+   }
   .team-data{
-    width: 50%;
+    width: 4vw;
   }
   @media screen and (max-width: 960px) {
     .head-image {
@@ -273,9 +281,17 @@
       color: #ffdd40;
       top: "0.2em";
     }
-
+    .team-img{
+      width:25vw;
+     }
+     .team-txt{
+      font-size: 16px;
+     }
+     .team-txt1{
+      font-size: 20px;
+     } 
     .team-data{
-     width:50%
+     width:8vw;
     }
   }
   
