@@ -15,7 +15,7 @@ function Staking({user,handler,w_type})     {
     const [data, setData] = useState(false);
 
     const fetch_data= ()=>{setData(true);}
-    
+
     if( Assets.unstaked==null )
     var response =Assets.functions.getassetdata(user);
     
@@ -66,6 +66,7 @@ console.log(Assets.unstaked);
           },
         });
         Assets.functions.getbalancedata(user);
+        var x =Assets.functions.getassetdata(user);
         await response;
             alert("Claim successful !");
       return response;
