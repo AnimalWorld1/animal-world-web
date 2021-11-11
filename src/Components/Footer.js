@@ -51,7 +51,7 @@ function Footer() {
         }}
       >
         All rights reserved by: SMS Tech Corp., REG NR: 890515712/ PS Ward/
-        Commercial II ,Under Maharashtra Shops and Establishment Act of 2017. De
+        Commercial II ,Under Maharashtra Shops and Establishment Act of 2017.Office no 301 De
         Elmas Sonawala Cross Road no 2 , Sonawala Industrial Estate, Goregaon
         EAST, Maharashtra, Mumbai- 400063, India.
         CEO:- MOHAMMAD SOHEL SHAIKH Contact email:- 
