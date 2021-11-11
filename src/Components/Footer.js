@@ -54,7 +54,7 @@ function Footer() {
         Commercial II ,Under Maharashtra Shops and Establishment Act of 2017. De
         Elmas Sonawala Cross Road no 2 , Sonawala Industrial Estate, Goregaon
         EAST, Maharashtra, Mumbai- 400063, India.
-        Contact email:- 
+        CEO:- MOHAMMAD SOHEL SHAIKH Contact email:- 
       </p>
        <a class="btnC" href="mailto:smstechcorp@gmail.com?subject=subject"> &nbsp;&nbsp;smstechcorp@gmail.com&nbsp;&nbsp; </a>
       <p>© 2021 Animalworld.io All rights reserved</p>
