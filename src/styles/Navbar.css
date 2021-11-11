@@ -221,7 +221,11 @@ width:35vw;
   }
   .rimg {
     width:45vw;
-      }
+      }  
+      .tknboard {
+        width:90%;
+        height:  90%;
+          }
       .rmimg {
         width:55vw;
           }
@@ -229,6 +233,9 @@ width:35vw;
     .head-image {
       padding:3% 0;
     }
+    .tknboard {
+      width:100%;
+        }
     /* .total {
       font-size: 0.67em;
       padding: 0;
@@ -298,6 +305,10 @@ width:35vw;
       cursor: pointer;
       color: #ffdd40;
       top: "0.2em";
+    }
+    .ttext
+    {
+      font-size:3.3vw;
     }
     .team-img{
       width:25vw;

@@ -10,8 +10,8 @@ function Banner(props) {
             style={{
               position: "absolute",
               top: "41%",
-              left: "15%",
-              fontSize: "1em",
+              left: "17%",
+              fontSize: "0.9em",
               textShadow: "#ffffff 3px 3px 0px, rgb(0 0 0 / 20%) 6px 6px 0px",
             }}
           >

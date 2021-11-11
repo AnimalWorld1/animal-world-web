@@ -11,7 +11,7 @@ function Roadmap() {
         justifyContent: "center",
         alignItems: "center",
         position:"relative",
-        fontSize:'2.4vw',whiteSpace:"nowrap",color:"white"
+        fontSize:'2.75vw',whiteSpace:"nowrap",color:"white"
       }}
     >
       <img className="rimg" src={Roadmap1} alt="roadmap" />

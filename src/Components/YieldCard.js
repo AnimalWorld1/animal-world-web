@@ -22,8 +22,8 @@ function YieldCard() {
           alignItems: "center",
         }}
       >
-        <img src={Yieldcard1} alt="Yieldcard1" style={{ width: "7em",height:"8em" }} />
-        <p cl style={{ fontSize: "0.5em",textAlign: "justify", margin: "3em 1em" }}>
+        <img src={Yieldcard1} alt="Yieldcard1" style={{ width: "6em",height:"6em" }} />
+        <p cl style={{ fontSize: "0.4em",textAlign: "center", margin: "3em 1em" }}>
           THIS CARD REPRESENTS THe COMMISSION EARNED ON THE TRADING ACTIVITY.
           HOLDERS OF THIS CARD WILL EARN DIVIDENDS UPTO 1% OF NET PROCEEDS IN
            WAX WHICH WILL BE DISTRIBUTED IN SELECTED INTERVALS.

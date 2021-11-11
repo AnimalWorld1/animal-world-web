@@ -14,7 +14,7 @@ function Token() {
       }}
     >
       <img src={Token1} alt="Token1" style={{ width: "11em" }} />
-      <p style={{ fontSize: "0.4em", padding: "5% 15% 5%", lineHeight: "1.3" }}>
+      <p style={{ fontSize: "0.45em", padding: "5% 1% 1%", lineHeight: "1.3" }}>
         A highly prized token in the entire ANIMAL WORLD. It is earned through a
         series of processes. Whenever a particular Tree is planted it will reap
         the respective commodity in a few hours’ time. That commodity is then
@@ -23,7 +23,7 @@ function Token() {
         return the player will receive AWC Tokens.
       </p>
       <div style={{ position: "relative" }}>
-        <img src={TokenBrd} alt="tokenbrd" style={{ width: "90%" ,height:"90%"}} />
+        <img className="tknboard" src={TokenBrd} alt="tokenbrd" />
         <h1
           style={{
             fontSize: "4vw",
@@ -39,6 +39,7 @@ function Token() {
           
           className="total"
         >
+          <div className="ttext">
           <div>PLAY TO EARN 25%___________________________2,500,000,000</div>
           <div>RESEARCH & DEVELOPMENT 25% ________2,500,000,000</div>
           <div>
@@ -56,12 +57,13 @@ function Token() {
           <div>ADVISOR 5%________________ ______________________500,000,000
           </div>
           <div>AIRDROP & REWARD 2% _____________________ 200,000,000</div>
+      </div>
         </p>
       </div>
 
       <h1
         style={{
-          fontSize: "0.8em",
+          fontSize: "0.7em",
           padding: "5% 0",
           textShadow: "#ffffff 3px 3px 0px, rgb(0 0 0 / 20%) 6px 6px 0px",
           color: "cadetblue",
@@ -72,7 +74,7 @@ function Token() {
 
       <ol
         style={{
-          fontSize: "0.4em",
+          fontSize: "0.49em",
           padding: "0 25%",
           textAlign:"left",
           textShadow: "#ffffff 3px 3px 0px, rgb(0 0 0 / 20%) 6px 6px 0px",

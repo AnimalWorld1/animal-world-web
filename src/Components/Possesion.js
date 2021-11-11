@@ -20,7 +20,7 @@ function Possesion() {
         <img
           src={possession1}
           alt="possession1"
-          style={{ width: "7em", height: "10em" ,marginBottom:"1em"}}
+          style={{ width: "7em", height: "10em" ,marginBottom:"0em"}}
         />
         <p
           style={{ fontSize: "0.4em",width:"17em", textAlign: "justify", margin: "0 1em" }}
