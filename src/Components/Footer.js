@@ -23,16 +23,16 @@ function Footer() {
       <h2 style={{fontSize:"2vw"}}>FOLLOW US ON SOCIAL MEDIA</h2>
       <h3 style={{fontSize:"1.7vw"}}>stay up-to-date with the latest in ANIMAL WORLD</h3>
       <div>
-        <a href="https://twitter.com/DreamFarm_">
+        <a href="https://twitter.com/DreamFarm_" target="_blank">
           <img src={Twitter} alt="twitter" style={{ width: "2.5em" }} />
         </a>
-        <a href="https://t.me/dreamfarmwax">
+        <a href="https://t.me/dreamfarmwax" target="_blank">
           <img src={Telegram} alt="telegram" style={{ width: "2.5em" }} />
         </a>
-        <a href="https://medium.com/@dreamfarmwax">
+        <a href="https://medium.com/@dreamfarmwax" target="_blank">
           <img src={OwnMssg} alt="OwnMsg" style={{ width: "2.5em" }} />
         </a>
-        <a href="https://www.instagram.com/dreamfarmwax/">
+        <a href="https://www.instagram.com/dreamfarmwax/" target="_blank">
           <img src={Insta} alt="insta" style={{ width: "2.5em" }} />
         </a>
       </div>
