@@ -23,16 +23,16 @@ function Footer() {
       <h2 style={{fontSize:"2vw"}}>FOLLOW US ON SOCIAL MEDIA</h2>
       <h3 style={{fontSize:"1.7vw"}}>stay up-to-date with the latest in ANIMAL WORLD</h3>
       <div>
-        <a href="https://twitter.com/DreamFarm_" target="_blank">
+        <a href="https://twitter.com/animalworldwax?t=tuy6WxG7Xq2AigaGZasE_g&s=09" target="_blank">
           <img src={Twitter} alt="twitter" style={{ width: "2.5em" }} />
         </a>
-        <a href="https://t.me/dreamfarmwax" target="_blank">
+        <a href="https://t.me/animalworldwax" target="_blank">
           <img src={Telegram} alt="telegram" style={{ width: "2.5em" }} />
         </a>
-        <a href="https://medium.com/@dreamfarmwax" target="_blank">
+        <a href="https://medium.com/@animalworldwax" target="_blank">
           <img src={OwnMssg} alt="OwnMsg" style={{ width: "2.5em" }} />
         </a>
-        <a href="https://www.instagram.com/dreamfarmwax/" target="_blank">
+        <a href="https://www.instagram.com/animalworldwax/?utm_medium=copy_link" target="_blank">
           <img src={Insta} alt="insta" style={{ width: "2.5em" }} />
         </a>
       </div>
@@ -56,7 +56,7 @@ function Footer() {
         EAST, Maharashtra, Mumbai- 400063, India.
         CEO:- MOHAMMAD SOHEL SHAIKH Contact email:- 
       </p>
-       <a class="btnC" href="mailto:smstechcorp@gmail.com?subject=subject"> &nbsp;&nbsp;smstechcorp@gmail.com&nbsp;&nbsp; </a>
+       <a style={{"color":"black","text-decoration": "none"}} href="mailto:smstechcorp@gmail.com?subject=subject"> &nbsp;&nbsp;smstechcorp@gmail.com&nbsp;&nbsp; </a>
       <p>© 2021 Animalworld.io All rights reserved</p>
     </div>
   );
