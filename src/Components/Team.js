@@ -29,12 +29,6 @@ function Team() {
   <a href="https://www.linkedin.com/in/vova-dobrovolskiy/?originalSubdomain=ua" target="_blank"><img className="team-data"src={linkedin} alt="mohammed" /></a>
 </div>
 
-<div style={{width:"300px"}}>
-  <img className="team-img" src={marcus} alt="mohammed" />
-  <p className="team-txt">MARCUS DSOUZA</p>
-  <p className="team-txt1">SOFTWARE DEVELOPER</p>
-  <a href="https://www.linkedin.com/m/in/marcus-dsouza-17b178222/" target="_blank"><img className="team-data"src={linkedin} alt="mohammed" /></a>
-</div>
 
 <div style={{width:"300px"}}>
   <img className="team-img" src={quan} alt="mohammed" />
