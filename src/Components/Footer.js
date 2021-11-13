@@ -50,11 +50,8 @@ function Footer() {
           textAlign: "center",
         }}
       >
-        All rights reserved by: SMS Tech Corp., REG NR: 890515712/ PS Ward/
-        Commercial II ,Under Maharashtra Shops and Establishment Act of 2017.Office no 301 De
-        Elmas Sonawala Cross Road no 2 , Sonawala Industrial Estate, Goregaon
-        EAST, Maharashtra, Mumbai- 400063, India.
-        CEO:- MOHAMMAD SOHEL SHAIKH Contact email:- 
+        All rights reserved by: SMS Tech Corp., REG NR: 890515712/ PS Ward/ Commercial II  ,601/A , Chandresh Arcade ,  Lodha road , Naya nagar ,Opposite Laxmi park, Mira road east.
+        Mumbai 401107.India. CEO:- MOHAMMAD SOHEL SHAIKH
       </p>
        <a style={{"color":"black","text-decoration": "none"}} href="mailto:smstechcorp@gmail.com?subject=subject"> &nbsp;&nbsp;smstechcorp@gmail.com&nbsp;&nbsp; </a>
       <p>© 2021 Animalworld.io All rights reserved</p>
