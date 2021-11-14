@@ -19,8 +19,6 @@ function Staking({user,handler,w_type})     {
     if( Assets.unstaked==null )
     var response =Assets.functions.getassetdata(user);
     
-    console.log(response);
-    console.log(Assets.assets);
 
     const now = new Date()  
     const utcMilllisecondsSinceEpoch = now.getTime();
@@ -29,14 +27,11 @@ function Staking({user,handler,w_type})     {
     var timeLeft,stakePower=0;
     if( Assets.user_data!=null)
     {
-    console.log(Assets.user_data.last_claim+3600);
     var seconds=(Assets.user_data.last_claim+3600)-utcSecondsSinceEpoch;
     var g=new Date(seconds * 1000).toISOString().substr(14, 5);
      timeLeft= utcSecondsSinceEpoch>=Assets.user_data.last_claim+3600?"Claim now":g;
         stakePower=Assets.user_data.stakePower;
 }
-console.log(seconds);
-console.log(Assets.unstaked);
 
     let transaction=async () => {
         try {

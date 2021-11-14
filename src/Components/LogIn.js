@@ -41,7 +41,6 @@ else
 else
    balance.awc= (x.rows[0].balance);   
 
-console.log(balance);
       Assets.functions.getassetdata(userAccount);
      Assets.functions.getbalancedata(userAccount,props);
       props.handleLogin();

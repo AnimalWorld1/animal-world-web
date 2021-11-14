@@ -13,7 +13,6 @@ Assets.getbalancedata=  function (username,props)
       {
         module.exports.wax=x;
         module.exports.awc=r;
-        console.log(x,r);
         if(props!=null)
      props.GetBalance(true);
       });
@@ -26,7 +25,6 @@ async function getwaxbalance(user) {
     rpcEndpoint: "https://api.wax.alohaeos.com",
     tryAutoLogin: false,
   });
-console.log(user);
   const r = await wax.rpc.get_table_rows({
     json: true,
     code: "eosio.token",
@@ -46,7 +44,6 @@ catch(e){
 }
 async function getawcbalance(user) {
   try{
-console.log(user);
 
   const wax = new waxjs.WaxJS({
     rpcEndpoint: "https://api.wax.alohaeos.com",
@@ -127,7 +124,8 @@ async function getuser(user) {
     code: "stakeanimal1",
     scope: "stakeanimal1",
     table: "user",
-    limit: 100,
+    limit: 10,
+    lower_bound:user,
   });
 
     for(let i=0;i<r.rows.length;i++)
