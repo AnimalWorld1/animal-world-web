@@ -32,7 +32,61 @@ function Staking({user,handler,w_type})     {
      timeLeft= utcSecondsSinceEpoch>=Assets.user_data.last_claim+3600?"Claim now":g;
         stakePower=Assets.user_data.stakePower;
 }
+let transactionall=async () => {
+  var assetids=[];
 
+  for(let i=0;i<Assets.unstaked.length;i++)
+  {
+    if(i<500)
+    assetids.push(Assets.unstaked[i].asset_id);
+    else 
+    break;
+  }
+
+  if(assetids.length==0) alert("Nothing to stake!");
+  else
+  {
+  try {
+    let response = w_type=="w"?await handler.api.transact({
+    actions: [{
+      account: 'stakeanimal1',
+      name: 'stakeassets',
+      authorization: [{
+        actor: handler.userAccount,
+        permission: 'active',
+      }],
+      data: {
+        _user: handler.userAccount,
+        asset_ids: assetids
+      },
+    }]
+  }, {
+    blocksBehind: 3,
+    expireSeconds: 1200,
+  }):await handler.transact({
+    action: {
+      account: 'stakeanimal1',
+      name: 'claim',
+      authorization: [handler.auth],
+      data: {
+        _user: handler.userAccount,
+        asset_ids: assetids
+      }
+    },
+  });
+
+  Assets.functions.getbalancedata(user);
+  var x =Assets.functions.getassetdata(user);
+  await response;
+      alert("Stake successful !");
+return response;
+
+}
+catch(e){
+  alert(e.message);
+}
+  }
+};
     let transaction=async () => {
         try {
           let response = w_type=="w"?await handler.api.transact({
@@ -116,6 +170,8 @@ function Staking({user,handler,w_type})     {
                 <button className="nav-item nav-links btnStk" onClick={staking}>Staked NFT</button>
                 <button className="nav-item nav-links btnStk" onClick={unstaking} >UnStaked NFT</button>
             </div>
+            <button className=" btnstkall" onClick={transactionall}>Stake All</button>
+
            {user && Assets.unstaked? (staked ? <StakedNFT perPage={12} assets={Assets.assets} handler={handler} w_type={w_type}/> :
             <UnStakedNFT perPage={12} unstaked_data={Assets.unstaked} handler={handler} w_type={w_type}/>):
 

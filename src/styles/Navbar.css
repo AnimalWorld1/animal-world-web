@@ -28,7 +28,7 @@
     color: #ff5640;
     text-align: center;
     font-family: "AnimalFont", Verdana, Tahoma;
-    font-size: 15px;
+    font-size: 13px;
     margin-top: 2%;
   }
 
@@ -160,7 +160,16 @@
     color: #ff5640;
     font-family: "AnimalFont", Verdana, Tahoma;;
   }
-
+  .btnstkall {
+    width: 100px;
+    height: 60px;
+    border-radius: 30px;
+    color:#292929;
+    background-color: Transparent;
+    font-size: 20px;
+    color: #ff5640;
+    font-family: "AnimalFont", Verdana, Tahoma;;
+  }
   .btnC {
     width: fit-content;
     height: 25px;
@@ -227,6 +236,25 @@ width:35vw;
       .rmimg {
         width:55vw;
           }
+.slide-para-1
+{
+  font-size: 30px;
+  text-shadow: none;
+  color: black;
+}
+          .stkbtttn{
+            position: absolute;
+            padding: 1em 1em;
+            width: 60%;
+            border: 1px(0,0,0);
+            background: rgb(255,255,255);
+            bottom: 10px;
+            border-radius:0.5em;
+            left: 50%;
+            transform: translate(-50%, 20%);
+            text-align:center;
+            }
+
   @media screen and (max-width: 960px) {
     .head-image {
       padding:3% 0;
@@ -286,7 +314,18 @@ width:35vw;
     width:85vw;
     padding:'0 5%';
       }
-
+      .stkbtttn{
+      position: absolute;
+      padding: 1em 1em;
+      border: 1px(0,0,0);
+      width:60%;
+      background: rgb(255,255,255);
+      bottom: 10px;
+      border-radius:0.5em;
+      left: 50%;
+      transform: translate(-50%, 10%);
+      text-align:center;
+      }
           .rimg {
             width:85vw;
               }
@@ -320,5 +359,11 @@ width:35vw;
     .team-data{
      width:8vw;
     }
+    .slide-para-1
+{
+  font-size: 15px;
+  text-shadow: none;
+  color: black;
+}
   }
   

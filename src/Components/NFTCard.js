@@ -123,18 +123,8 @@ let unstktransaction = async () => {
       <div style={{textAlign:"center"}}>
         <button
           onClick={type=="Stake Asset"?stktransaction:unstktransaction}
-          style={{
-            position:"absolute",
-            width:"60%",
-            padding: "1em 2em",
-            border: "1px(0,0,0)",
-            background: "rgb(255,255,255)",
-            bottom: "10px",
-            left: "50%", 
-            transform: "translate(-50%, -50%)",
-            borderRadius:"0.5em",
-            textAlign:"center",
-          }}
+          className="stkbtttn"
+
         >
           <text className="stktext">{type}</text>
         </button>

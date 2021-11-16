@@ -10,7 +10,7 @@ function CarouselCard({idx,total,banner_img,title_img,para}) {
         className="slide-bg-img"
         style={{ width: "100%" }}
       />
-      <img src={title_img} style={{height:"30%",width:"36%"}} className="episodes-title" />
+      <img src={title_img} style={{height:"30%",width:"46%"}} className="episodes-title" />
       <p class="slide-para-1">
         {para}
       </p>

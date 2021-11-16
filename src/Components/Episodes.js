@@ -40,7 +40,7 @@ const Episodes = () => {
       episodes_5,
     ],
     [
-      `his stage will open up a number of construction projects including a
+      `This stage will open up a number of construction projects including a
      Forest House and a Central Garden. Animals like horses, ducks, goats, 
      hen buffaloes, and cows will be reared on tbe ANIMAL WORLD. They will be 
      sources of rich food products and also form a sustainable ecosystem within
