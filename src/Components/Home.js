@@ -47,7 +47,7 @@ const Home = ({ login }) => {
     <>
       <BannerImg />
       <a
-        href="https://pdfhost.io/v/ASFrJYDno_09983c_dcc20644b51d42eb85668c694f6d9fe5_6"
+        href="https://pdfhost.io/v/~8xG0R~O3_document"
         target="_blank"
         class="btn_normal"
       >
