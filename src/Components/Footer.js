@@ -50,7 +50,7 @@ function Footer() {
           textAlign: "center",
         }}
       >
-        All rights reserved by: SMS Tech Corp., REG NR: 890515712/ PS Ward/ Commercial II  ,601/A , Chandresh Arcade ,  Lodha road , Naya nagar ,Opposite Laxmi park, Mira road east.
+        All rights reserved by: SMS Tech Corp., REG NR: 890515712/ PS Ward/ Commercial II ,  Lodha road , Naya nagar ,Opposite Laxmi park, Mira road east.
         Mumbai 401107.India. CEO:- MOHAMMAD SOHEL SHAIKH
       </p>
        <a style={{"color":"black","text-decoration": "none"}} href="mailto:smstechcorp@gmail.com?subject=subject"> &nbsp;&nbsp;smstechcorp@gmail.com&nbsp;&nbsp; </a>
