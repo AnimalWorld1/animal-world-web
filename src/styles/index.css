@@ -1,101 +1,390 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+	  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+	  sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+	  monospace;
+  }
+  .mySlides {
+	display: flex;
+	justify-content: center;
+  }
+  #dashboard {
+	font-size: 0.4em;
+  }
+  td {
+	margin:1em;
+  }
+  .episodes-title{
+	position: absolute;
+	top: 0;
+	width: 30%;
+	height: 25%;
+  }
+  .btn_normal {
+	font-family: poppins-extralight, poppins, sans-serif;
+	font-size: 16px;
+	margin:15px 0;
+  }
+  .btn_normal:link, .btn_normal:visited {
+	background-color: #f44336;
+	color: white;
+	padding: 8px 15px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+  }
+  
+  .btn_normal:hover, .btn_normal:active {
+	background-color: red;
+  }
+  .slideshow-container {
+	max-width: 100%;
+	position: relative;
+	margin: auto;
+	margin-bottom: 100px;
+  }
+  
+  .slide-bg-img{
+	  opacity: 0.8;
+	  height: 15em;
+  }
+  .orangeText {
+	color:rgb(224, 69, 2);
+	text-shadow:#ffffff 3px 3px 0px rgba(0, 0, 0, 0.2) 6px 6px 0px
+  }
+  
+  .numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+  }
+  
+  .slide-para-1{
+	position: absolute;
+	top: 25%;
+	padding: 0 10% 10% 10%;
+	font-weight: bolder;
+	color:#fff;
+	text-shadow: 4px 6px black;
+	font-size: 3.6vh;
+	text-align: justify;
+	text-justify: inter-word;
+	line-height: 1.2;
+	letter-spacing: 0.1em;
+  }
+  #dashboard td {
+	margin:1em;
+  }
+  .about_para{
+	color:black;
+	text-shadow: 4px 6px white;
+	font-size: 0.6em;
+	text-align: justify;
+	text-justify: inter-word;
+	line-height: 1.2;
+	letter-spacing: 0.1em;
+  }
+  @media screen and (max-width: 720px) {
+  
+  .slide-para-1 {
+	font-size: 3.6vw;
+  }
+  }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-.mySlides {
-  display: flex;
-  justify-content: center;
-}
-#dashboard {
-  font-size: 0.4em;
-}
-td {
-  margin:1em;
-}
-.episodes-title{
-  position: absolute;
-  top: 0;
-  width: 30%;
-  height: 25%;
-}
-.btn_normal {
-  font-family: poppins-extralight, poppins, sans-serif;
-  font-size: 16px;
-  margin:15px 0;
-}
-.btn_normal:link, .btn_normal:visited {
-  background-color: #f44336;
-  color: white;
-  padding: 8px 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-}
+  #background 
+{ 
+	 left: 0px; 
+	 top: 0px; 
+	 position: relative; 
+	 margin-left: auto; 
+	 margin-right: auto; 
+	 width: 1450px;
+	 height: 3105px; 
+	 overflow: hidden;
+	 z-index:0;
+	} 
 
-.btn_normal:hover, .btn_normal:active {
-  background-color: red;
-}
-.slideshow-container {
-  max-width: 100%;
-  position: relative;
-  margin: auto;
-  margin-bottom: 100px;
-}
+ #Background 
+{ 
+	 left: 0px;  
+	 top: 0px; 
+	 position: absolute; 
+	 width: 1350px;
+	 height: 3750px;
+	 z-index:1;
+} 
 
-.slide-bg-img{
-    opacity: 0.8;
-    height: 15em;
-}
-.orangeText {
-  color:rgb(224, 69, 2);
-  text-shadow:#ffffff 3px 3px 0px rgba(0, 0, 0, 0.2) 6px 6px 0px
-}
+ #Isometricland08 
+{ 
+	 left: 201px; 
+	 top: 74px; 
+	 position: absolute; 
+	 width: 1037px;
+	 height: 763px;
+	 z-index:2;
+} 
 
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
+ #Overlay 
+{ 
+	 left: 0px; 
+	 top: 0px; 
+	 position: absolute; 
+	 width: 1439px;
+	 height: 936px;
+	 z-index:3;
+} 
 
-.slide-para-1{
-  position: absolute;
-  top: 25%;
-  padding: 0 10% 10% 10%;
-  font-weight: bolder;
-  color:#fff;
-  text-shadow: 4px 6px black;
-  font-size: 3.6vh;
-  text-align: justify;
-  text-justify: inter-word;
-  line-height: 1.2;
-  letter-spacing: 0.1em;
-}
-#dashboard td {
-  margin:1em;
-}
-.about_para{
-  color:black;
-  text-shadow: 4px 6px white;
-  font-size: 0.6em;
-  text-align: justify;
-  text-justify: inter-word;
-  line-height: 1.2;
-  letter-spacing: 0.1em;
-}
-@media screen and (max-width: 720px) {
+ #playbutton 
+{ 
+	 left: 648px; 
+	 top: 384px; 
+	 position: absolute; 
+	 width: 144px;
+	 height: 144px;
+	 z-index:4;
+} 
 
-.slide-para-1 {
-  font-size: 3.6vw;
-}
-}
+ #AvailableOn 
+{ 
+	 left: 457px; 
+	 top: 651px; 
+	 position: absolute; 
+	 width: 526px;
+	 height: 61px;
+	 z-index:5;
+} 
+
+ #AppleAppStore 
+{ 
+	 left: 262px; 
+	 top: 788px; 
+	 position: absolute; 
+	 width: 331px;
+	 height: 98px;
+	 z-index:6;
+} 
+
+ #Google 
+{ 
+	 left: 858px; 
+	 top: 792px; 
+	 position: absolute; 
+	 width: 335px;
+	 height: 100px;
+	 z-index:7;
+} 
+
+ #Farmingatitsfinest 
+{ 
+	 left: 61px; 
+	 top: 1079px; 
+	 position: absolute; 
+	 width: 530px;
+	 height: 55px;
+	 z-index:8;
+} 
+
+ #It39stimeforyoutoget 
+{ 
+	 left: 68px; 
+	 top: 1167px; 
+	 position: absolute; 
+	 width: 965px;
+	 height: 187px;
+	 z-index:9;
+} 
+
+ #House 
+{ 
+	 left: 1705px; 
+	 top: 2117px; 
+	 position: absolute; 
+	 width: 707px;
+	 height: 620px;
+	 z-index:10;
+} 
+
+ #Itistimeforanewstart 
+{ 
+	 left: 649px; 
+	 top: 1518px; 
+	 position: absolute; 
+	 width: 630px;
+	 height: 42px;
+	 z-index:11;
+} 
+
+ #HowdyskilledBuddiesN 
+{ 
+	 left: 647px; 
+	 top: 1599px; 
+	 position: absolute; 
+	 width: 588px;
+	 height: 281px;
+	 z-index:12;
+} 
+
+ #Createyourdreamfarm 
+{ 
+	 left: 23px; 
+	 top: 2078px; 
+	 position: absolute; 
+	 width: 642px;
+	 height: 53px;
+	 z-index:13;
+} 
+
+ #Happyanimalsarethere 
+{ 
+	 left: 25px; 
+	 top: 2170px;
+	 right: 5px; 
+	 position: absolute; 
+	 width: 967px;
+	 height: 234px;
+	 z-index:14;
+} 
+
+ #Competewithyourpals 
+{ 
+	 left: 720px; 
+	 top: 2706px; 
+	 position: absolute; 
+	 width: 626px;
+	 height: 55px;
+	 z-index:15;
+} 
+
+ #Anewworldtodiscover 
+{ 
+	 left: 47px; 
+	 top: 2554px; 
+	 position: absolute; 
+	 width: 624px;
+	 height: 42px;
+	 z-index:16;
+} 
+
+ #Theworldofgamenameal 
+{ 
+	 left: 500px; 
+	 top: 2753px;
+	 position: absolute; 
+	 width: 800px;
+	 height: 892px;
+	 z-index:17;
+} 
+
+ #Tradeyourgoodsandcro 
+{ 
+	 left: 719px; 
+	 top: 2784px; 
+	 position: absolute; 
+	 width: 712px;
+	 height: 231px;
+	 z-index:18;
+} 
+
+ #Animals 
+{ 
+	 left: 99px; 
+	 top: 1463px; 
+	 position: absolute; 
+	 width: 448px;
+	 height: 442px;
+	 z-index:19;
+} 
+
+ #Animalscopy2 
+{ 
+	 left: 99px; 
+	 top: 2577px; 
+	 position: absolute; 
+	 width: 448px;
+	 height: 442px;
+	 z-index:20;
+} 
+
+ #Animalscopy 
+{ 
+	 left: 980px; 
+	 top: 2044px; 
+	 position: absolute; 
+	 width: 448px;
+	 height: 442px;
+	 z-index:21;
+} 
+
+ #Animalscopy3 
+{ 
+	 left: 44px; 
+	 top: 2652px; 
+	 position: absolute; 
+	 width: 438px;
+	 height: 432px;
+	 z-index:22;
+} 
+
+ #Lastpagecopy 
+{ 
+	 left: 0px; 
+	 top: 3857px; 
+	 position: absolute; 
+	 width: 1440px;
+	 height: 448px;
+	 z-index:23;
+} 
+
+ #Googlecopy 
+{ 
+	 left: 874px; 
+	 top: 4133px; 
+	 position: absolute; 
+	 width: 335px;
+	 height: 100px;
+	 z-index:24;
+} 
+
+ #AppleAppStorecopy 
+{ 
+	 left: 262px; 
+	 top: 4135px; 
+	 position: absolute; 
+	 width: 331px;
+	 height: 98px;
+	 z-index:25;
+} 
+
+.video-container {
+	height: 300px;
+	width: 300px;
+	overflow: hidden;
+	position: relative;
+  }
+  
+  .video-container video {
+	min-width: 100%;
+	min-height: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+  }
+  
+  /* Just styling the content of the div, the *magic* in the previous rules */
+  .video-container .caption {
+	z-index: 1;
+	position: relative;
+	text-align: center;
+	color: #dc0000;
+	padding: 10px;
+  }

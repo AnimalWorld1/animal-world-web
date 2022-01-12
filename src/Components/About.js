@@ -7,8 +7,8 @@ const About = () => {
   const data = [
     [
       `ANIMAL WORLD is a dynamic tokenized, environmentally sustainable
-  PROJECT IN THE FORM OF futuristic MULTI-CHAIN farM BUILDING game. It
-  offers a riveting simulated gameplay iN which a player can collect,
+  project in the form of futuristic multi-chain farm building game. It
+  offers a riveting simulated gameplay in which a player can collect,
   own, trade and exchange farming assets and winnings. We at ANIMAL
   WORLD are committed towards enabling and building a community of
   ecologically aware individuals who will engage in a self-sustainable
@@ -40,7 +40,7 @@ const About = () => {
     ],
   ];
   return (
-    <div style={{marginTop:"2em",fontSize:"3vw"}}>
+    <div style={{marginTop:"2em"}}>
       {data.map(i=><AboutCard para={i[0]} titleImg={i[1]} />)}
     </div>
   );

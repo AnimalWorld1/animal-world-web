@@ -10,7 +10,7 @@ function Footer() {
   return (
     <div
       style={{
-        background: "#e1e2dd",
+        background: "#f9dc5554",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
@@ -18,7 +18,7 @@ function Footer() {
         zindex:3
       }}
     >
-      <img src={img_aboutus_5} style={{ width: "100vw" }} alt="wood" />
+      
       <img src={Logo2} alt="logo2" />
       <h2 style={{fontSize:"2vw"}}>FOLLOW US ON SOCIAL MEDIA</h2>
       <h3 style={{fontSize:"1.7vw"}}>stay up-to-date with the latest in ANIMAL WORLD</h3>
@@ -50,8 +50,16 @@ function Footer() {
           textAlign: "center",
         }}
       >
-        All rights reserved by: SMS Tech Corp., REG NR: 890515712/ PS Ward/ Commercial II ,  Lodha road , Naya nagar ,Opposite Laxmi park, Mira road east.
-        Mumbai 401107.India. CEO:- MOHAMMAD SOHEL SHAIKH
+        All rights reserved by: SMS Tech Corp., REG NR: 890515712
+      </p>
+      <p
+        style={{
+        fontFamily: "poppins-extralight, poppins, sans-serif",
+          textAlign: "center",
+        }}
+      >
+        Address:Commercial II ,  Lodha road , Naya nagar ,Opposite Laxmi park, Mira road east.
+        Mumbai 401107.India.
       </p>
        <a style={{"color":"black","text-decoration": "none"}} href="mailto:smstechcorp@gmail.com?subject=subject"> &nbsp;&nbsp;smstechcorp@gmail.com&nbsp;&nbsp; </a>
       <p>© 2021 Animalworld.io All rights reserved</p>
