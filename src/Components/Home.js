@@ -1,10 +1,11 @@
 import Token from "./Token";
 import Roadmap from "./Roadmap";
+import Divider from "./Divider";
 import Treepack from "./Treepack";
 import Possesion from "./Possesion";
 import Blending from "./Blending";
 import Blending1 from "./Blending1";
-
+import YieldCard from "./YieldCard";
 import data from "./data";
 import Banner from "./Banner";
 import game from "../assets/thegame.png";
@@ -18,50 +19,13 @@ import processed from '../assets/processed.png';
 import complete from '../assets/complete.png';
 import final from '../assets/final.png';
 import howtoplay_img from "../assets/howtoplay.png";
-import mythic from "../assets/sheepcard.PNG"
-import mangotree from "../assets/goatcard.PNG"
-import lemon from "../assets/cowcard.PNG"
-import fig from "../assets/pigcard.PNG";
-import coconut from "../assets/hencard.PNG"
+import mythic from "../assets/mythic.gif"
+import mangotree from "../assets/mangotree.webp"
+import lemon from "../assets/lemon.jpg"
+import fig from "../assets/fig.gif";
+import coconut from "../assets/coconut.gif"
 import collectall from "../assets/collectall.webp";
-import Isometricland08 from "../assets/Isometricland08.png"
-import Overlay from "../assets/Overlay.gif"
-
-import AvailableOn from "../assets/AvailableOn.png"
-import AppleAppStore from "../assets/AppleAppStore.png"
-import Google from "../assets/Google.png"
-			import Farming from "../assets/Farming.png"
-			import Farmingatitsfinest from "../assets/Farmingatitsfinest.png"
-			import It39stimeforyoutoget from "../assets/It39stimeforyoutoget.png"
-			import Rectangle2 from "../assets/Rectangle2.png"
-			import Layer1 from "../assets/Layer1.png"
-			import House from "../assets/House.png"
-			import Itistimeforanewstart from "../assets/Itistimeforanewstart.png"
-			import HowdyskilledBuddiesN from "../assets/HowdyskilledBuddiesN.png"
-			import tech from "../assets/tech.png"
-			import Createyourdreamfarm from "../assets/Createyourdreamfarm.png"
-			import Happyanimalsarethere from "../assets/Happyanimalsarethere.png"
-			import Competewithyourpals from "../assets/Competewithyourpals.png"
-			import Rectangle3 from "../assets/Rectangle3.png"
-			import Anewworldtodiscover from "../assets/Anewworldtodiscover.png"
-			import Theworldofgamenameal from "../assets/Theworldofgamenameal.png"
-			import Tradeyourgoodsandcro from "../assets/Tradeyourgoodsandcro.png"
-			import Crope from "../assets/Crope.png"
-			import Animals from "../assets/Animals.gif"
-			import Animalscopy from "../assets/Animalscopy.gif"
-			import Animalscopy2 from "../assets/Animalscopy2.gif"
-			import Animalscopy3 from "../assets/Animalscopy3.gif"
-			import Lastpagecopy from "../assets/Lastpagecopy.png"
-			import FollowUsOnSocialMedi from "../assets/FollowUsOnSocialMedi.png"
-			import Layer11copy2 from "../assets/Layer11copy2.png"
-			import Layer8copy2 from "../assets/Layer8copy2.png"
-			import Layer9copy2 from "../assets/Layer9copy2.png"
-			import Layer10copy2 from "../assets/Layer10copy2.png"
-			import GameLinkTermsofServi from "../assets/GameLinkTermsofServi.png"
-			import Googlecopy from "../assets/Googlecopy.png"
-			import AppleAppStorecopy from "../assets/AppleAppStorecopy.png"
-import Team from "./Team";
-
+import Team from "./Team"; 
 
 const howToPlayData = [
   ["Plant a Tree", "linear-gradient(315deg, #000000 0%, #958e69 74%)","white", tree],
@@ -81,27 +45,15 @@ const collectAllData = [
 const Home = ({ login }) => {
   return (
     <>
-	
-      <div id="background">
-			<div id="Overlay">
-
-  <img src={Overlay} /></div>
-<div class="video-container">
-</div>
-			<div id="Farmingatitsfinest"><img src={Farmingatitsfinest} /></div>
-			<div id="It39stimeforyoutoget"><img src={It39stimeforyoutoget} /></div>
-			<div id="House"><img src={House} /></div>
-			<div id="Itistimeforanewstart"><img src={Itistimeforanewstart} /></div>
-			<div id="HowdyskilledBuddiesN"><img src={HowdyskilledBuddiesN} /></div>
-			<div id="Createyourdreamfarm"><img src={Createyourdreamfarm} /></div>
-			<div id="Happyanimalsarethere"><img src={Happyanimalsarethere} /></div>
-			<div id="Anewworldtodiscover"><img src={Anewworldtodiscover} /></div>
-			<div id="Theworldofgamenameal"><img src={Theworldofgamenameal} /></div>
-			<div id="Animals"><img src={Animals} /></div>
-			<div id="Animalscopy"><img src={Animalscopy} /></div>
-			<div id="Animalscopy3"><img src={Animalscopy3} /></div>
-	    </div>
-        <div style={{ height: "19m", width: "100vw" }}>
+      <BannerImg />
+      <a
+        href="https://pdfhost.io/v/~8xG0R~O3_document"
+        target="_blank"
+        class="btn_normal"
+      >
+        <span> White Paper</span>
+      </a>
+      <div style={{ height: "19m", width: "100vw" }}>
         <img 
           src={nft_meet_real}
           className="imgclass"
@@ -131,9 +83,9 @@ const Home = ({ login }) => {
           <span className="orangeText"> real-time basis </span>with
           user-friendly accessibility and consistent monitoring.
         </p>
+      <Divider />
 
-      </div>
-      <img
+        <img
           src={game}
           className="animate__animated animate__flip"
           style={{
@@ -143,6 +95,8 @@ const Home = ({ login }) => {
           }}
           alt="the Game"
         />
+      </div>
+      
       <div
         style={{
           display: "flex",
@@ -155,7 +109,54 @@ const Home = ({ login }) => {
           <Banner titleText={i[0]} para={i[1]} />
         ))}
       </div>
-     </>
+      <Divider />
+
+      <div class="slideshow-container" style={{margin:0,height:"12em"}}>
+        <Carousel autoPlay>
+          {howToPlayData.map((i, idx) => (
+            <PlayCard
+              idx={idx}
+              para={i[0]}
+              bannerStyle={i[1]}
+              text_c={i[2]}
+              title_img={i[3]}
+              commonImg={howtoplay_img}
+              total={howToPlayData.length}
+            />
+          ))}</Carousel>
+      </div>
+      <Divider />
+      <Treepack />
+      <Divider />
+
+      <div class="slideshow-container" style={{margin:0,height:"12.7em"}}>
+        <Carousel autoPlay>
+          {collectAllData.map((i, idx) => (
+            <PlayCard
+              idx={idx}
+              para={i[0]}
+              bannerStyle={i[1]}
+              title_img={i[2]}
+              commonImg={collectall}
+              total={howToPlayData.length}
+            />
+          ))}
+        </Carousel>
+      </div>
+      <Divider />
+      <Possesion/>
+        <Divider />
+      <Blending />
+        <Blending1 />
+        <Divider />
+        <YieldCard />
+        <Divider />
+      <Token />
+      <Divider/>
+      <Roadmap />
+      <Divider/>
+      <Team />
+    </>
   );
 };
 

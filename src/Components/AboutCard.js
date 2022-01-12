@@ -5,9 +5,22 @@ function AboutCard({ titleImg, para }) {
   console.log(titleImg);
   return (
     <div>
-      <h1></h1>
-      <img src={titleImg} style={{ position: "relative" ,"width":"38%"}} />
-      <p style={{ padding: "1em 2%", paddingX:"5px 15%" }} className="about_para">{para}</p>
+      <img src={titleImg} style={{ position: "relative", top: "-2em" ,"width":"38%"}} />
+      <p style={{ padding: "2em 15%", fontSize:"4vw", textAlign:"center",paddingX:"5px 15%" }} className="about_para">{para}</p>
+      {titleImg==="/static/media/aboutus7.ef4a6bc4.webp"?<div></div>:<div style={{ position: "relative" }}>
+      <img src={img_aboutus_5} style={{ width: "100vw" }} alt="wood" />
+        <img
+          src={img_aboutus_6}
+          style={{
+            position: "absolute ",
+            bottom: "10%",
+            right: "4%",
+            width: "5em",
+            height: "3em",
+          }}
+          alt="Leaf"
+        />
+      </div>}
     </div>
   );
 }

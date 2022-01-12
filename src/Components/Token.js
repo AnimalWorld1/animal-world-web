@@ -24,14 +24,39 @@ function Token() {
       </p>
       <div style={{ position: "relative" }}>
         <img className="tknboard" src={TokenBrd} alt="tokenbrd" />
-        
+        <h1
+          style={{
+            fontSize: "4vw",
+            color: "#ffbd11",
+            position: "absolute",
+            top: ".7em",
+            left: "21.5%",
+          }}
+        >
+          TOTAL SUPPLY- 10,000,000,000
+        </h1>
         <p
           
           className="total"
         >
           <div className="ttext">
-          
-           
+          <div>PLAY TO EARN 25%___________________________2,500,000,000</div>
+          <div>RESEARCH & DEVELOPMENT 25% ________2,500,000,000</div>
+          <div>
+            TEAM 15%_________________________________________1,500,000,000
+          </div>
+          <div>MARKETING/PROMOTION 13%____________1,300,000,000</div>
+          <div>
+            private SALE 5%________________________________ 500,000,000
+          </div>
+          <div>
+            IDO 5% ______________________________________________ 500,000,000
+          </div>
+          <div>legal 5% ___________________________________________ 500,000,000
+          </div>
+          <div>ADVISOR 5%________________ ______________________500,000,000
+          </div>
+          <div>AIRDROP & REWARD 2% _____________________ 200,000,000</div>
       </div>
         </p>
       </div>
@@ -39,7 +64,7 @@ function Token() {
       <h1
         style={{
           fontSize: "0.7em",
-          padding: "2% 0",
+          padding: "5% 0",
           textShadow: "#ffffff 3px 3px 0px, rgb(0 0 0 / 20%) 6px 6px 0px",
           color: "cadetblue",
         }}
@@ -51,6 +76,7 @@ function Token() {
         style={{
           fontSize: "0.49em",
           padding: "0 25%",
+          textAlign:"left",
           textShadow: "#ffffff 3px 3px 0px, rgb(0 0 0 / 20%) 6px 6px 0px",
         }}
       >

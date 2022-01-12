@@ -64,62 +64,6 @@ function NavBar(props) {
                 Home
               </NavLink>
             </li>
-            
-            <li className="nav-item">
-              <NavLink
-                exact
-                to="/episodes"
-                activeClassName="active"
-                className="nav-links"
-                onClick={click ? handleClick : null}
-              >
-                Episodes
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                exact
-                to="/token"
-                activeClassName="active"
-                className="nav-links"
-                onClick={click ? handleClick : null}
-              >
-                Tokenomics
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                exact
-                to="/team"
-                activeClassName="active"
-                className="nav-links"
-                onClick={click ? handleClick : null}
-              >
-                Teams
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                exact
-                to="/terms"
-                activeClassName="active"
-                className="nav-links"
-                onClick={click ? handleClick : null}
-              >
-                Terms and Conditions
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                exact
-                to="/roadmap"
-                activeClassName="active"
-                className="nav-links"
-                onClick={click ? handleClick : null}
-              >
-                Roadmap
-              </NavLink>
-            </li>            
             <li className="nav-item">
               <NavLink
                 exact
@@ -131,6 +75,18 @@ function NavBar(props) {
                 About Us
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="/episodes"
+                activeClassName="active"
+                className="nav-links"
+                onClick={click ? handleClick : null}
+              >
+                Episodes
+              </NavLink>
+            </li>
+            
             <li className="nav-item">
               <NavLink
                 exact
