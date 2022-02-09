@@ -1,0 +1,443 @@
+@import "../../global"
+
+.main-page
+  background-color: #F3ECE2
+
+  .main-title
+    color: #8B80F9
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+    text-align: center
+    font-size: 45px
+    font-weight: 900
+    text-transform: uppercase
+    margin-bottom: 40px
+    @include small-phone
+      font-size: 35px
+
+  .main-page-banner
+    width: 100vw
+    height: 100vh
+    background-size: cover
+    background-position: center
+    background-image: url("../../assets/images/main-banner.jpg")
+    @include tablet
+      height: 90vh
+    @include phone
+      background-image: url("../../assets/images/main-banner-mobile.png")
+
+
+  .main-description
+    @include flex-props-column-center
+    padding-top: 120px
+    padding-bottom: 40px
+    margin-bottom: 80px
+    position: relative
+    background-image: url("../../assets/images/main-description-background.png")
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    width: 100vw
+    height: calc(100vw/4)
+    @include desktop
+      background-image: url("../../assets/images/main-description-background-tablet.png")
+      height: calc(100vw/2.5)
+
+    @include phone
+      height: 70vw
+
+    // custom endpoints
+    @media (max-width: 600px)
+      height: 80vw
+
+    @include small-phone
+      background-image: url("../../assets/images/main-description-background-phone.png")
+      height: 80vh
+
+
+    .main-description-title
+      color: #fff
+      font-weight: 700
+      font-size: 45px
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
+      margin-bottom: 20px
+      text-transform: uppercase
+      z-index: 2
+      @include tablet
+        font-size: 35px
+        margin-bottom: 10px
+
+      @include phone
+        font-size: 30px
+
+      // custom endpoints
+      @media (max-width: 600px)
+        font-size: 20px
+
+      @include small-phone
+        font-size: 25px
+        text-align: center
+        max-width: 90%
+        margin-bottom: 20px
+
+    .main-description-text
+      font-weight: 700
+      color: #fff
+      font-size: 18px
+      max-width: 60%
+      text-align: center
+      line-height: 25px
+      z-index: 2
+      @include tablet
+        font-size: 16px
+        max-width: 85%
+      // custom endpoints
+      @media (max-width: 600px)
+        font-size: 15px
+        max-width: 90%
+
+      .main-description-text-emphasize
+        color: #8B80F9
+
+  .main-game
+    @include flex-props-column-center
+    margin-bottom: 80px
+    overflow-x: hidden
+
+    .main-game-features
+      max-width: 1000px
+      @include flex-props-center
+      flex-wrap: wrap
+      position: relative
+
+      .main-game-feature
+        background-image: url("../../assets/images/paper-background.png")
+        background-size: cover
+        background-position: center
+        width: 350px
+        height: 350px
+        box-sizing: border-box
+        margin-right: 10px
+        margin-bottom: 10px
+        position: relative
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: flex-start
+        padding-top: 100px
+
+        @include small-phone
+          margin-bottom: 20px
+
+        .main-game-feature-image
+          width: auto
+          height: 130px
+          margin-bottom: 5px
+          top: -30px
+          position: absolute
+
+        .main-game-feature-title
+          font-family: "RF Krabuler", "MuseoSans", sans-serif
+          font-weight: 300
+          color: #8B80F9
+          font-size: 32px
+          margin-bottom: 10px
+          text-transform: uppercase
+
+        .main-game-feature-text
+          color: #B4B4B4
+          font-size: 18px
+          line-height: 22px
+          max-width: 80%
+          text-align: center
+          padding-bottom: 80px
+
+      .main-game-feature-plant
+        position: absolute
+        width: 50px
+        height: auto
+        @include tablet
+          display: none
+
+        //custom endpoints
+        @media (max-width: 720px)
+          display: block
+
+      .main-game-feature-plant-1
+        right: -50px
+        top: 20%
+        @include desktop
+          right: 50px
+        @include small-phone
+          right: 5px
+
+      .main-game-feature-plant-2
+        left: -50px
+        top: 60%
+        @include desktop
+          left: 50px
+        @include small-phone
+          left: 5px
+          top: 50%
+
+      .main-game-feature-plant-3
+        right: -50px
+        top: 80%
+        @include desktop
+          right: 50px
+        @include small-phone
+          right: 5px
+
+  .main-tutorial
+    margin-bottom: 80px
+
+    .slider-control-bottomcenter
+      bottom: -10% !important
+
+    .tutorial-slide
+      position: relative
+      @include flex-props-space-between
+      cursor: default
+      background-size: cover
+      background-position: center
+      background-repeat: no-repeat
+      width: 100vw
+      height: calc(100vw / 4.63)
+      @include phone
+        height: 50vw
+      @include small-phone
+        height: 70vw
+
+      .tutorial-slide-image
+        width: 300px
+        margin-left: 150px
+        z-index: 2
+        @include desktop
+          width: 200px
+        @include phone
+          margin-left: 80px
+          width: 150px
+        @include small-phone
+          margin-left: 0
+
+      .tutorial-slide-title
+        color: #fff
+        font-size: 42px
+        text-transform: uppercase
+        z-index: 2
+        font-weight: 900
+        @include tablet
+          font-size: 32px
+        @include phone
+          font-size: 30px
+          text-align: center
+        @include small-phone
+          font-size: 25px
+
+      .tutorial-slide-helper-block
+        width: 300px
+        @include desktop
+          width: 100px
+
+    .tutorial-slide-1
+      background-image: url("../../assets/images/tutorial-slider-1.png")
+
+    .tutorial-slide-2
+      background-image: url("../../assets/images/tutorial-slider-2.png")
+
+    .tutorial-slide-3
+      background-image: url("../../assets/images/tutorial-slider-3.png")
+
+    .tutorial-slide-4
+      background-image: url("../../assets/images/tutorial-slider-4.png")
+
+    .tutorial-slide-5
+      background-image: url("../../assets/images/tutorial-slider-5.png")
+
+    .main-tutorial-slider-arrow
+      width: 50px
+      height: auto
+      cursor: pointer
+      padding: 0 20px
+      box-sizing: content-box
+      @include small-phone
+        display: none
+
+  .main-collect
+    margin-bottom: 80px
+
+    .main-collect-slide
+      width: 100vw
+      height: calc(100vw / 1.9)
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center
+      @include flex-props-center
+
+      @include small-phone
+        height: 80vh
+        @include flex-props-column-center
+
+
+      .main-collect-slide-plate
+        background-image: url("../../assets/images/collect-plate.svg")
+        width: 400px
+        height: 120px
+        margin-right: 50px
+        @include flex-props-center
+        background-position: center
+        background-size: contain
+        background-repeat: no-repeat
+        @include tablet
+          width: 300px
+          height: 100px
+
+        //custom endpoints
+        @media (max-width: 650px)
+          width: 250px
+
+        @include small-phone
+          margin-right: 0
+          margin-bottom: 50px
+
+        .main-collect-slide-plate-text
+          font-weight: 900
+          font-size: 38px
+          color: white
+          text-transform: uppercase
+          margin-bottom: 10px
+          @include tablet
+            font-size: 30px
+
+      .main-collect-image
+        width: 300px
+        height: auto
+        transform: rotate(-10deg)
+        transition: all 1s ease
+        @include tablet
+          width: 200px
+
+        //custom endpoints
+        @media (max-width: 650px)
+          width: 150px
+
+        @include small-phone
+          width: 200px
+
+        &:hover
+          transform: rotate(0deg) scale(1.2)
+
+    .main-collect-slide-1
+      background-image: url("../../assets/images/collect-slider-1.png")
+
+    .main-collect-slide-2
+      background-image: url("../../assets/images/collect-slider-2.png")
+
+    .main-collect-slide-3
+      background-image: url("../../assets/images/collect-slider-3.png")
+
+    .main-collect-slide-4
+      background-image: url("../../assets/images/collect-slider-4.png")
+
+    .main-collect-slide-5
+      background-image: url("../../assets/images/collect-slider-5.png")
+
+  .main-game-preview
+    margin-bottom: 80px
+
+    .slider-control-bottomcenter
+      @include small-phone
+        bottom: 30px !important
+
+    .main-game-preview-slider-arrow
+      padding: 0 20px
+      box-sizing: content-box
+      @include tablet
+        display: none
+
+    .main-game-preview-slide
+      @include flex-props-center
+      padding-bottom: 50px
+
+      .main-game-preview-slide-content
+        padding: 50px 0
+
+        &:before
+          content: ""
+          z-index: 1
+          width: 60vw
+          height: calc(60vw / 2)
+          position: absolute
+          top: 10%
+          background-color: #8B80F9
+          transform: rotate(-7deg)
+          border-radius: 15px
+          @include tablet
+            width: 90vw
+            height: calc(90vw / 2)
+          @include small-phone
+            height: 90vw
+            z-index: -1
+
+        .main-game-preview-slide-image
+          width: 60vw
+          height: calc(60vw / 2)
+          box-sizing: content-box
+          z-index: 2
+          position: relative
+          border-radius: 15px
+          @include tablet
+            width: 90vw
+            height: calc(90vw / 2)
+
+          @include small-phone
+            display: none
+
+        .main-game-preview-slide-image-phone
+          display: none
+          background-size: cover
+          background-repeat: no-repeat
+          background-position: center
+          width: 90vw
+          height: 90vw
+          z-index: 2
+          border-radius: 15px
+          @include small-phone
+            display: block
+
+  .main-gameplay
+    padding-bottom: 150px
+
+    .main-gameplay-content
+      @include flex-props-center
+      position: relative
+
+      .main-gameplay-frame
+        background-image: url("../../assets/images/main-gameplay-frame.png")
+        width: 60vw
+        height: calc(60vw / 1.48)
+        background-size: cover
+        box-shadow: 3px 1px 20px #000
+        padding: 2vw 2vw
+
+        .main-gameplay-frame-video
+          display: block
+          width: 100%
+          height: 100%
+
+        @include tablet
+          width: 90vw
+          height: calc(90vw / 1.48)
+
+      .main-gameplay-decorations
+        position: absolute
+        bottom: -20%
+        left: 10%
+        @include tablet
+          left: 1%
+
+        @include phone
+          left: 5%
+          width: 200px
+
+        @include small-phone
+          width: 120px

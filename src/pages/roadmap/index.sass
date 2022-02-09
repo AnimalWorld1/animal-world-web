@@ -1,0 +1,340 @@
+@import "../../global"
+
+.roadmap-page
+  background-color: #f4efe7
+  position: relative
+  @include flex-props-column-center
+  overflow-x: hidden
+
+  .roadmap-text
+    font-size: 24px
+    line-height: 36px
+    text-align: center
+    margin: 0 auto 20px
+    max-width: 85vw
+    @include phone
+      font-size: 21px
+
+    @include small-phone
+      font-size: 19px
+
+    .roadmap-text-emphasize
+      color: #8B80F9
+
+  .roadmap-mobile-background
+    .roadmap-mobile-image
+      display: none
+      @include phone
+        display: block
+        width: 100vw
+        height: 190vh
+        z-index: 2
+      @include small-phone
+        width: 450px
+
+    .roadmap-mobile-background-elements
+      display: none
+      top: 100px
+      position: absolute
+      z-index: 1
+      width: 100vw
+      @include flex-props-column-center
+      display: none
+      @include phone
+        display: flex
+      .roadmap-mobile-background-item
+        min-width: 100px
+        max-width: 250px
+        height: auto
+
+        &:nth-child(1)
+          margin-left: 50px
+          margin-bottom: 20px
+
+        &:nth-child(2)
+          margin-right: 25px
+          margin-bottom: 10px
+          margin-left: 50px
+          align-self: flex-start
+
+        &:nth-child(3)
+          align-self: flex-end
+          margin-right: 20px
+          margin-bottom: 100px
+
+        &:nth-child(4)
+          align-self: flex-start
+          margin-left: 50px
+          margin-bottom: 80px
+
+        &:nth-child(5)
+          margin-bottom: -50px
+          align-self: flex-end
+
+        &:nth-child(6)
+          align-self: flex-start
+          margin-left: 50px
+
+  .roadmap-video-wrapper
+    width: 1280px
+    min-height: 100vh
+    @include tablet
+      width: 900px
+    @include phone
+      display: none
+
+    .roadmap-image
+      width: 100%
+      @include phone
+        display: none
+
+      &:focus
+        outline: none
+
+  .roadmap-content
+    position: absolute
+    width: 1280px
+    top: 125px
+    @include tablet
+      width: 900px
+      top: 15px
+    @include phone
+      top: 50px
+
+    .roadmap-content-blocks
+      margin-top: 150px
+      padding: 0 175px
+      @include flex-props-column-center
+      @include tablet
+        margin-top: 70px
+        padding: 0 85px
+
+      .roadmap-block
+        background: rgba(255, 255, 255, 0.5)
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
+        transition: background-color 1s ease
+        padding: 15px 40px
+        width: fit-content
+        position: relative
+        z-index: 1
+        cursor: pointer
+        @include flex-props-column-center
+        align-items: flex-start
+        @include phone
+          background: rgba(255, 255, 255, 0.8)
+
+        &:nth-child(1)
+          align-self: flex-end
+          @include phone
+            align-self: center
+            margin-bottom: 100px
+
+        &:nth-child(2)
+          align-self: flex-start
+          margin: -100px 0 100px
+          @include tablet
+            margin-bottom: 50px
+          @include phone
+            align-self: center
+            margin: 0 0 100px
+
+        &:after
+          content: ""
+          position: absolute
+          transition: border-top-color 1s ease
+          width: 1px
+          height: 1px
+          border-style: solid
+          border-width: 40px 40px 0 40px
+          border-color: rgba(255, 255, 255, 0.5) transparent transparent transparent
+          bottom: -40px
+          left: 80px
+          z-index: 2
+          @include phone
+            display: none
+
+        &:hover
+          background-color: #fff
+
+        &:hover:after
+          border-top-color: #fff
+
+        .roadmap-block-title
+          font-size: 38px
+          margin-bottom: 30px
+          font-weight: 900
+          @include tablet
+            font-size: 30px
+
+        .roadmap-block-content-wrapper
+          @include flex-props-center
+          align-items: flex-start
+          @include small-phone
+            flex-direction: column
+
+        .roadmap-block-content
+          @include flex-props-column-center
+          align-items: flex-start
+          margin-right: 15px
+          @include small-phone
+            margin-right: 0
+            margin-bottom: 15px
+
+          &:last-child
+            margin-right: 0
+
+          .roadmap-block-content-item
+            margin-bottom: 20px
+            line-height: 24px
+            font-weight: 500
+            font-size: 18px
+            @include tablet
+              margin-bottom: 10px
+              font-size: 15px
+
+            &:last-child
+              margin-bottom: 0
+
+  .roadmap-future
+    max-width: 1280px
+    margin-top: 40px
+    margin-bottom: 80px
+
+    .roadmap-future-content-wrapper
+      @include flex-props-space-between
+
+      @include phone
+        @include flex-props-column-center
+
+      .roadmap-future-content-image-container
+        width: 350px
+        @include phone
+          @include flex-props-center
+
+        &:nth-child(1)
+          padding: 0 20px
+
+        .roadmap-future-content-image-1
+          width: 100%
+          @include phone
+            display: none
+
+        .roadmap-future-content-image-2
+          width: 70%
+
+      .roadmap-future-content
+        @include flex-props-column-center
+        @include phone
+          position: relative
+        @include small-phone
+          padding: 0 20px
+
+        .roadmap-future-content-item
+          font-weight: 500
+          font-size: 21px
+          margin-bottom: 20px
+          text-align: center
+
+          @include phone
+            font-size: 19px
+
+          @include small-phone
+            font-size: 17px
+
+        .roadmap-future-content-item-image
+          width: 100px
+          height: auto
+          @include phone
+            position: absolute
+            right: -11vw
+            bottom: -20px
+
+          @include small-phone
+            display: none
+
+  .roadmap-tokenomics
+    @include flex-props-column-center
+    margin-bottom: 80px
+
+    .roadmap-tokenomics-wrapper
+      background-image: url("../../assets/images/tokenomics-background.png")
+      background-size: cover
+      width: 70vw
+      border-radius: 15px
+      padding: 20px 0 40px 0
+
+      @include desktop
+        width: 85vw
+
+      .roadmap-tokenomics-title-wrapper
+        background-image: url("../../assets/images/tokenomics-title-background.png")
+        background-size: cover
+        max-width: 60vw
+        height: calc(60vw / 6.2)
+        margin: 0 auto 40px
+        @include flex-props-center
+        @include desktop
+          padding: 20px 0
+          max-width: 75vw
+          height: calc(75vw / 6.2)
+
+        @include tablet
+          padding: 60px 0
+
+        .page-title
+          margin-bottom: 0
+          @include desktop
+            font-size: 35px
+            line-height: 40px
+          @include small-phone
+            font-size: 25px
+
+      .roadmap-tokenomics-content
+        padding: 0 50px
+        @include flex-props-column-center
+        @include phone
+          padding: 0 20px
+
+        .roadmap-tokenomics-item
+          margin-bottom: 25px
+          width: 100%
+          @include flex-props-space-between
+
+          &:last-child
+            margin-bottom: 0
+
+          .roadmap-tokenomics-item-title
+            font-weight: 500
+            font-size: 30px
+            margin-right: 8px
+            color: #fff
+            text-transform: uppercase
+            @include tablet
+              font-size: 21px
+            @include phone
+              max-width: 40%
+              font-size: 18px
+            @include small-phone
+              font-size: 14px
+
+          .roadmap-tokenomics-item-line
+            border: none
+            flex-grow: 2
+            background-color: #8B80F9
+            height: 3px
+            margin-right: 8px
+
+          .roadmap-tokenomics-item-value
+            color: #fff
+            font-size: 24px
+            @include tablet
+              font-size: 19px
+
+            @include phone
+              font-size: 16px
+            @include small-phone
+              font-size: 14px
+
+
+
+

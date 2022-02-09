@@ -1,0 +1,25 @@
+@import 'reset.sass'
+@import 'global.sass'
+@import 'fonts.sass'
+
+body
+  font-family: "MuseoSans", sans-serif
+  overflow-x: hidden
+  background-color: #F3ECE2
+
+  & iframe
+    display: none
+
+.page-title
+  color: #8B80F9
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+  text-align: center
+  font-size: 45px
+  font-weight: 900
+  text-transform: uppercase
+  margin-bottom: 40px
+  @include tablet
+    max-width: 90%
+    margin: 0 auto 40px
+  @include small-phone
+    font-size: 35px

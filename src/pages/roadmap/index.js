@@ -1,0 +1,149 @@
+import './index.sass'
+import {ReactComponent as RoadmapGreenhouse} from "../../assets/images/roadmap-greenhouse.svg";
+import {ReactComponent as RoadmapMobileImage} from "../../assets/images/roadmap-mobile.svg";
+import {ReactComponent as RoadmapMobileHaystack} from "../../assets/images/roadmap-haystack.svg";
+import {ReactComponent as RoadmapMobileCart} from "../../assets/images/roadmap-cart.svg";
+import {ReactComponent as RoadmapMobilePlant} from "../../assets/images/roadmap-plant.svg";
+
+export default function RoadmapPage() {
+
+    return (
+        <>
+            <div className="roadmap-page">
+                <div className="roadmap-video-wrapper">
+                    <video autoPlay loop muted playsInline className="roadmap-image">
+                        <source src={require("../../assets/videos/roadmap.mp4").default} type="video/mp4"/>
+                    </video>
+                </div>
+                <div className="roadmap-mobile-background">
+                    <RoadmapMobileImage className="roadmap-mobile-image"/>
+                    <div className="roadmap-mobile-background-elements">
+                        <RoadmapMobileHaystack className="roadmap-mobile-background-item"/>
+                        <img src={require("../../assets/gifs/fig-tree.gif").default} alt="fig tree gif" className="roadmap-mobile-background-item"/>
+                        <RoadmapMobileCart className="roadmap-mobile-background-item"/>
+                        <RoadmapMobilePlant className="roadmap-mobile-background-item"/>
+                        <img src={require("../../assets/images/roadmap-mango-tree.png").default} alt="mango tree" className="roadmap-mobile-background-item"/>
+                        <img src={require("../../assets/gifs/windmill.gif").default} alt="windmill gif" className="roadmap-mobile-background-item"/>
+                    </div>
+                </div>
+                <div className="roadmap-content">
+                    <h1 className="page-title">Roadmap</h1>
+                    <div className="roadmap-content-blocks">
+                        <div className="roadmap-block">
+                            <h4 className="roadmap-block-title">Q4/2021</h4>
+                            <div className="roadmap-block-content">
+                                <span className="roadmap-block-content-item">✅ Tree sale</span>
+                                <span className="roadmap-block-content-item">✅ Trees staking for <br/> AWC started</span>
+                                <span className="roadmap-block-content-item">✅ Land sale phase 1</span>
+                            </div>
+                        </div>
+                        <div className="roadmap-block">
+                            <h4 className="roadmap-block-title">Q1/2022</h4>
+                            <div className="roadmap-block-content-wrapper">
+                                <div className="roadmap-block-content">
+                                    <span className="roadmap-block-content-item">✅ New whitepaper <br/> release</span>
+                                    <span className="roadmap-block-content-item">✅ New website</span>
+                                    <span className="roadmap-block-content-item">🔳 Game Updates<br/> and sneak peeks</span>
+                                </div>
+                                <div className="roadmap-block-content">
+                                    <span className="roadmap-block-content-item">🔳 Animal, Machines and Crop<br/> fields drop in AWC (February<br/> 16th)</span>
+                                    <span className="roadmap-block-content-item">🔳 Trees staking for AWC stopped<br/> (February 28th)</span>
+                                    <span className="roadmap-block-content-item">🔳 Alpha game release and testing</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="roadmap-block">
+                            <h4 className="roadmap-block-title">Q2/2022</h4>
+                            <div className="roadmap-block-content-wrapper">
+                                <div className="roadmap-block-content">
+                                    <span className="roadmap-block-content-item">🔳 Upgrades to awc<br/> distribution system<br/> and market orders</span>
+                                    <span className="roadmap-block-content-item">🔳 Collaboration with <br/>other projects</span>
+                                    <span className="roadmap-block-content-item">🔳 Listing Partnerships</span>
+                                </div>
+                                <div className="roadmap-block-content">
+                                    <span className="roadmap-block-content-item">🔳 Launch on BSC </span>
+                                    <span className="roadmap-block-content-item">🔳 Bridge for NFT and tokens</span>
+                                    <span className="roadmap-block-content-item">🔳 Land upgrade mechanics</span>
+                                    <span className="roadmap-block-content-item">🔳 Next game mode announced</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section className="roadmap-future">
+                    <h2 className="page-title">Future Plans for Animal World</h2>
+                    <p className="roadmap-text">We have future plans to create and explore new features and game mechanics.
+                        The next phase will be involving multiplayer mechanics to allow users to interact
+                        with each other and play interactive games
+                    </p>
+                    <div className="roadmap-future-content-wrapper">
+                        <div className="roadmap-future-content-image-container">
+                            <RoadmapGreenhouse className="roadmap-future-content-image-1"/>
+                        </div>
+                        <div className="roadmap-future-content">
+                            <span className="roadmap-future-content-item">🔳 New animal (Wolves, Lions, Eagle etc)</span>
+                            <span className="roadmap-future-content-item">🔳 PVP battle mode</span>
+                            <span className="roadmap-future-content-item">🔳 DAO and guild based system</span>
+                            <span className="roadmap-future-content-item">🔳 Metaverse Coming Soon...</span>
+                            <img src={require("../../assets/gifs/vr.gif").default} alt="vr gif" className="roadmap-future-content-item roadmap-future-content-item-image"/>
+                        </div>
+                        <div className="roadmap-future-content-image-container">
+                            <img alt="tractor gif" src={require("../../assets/gifs/tractor.gif").default} className="roadmap-future-content-image-2"/>
+                        </div>
+                    </div>
+                </section>
+                <section className="roadmap-tokenomics">
+                    <h2 className="page-title">Tokenomics</h2>
+                    <p className="roadmap-text">A highly prized token in the entire <span className="roadmap-text-emphasize">ANIMAL WORLD</span>. It is earned through a series
+                        of processes. Whenever a particular Tree is planted it will reap the respective commodity
+                        in a few hours’ time. That commodity is then sent for processing and a finished product
+                        is manufactured. This processed commodity will be then listed for sale in the market.
+                        IN return the player will receive AWC Tokens.</p>
+                    <div className="roadmap-tokenomics-wrapper">
+                        <div className="roadmap-tokenomics-title-wrapper">
+                            <h4 className="page-title">TOTAL SUPPLY- 10,000,000,000</h4>
+                        </div>
+                        <div className="roadmap-tokenomics-content">
+                            <div className="roadmap-tokenomics-item">
+                                <h6 className="roadmap-tokenomics-item-title">PLAY TO EARN 30%</h6>
+                                <hr className="roadmap-tokenomics-item-line"/>
+                                <span className="roadmap-tokenomics-item-value">3,000,000,000</span>
+                            </div>
+                            <div className="roadmap-tokenomics-item">
+                                <h6 className="roadmap-tokenomics-item-title">RESEARCH & DEVELOPMENT 25%</h6>
+                                <hr className="roadmap-tokenomics-item-line"/>
+                                <span className="roadmap-tokenomics-item-value">2,500,000,000</span>
+                            </div>
+                            <div className="roadmap-tokenomics-item">
+                                <h6 className="roadmap-tokenomics-item-title">TEAM 15%</h6>
+                                <hr className="roadmap-tokenomics-item-line"/>
+                                <span className="roadmap-tokenomics-item-value">1,500,000,000</span>
+                            </div>
+                            <div className="roadmap-tokenomics-item">
+                                <h6 className="roadmap-tokenomics-item-title">MARKETING / PROMOTION 18%</h6>
+                                <hr className="roadmap-tokenomics-item-line"/>
+                                <span className="roadmap-tokenomics-item-value">1,800,000,000</span>
+                            </div>
+                            <div className="roadmap-tokenomics-item">
+                                <h6 className="roadmap-tokenomics-item-title">legal 5%</h6>
+                                <hr className="roadmap-tokenomics-item-line"/>
+                                <span className="roadmap-tokenomics-item-value">500,000,000</span>
+                            </div>
+                            <div className="roadmap-tokenomics-item">
+                                <h6 className="roadmap-tokenomics-item-title">advisor 5%</h6>
+                                <hr className="roadmap-tokenomics-item-line"/>
+                                <span className="roadmap-tokenomics-item-value">500,000,000</span>
+                            </div>
+                            <div className="roadmap-tokenomics-item">
+                                <h6 className="roadmap-tokenomics-item-title">airdrop/lp rewards 2%</h6>
+                                <hr className="roadmap-tokenomics-item-line"/>
+                                <span className="roadmap-tokenomics-item-value">200,000,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </>
+    )
+}
+

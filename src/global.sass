@@ -1,0 +1,44 @@
+@mixin background-props
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+
+@mixin flex-props-center
+  display: flex
+  align-items: center
+  justify-content: center
+
+@mixin flex-props-column-center
+  display: flex
+  align-items: center
+  flex-direction: column
+  justify-content: center
+
+@mixin flex-props-space-between
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+@mixin smallest-phone
+  @media (max-width: 350px)
+    @content
+
+@mixin small-phone
+  @media (max-width: 500px)
+    @content
+
+@mixin phone
+  @media (max-width: 768px)
+    @content
+
+@mixin small-tablet
+  @media (min-width: 500px) and (max-width: 768px)
+    @content
+
+@mixin tablet
+  @media (max-width: 1024px)
+    @content
+
+@mixin desktop
+  @media (max-width: 1200px)
+    @content

@@ -1,0 +1,71 @@
+@import "../../global"
+
+.wallet-modal-overlay
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  width: 100vw
+  height: 100vh
+  background-color: rgba(11, 12, 39, 0.8)
+  z-index: 4
+  @include flex-props-center
+
+  .wallet-modal-content
+    background-color: #fff
+    border-radius: 15px
+    width: 40vw
+    height: calc(40vw / 2)
+    @include flex-props-column-center
+    @include desktop
+      width: 400px
+      height: 200px
+
+    @include small-phone
+      width: 300px
+
+    .wallet-modal-title
+      color: #8B80F9
+      font-size: 23px
+      font-weight: 700
+      margin-bottom: 40px
+      text-transform: uppercase
+      @include desktop
+        font-size: 20px
+        text-align: center
+        margin-top: 20px
+
+      @include small-phone
+        font-size: 18px
+        padding: 0 10px
+
+    .wallet-modal-option
+      border: none
+      background: none
+      cursor: pointer
+      @include flex-props-center
+      margin-bottom: 20px
+
+      .wallet-modal-option-image-1
+        width: 55px
+        height: auto
+        margin-right: 10px
+
+      .wallet-modal-option-image-2
+        width: 30px
+        height: auto
+        margin-right: 10px
+
+      .wallet-modal-option-text
+        padding-bottom: 5px
+        border-bottom: 2px solid #000
+        font-size: 23px
+        font-weight: 700
+        text-transform: uppercase
+        color: #000
+        @include desktop
+          font-size: 20px
+
+        @include small-phone
+          font-size: 18px

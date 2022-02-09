@@ -1,0 +1,39 @@
+@import "../../global"
+
+.page-404
+  background-image: url("../../assets/images/404-background.png")
+  width: 100vw
+  height: 100vh
+  background-size: cover
+  background-repeat: no-repeat
+  @include flex-props-column-center
+  @include phone
+    padding: 0 20px
+
+  .page-404-title
+    margin-bottom: 25px
+    @include phone
+      width: 328px
+      height: auto
+      margin-bottom: 40px
+
+    @include smallest-phone
+      width: 300px
+
+  .page-404-description
+    font-size: 24px
+    font-weight: 900
+    margin-bottom: 40px
+    @include phone
+      font-size: 20px
+      text-align: center
+
+  .page-404-link
+    text-transform: uppercase
+    font-size: 30px
+    color: #8B80F9
+    font-weight: 900
+    padding-bottom: 5px
+    border-bottom: 2px solid #8B80F9
+    @include phone
+      font-size: 24px

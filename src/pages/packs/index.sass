@@ -1,0 +1,183 @@
+@import "../../global"
+
+.packs-page
+  background-color: #F3ECE2
+
+  .packs
+    margin-top: 80px
+
+    .packs-title
+      color: #8B80F9
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
+      font-size: 40px
+      font-weight: 900
+      text-transform: uppercase
+      text-align: center
+      margin-bottom: 20px
+
+    .packs-subtitle
+      font-size: 30px
+      color: #000
+      font-weight: 900
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
+      text-transform: uppercase
+      text-align: center
+
+    .packs-wrapper
+      margin: 80px 0
+      @include flex-props-center
+      @include desktop
+        flex-wrap: wrap
+
+      @include tablet
+        max-width: 400px
+        margin: 40px auto 0
+
+      .pack
+        position: relative
+        margin-right: 30px
+        @include flex-props-column-center
+        @include desktop
+          margin-bottom: 30px
+
+        @include tablet
+          margin-right: 0
+          margin-bottom: 40px
+
+
+        &:last-child
+          margin-right: 0
+
+        .pack-img-shadow
+          width: 250px
+          height: 250px
+          background: #8B80F9
+          filter: blur(100px)
+          position: absolute
+          top: 0
+          left: 20%
+          z-index: 1
+
+        .pack-img-shadow-legendary
+          background: #F05D5E
+
+
+        .pack-img-wrapper
+          height: 250px
+          z-index: 2
+          margin-bottom: 20px
+          @include flex-props-center
+
+          .pack-img
+            max-width: 300px
+            max-height: 250px
+
+            @include small-phone
+              max-width: 250px
+              max-height: 200px
+
+        .pack-wrapper
+          background-color: #fff
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+          border-radius: 15px
+          width: 400px
+          z-index: 2
+          color: #464646
+
+          @include small-phone
+            width: 320px
+
+          .pack-info-wrapper
+            @include flex-props-space-between
+            padding: 30px 25px
+            @include small-phone
+              padding: 30px 15px
+
+            .pack-info
+              max-width: 40%
+              display: flex
+              flex-direction: column
+
+              .pack-info-name
+                font-size: 24px
+                font-weight: 700
+                margin-bottom: 15px
+                text-transform: uppercase
+                text-align: left
+                @include small-phone
+                  font-size: 21px
+
+              .pack-info-quantity
+                font-size: 21px
+                margin-bottom: 15px
+                text-align: left
+
+              .pack-info-price
+                font-weight: 900
+                font-size: 32px
+                text-align: left
+
+            .pack-info-cards
+              width: 55%
+              @include flex-props-column-center
+
+              .pack-info-card
+                @include flex-props-space-between
+                font-family: "RF Krabuler", "MuseoSans", sans-serif
+                margin-bottom: 10px
+                width: 100%
+
+                &:last-child
+                  margin-bottom: 0
+
+                .pack-info-card-name, .pack-info-card-percentage
+                  font-size: 20px
+
+                  @include small-phone
+                    font-size: 18px
+
+          .pack-button-wrapper
+            display: flex
+            justify-content: space-evenly
+            margin-bottom: 15px
+
+            @include small-phone
+              flex-wrap: wrap
+
+            .pack-button
+              width: 170px
+              height: 40px
+              background-color: #F05D5E
+              color: white
+              border-radius: 10px
+              cursor: pointer
+              border: none
+              font-size: 15px
+              font-weight: 900
+              text-transform: uppercase
+              text-align: center
+              font-family: "MuseoSans", sans-serif
+              @include flex-props-center
+
+              @include small-phone
+                margin-bottom: 15px
+                &:last-child
+                  margin-bottom: 0
+
+            .pack-button-disabled
+              background-color: #B8B8B8
+              cursor: not-allowed
+
+        .pack-wrapper-legendary
+          background-color: #8B80F9
+          color: #fff
+
+
+
+
+
+
+
+
+
+

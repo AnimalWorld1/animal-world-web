@@ -1,0 +1,86 @@
+@import "../../global"
+
+.footer
+  background-color: #F3ECE2
+  @include flex-props-center
+
+  .footer-wrapper
+    width: 95vw
+    height: 100px
+    padding: 0 40px
+    text-align: center
+    background-color: #fff
+    border-radius: 15px 15px 0 0
+    @include flex-props-space-between
+
+    @include tablet
+      height: auto
+      @include flex-props-column-center
+
+    .footer-company-info
+      //font-weight: 900
+      //color: #000
+      //padding-bottom: 3px
+      //border-bottom: 2px solid #000
+      //font-size: 25px
+      //text-transform: uppercase
+      text-align: left
+      max-width: 30%
+      font-size: 12px
+      @include tablet
+        order: 2
+        margin-bottom: 20px
+        max-width: 80%
+        font-size: 16px
+
+      @include phone
+        //font-size: 20px
+
+    .footer-social
+      @include flex-props-center
+      @include tablet
+        order: 1
+        margin: 20px 0
+
+      @include small-phone
+        flex-wrap: wrap
+
+      .footer-social-text
+        font-size: 25px
+        color: #8B80F9
+        margin-right: 20px
+        font-weight: 900
+        text-transform: uppercase
+        @include phone
+          font-size: 20px
+
+        @include small-phone
+          margin-bottom: 10px
+          margin-right: 0
+
+      .footer-social-links
+        display: flex
+
+        .footer-social-link
+          margin-right: 15px
+
+          .footer-social-link-image
+            width: 35px
+            height: auto
+
+            @include phone
+              width: 25px
+
+    .footer-social-copyright
+      font-weight: 300
+      text-align: right
+      @include tablet
+        order: 3
+        text-align: center
+        margin-bottom: 10px
+
+      .footer-social-copyright-email
+        display: block
+        margin-bottom: 5px
+        color: #000
+
