@@ -3,6 +3,7 @@ import {ReactComponent as TwitterLogo} from '../../assets/icons/footer-twitter.s
 import {ReactComponent as InstagramLogo} from '../../assets/icons/footer-instagram.svg';
 import {ReactComponent as MediumLogo} from '../../assets/icons/footer-medium.svg';
 import {ReactComponent as TelegramLogo} from '../../assets/icons/footer-telegram.svg';
+import {ReactComponent as DiscordLogo} from '../../assets/icons/footer-discord.svg';
 
 export default function Footer() {
     return (
@@ -23,6 +24,9 @@ export default function Footer() {
                         </a>
                         <a href="https://t.me/animalworldwax" target="_blank" rel="noreferrer" className="footer-social-link">
                             <TelegramLogo className="footer-social-link-image"/>
+                        </a>
+                        <a href="https://discord.gg/nbeb6MN9hA" target="_blank" className="footer-social-link">
+                            <DiscordLogo className="footer-social-link-image"/>
                         </a>
                     </div>
                 </div>

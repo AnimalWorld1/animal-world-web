@@ -9,20 +9,23 @@ import Footer from "./components/footer";
 import PacksPage from "./pages/packs";
 import EpisodesPage from "./pages/episodes";
 import RoadmapPage from "./pages/roadmap";
+import {ParallaxProvider} from "react-scroll-parallax";
 
 export default function AppRoutes() {
     return (
         <App>
             <Router>
                 <Header/>
-                <Routes>
-                    <Route path="/" element={<MainPage/>}/>
-                    <Route path="/staking" element={<StakingPage/>}/>
-                    <Route path="/episodes" element={<EpisodesPage/>}/>
-                    <Route path="/packs" element={<PacksPage/>}/>
-                    <Route path="/roadmap" element={<RoadmapPage/>}/>
-                    <Route path="*" element={<Page404/>}/>
-                </Routes>
+                <ParallaxProvider>
+                    <Routes>
+                        <Route path="/" element={<MainPage/>}/>
+                        <Route path="/staking" element={<StakingPage/>}/>
+                        <Route path="/episodes" element={<EpisodesPage/>}/>
+                        <Route path="/packs" element={<PacksPage/>}/>
+                        <Route path="/roadmap" element={<RoadmapPage/>}/>
+                        <Route path="*" element={<Page404/>}/>
+                    </Routes>
+                </ParallaxProvider>
                 <Footer/>
             </Router>
         </App>

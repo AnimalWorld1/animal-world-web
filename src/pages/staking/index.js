@@ -9,6 +9,7 @@ import Pagination from "../../components/pagination";
 import Notification from "../../components/notification";
 import {NotificationManager} from "react-notifications";
 import Preloader from "../../components/preloader";
+import Fade from "react-reveal/Fade";
 
 function StakingPage() {
     const {AccountStore} = StoreContext();
@@ -23,7 +24,7 @@ function StakingPage() {
     const [currentPage, setCurrentPage] = useState(1);
     const [loading, setLoading] = useState(false);
 
-    const assetsPerPage = 5; //how many assets are shown on screen
+    const assetsPerPage = 8; //how many assets are shown on screen
 
     async function sendTransaction(actions, wallet, successMessage) {
         setLoading(true);
@@ -71,8 +72,7 @@ function StakingPage() {
             if (tableRows.rows.length === 0) {
                 setBalanceWax(0);
             } else {
-                console.log("BALANCE", tableRows.rows[0].balance)
-                setBalanceWax(tableRows.rows[0].balance)
+                setBalanceWax(String(tableRows.rows[0].balance).slice(0, 6))
             }
         } catch (e) {
             NotificationManager.error(e.message, "An error has occurred.");
@@ -90,8 +90,7 @@ function StakingPage() {
             if (tableRows.rows.length === 0) {
                 setBalanceAwc("0.0000 AWC");
             } else {
-                console.log("BALANCE", tableRows.rows[0].balance)
-                setBalanceAwc(tableRows.rows[0].balance)
+                setBalanceAwc(String(tableRows.rows[0].balance).slice(0, 6))
             }
         } catch (e) {
             NotificationManager.error(e.message, "An error has occurred.");
@@ -150,7 +149,6 @@ function StakingPage() {
                     template: data.template
                 })
             }
-            console.log("Unfiltered assets: ", assets);
             await getStakingRates(assets);
         } catch (e) {
             setLoading(false);
@@ -185,7 +183,7 @@ function StakingPage() {
                             collections.levels.forEach(level => {
                                 if (level.key === levelRow.level) {
                                     asset.rate = level.value
-                                    if (stakePower > 0){
+                                    if (stakePower > 0) {
                                         stakePower = stakePower + Number(level.value)
                                     } else {
                                         stakePower = Number(level.value)
@@ -198,7 +196,6 @@ function StakingPage() {
             })
         }
         setStakePower(stakePower);
-        console.log("Filtered assets: ", assets)
         filterAssets(assets)
     }
 
@@ -221,7 +218,6 @@ function StakingPage() {
             assets.forEach(asset => {
                 data.forEach(dataItem => {
                     if (dataItem.asset_id === asset.asset_id && dataItem.account === AccountStore.accountAddress) {
-                        console.log("got into if to push the assets")
                         filteredAssets.push(asset);
                     }
                 })
@@ -229,21 +225,22 @@ function StakingPage() {
         }
 
         setLoading(false);
-        console.log("Staked assets:  ", filteredAssets);
         setStakedAssets(filteredAssets)
         const unstakedAssets = assets.filter(item => {
             if (!filteredAssets.includes(item) && item.rate) {
                 return item
             }
         })
-        console.log("Unstaked assets: ", unstakedAssets);
         setUnstakedAssets(unstakedAssets);
     }
 
     function renderAssets() {
+        const indexOfLastAsset = currentPage * assetsPerPage;
+        const indexOfFirstAsset = indexOfLastAsset - assetsPerPage;
         if (chosenAssets === "staked") {
+            const currentAssets = stakedAssets.slice(indexOfFirstAsset, indexOfLastAsset);
             return (
-                stakedAssets.length !== 0 ?
+                stakedAssets.length !== 0 && stakedAssets.length < assetsPerPage ?
                     stakedAssets.map((asset, index) => {
                         return (
                             <div className="staking-asset" key={`staked-asset-${index}`}>
@@ -260,14 +257,32 @@ function StakingPage() {
                         )
 
                     })
-                    : stakedAssets.length > assetsPerPage ? <>
-                        {/*    do this */}
-
-                    </> : <h4 className="staking-no-assets-title">No assets to show</h4>
+                    : stakedAssets.length > assetsPerPage ?
+                        <>
+                            <div className="staking-assets">
+                                {currentAssets.map((asset, index) => {
+                                    return (<div className="staking-asset" key={`staked-asset-${index}`}>
+                                        <div className="staking-asset-name-wrapper">
+                                            <span className="staking-asset-name">{asset.name}</span>
+                                        </div>
+                                        <img src={`https://ipfs.wecan.dev/ipfs/${asset.img}`} alt=""
+                                             className="staking-asset-img"/>
+                                        <span className="staking-asset-rate">{asset.rate.slice(0, 6)}/day</span>
+                                        <button className="staking-asset-button" disabled={loading}
+                                                onClick={() => unStakeAssets([asset.asset_id])}>Unstake asset
+                                        </button>
+                                    </div>)
+                                })}
+                            </div>
+                            <Pagination contentPerPage={assetsPerPage} totalContent={stakedAssets.length}
+                                        paginate={(pageNum) => setCurrentPage(pageNum)} currentPage={currentPage}/>
+                        </>
+                        : <h4 className="staking-no-assets-title">No assets to show</h4>
             )
         } else if (chosenAssets === "unstaked") {
+            const currentAssets = unstakedAssets.slice(indexOfFirstAsset, indexOfLastAsset);
             return (
-                unstakedAssets.length !== 0 ?
+                unstakedAssets.length !== 0 && unstakedAssets.length < assetsPerPage ?
                     unstakedAssets.map((asset, index) => {
                         return (
                             <div className="staking-asset" key={`unstaked-asset-${index}`}>
@@ -283,7 +298,27 @@ function StakingPage() {
                             </div>
                         )
                     })
-                    : <h4 className="staking-no-assets-title">No assets to show</h4>
+                    : unstakedAssets.length > assetsPerPage ?
+                        <>
+                            <div className="staking-assets">
+                                {currentAssets.map((asset, index) => {
+                                    return (<div className="staking-asset" key={`staked-asset-${index}`}>
+                                        <div className="staking-asset-name-wrapper">
+                                            <span className="staking-asset-name">{asset.name}</span>
+                                        </div>
+                                        <img src={`https://ipfs.wecan.dev/ipfs/${asset.img}`} alt=""
+                                             className="staking-asset-img"/>
+                                        <span className="staking-asset-rate">{asset.rate.slice(0, 6)}/day</span>
+                                        <button className="staking-asset-button" disabled={loading}
+                                                onClick={() => unStakeAssets([asset.asset_id])}>Unstake asset
+                                        </button>
+                                    </div>)
+                                })}
+                            </div>
+                            <Pagination contentPerPage={assetsPerPage} totalContent={unstakedAssets.length}
+                                        paginate={(pageNum) => setCurrentPage(pageNum)} currentPage={currentPage}/>
+                        </>
+                        : <h4 className="staking-no-assets-title">No assets to show</h4>
             )
         }
     }
@@ -294,12 +329,16 @@ function StakingPage() {
             name: 'claim',
             authorization: [{
                 actor: AccountStore.accountAddress,
-                permission: AccountStore.getUserData()[0]=== "anchor" ? AccountStore.getUserData()[3] : "active",
+                permission: AccountStore.getUserData()[0] === "anchor" ? AccountStore.getUserData()[3] : "active",
             }], data: {
                 _user: AccountStore.accountAddress,
             },
-        }], AccountStore.getUserData()[0], "Tokens claimed.")
-        await getUserBalanceAwc();
+        }], AccountStore.getUserData()[0], "Tokens claimed.").then(() => {
+                setTimeout(() => {
+                    getUserBalanceAwc();
+                }, 2000)
+            }
+        )
     }
 
     async function stakeAssets(assetIDs) {
@@ -308,14 +347,14 @@ function StakingPage() {
             name: 'stakeassets',
             authorization: [{
                 actor: AccountStore.accountAddress,
-                permission: AccountStore.getUserData()[0]=== "anchor" ? AccountStore.getUserData()[3] : "active",
+                permission: AccountStore.getUserData()[0] === "anchor" ? AccountStore.getUserData()[3] : "active",
             }],
             data: {
                 _user: AccountStore.accountAddress,
                 asset_ids: assetIDs
             },
         }], AccountStore.getUserData()[0], "Assets staked.")
-        setTimeout(()=>{
+        setTimeout(() => {
             getAssets();
         }, 1000)
     }
@@ -326,14 +365,14 @@ function StakingPage() {
             name: 'removenft',
             authorization: [{
                 actor: AccountStore.accountAddress,
-                permission: AccountStore.getUserData()[0]=== "anchor" ? AccountStore.getUserData()[3] : "active",
+                permission: AccountStore.getUserData()[0] === "anchor" ? AccountStore.getUserData()[3] : "active",
             }],
             data: {
                 _user: AccountStore.accountAddress,
                 asset_ids: assetIDs
             },
         }], AccountStore.getUserData()[0], "Assets unstaked.")
-        setTimeout(()=>{
+        setTimeout(() => {
             getAssets();
         }, 1000)
     }
@@ -357,87 +396,96 @@ function StakingPage() {
     return (AccountStore.accountAddress ?
             <div className="staking-page">
                 <Notification/>
-                <div className="staking-info-wrapper">
-                    <div className="staking-info">
-                        <div className="staking-info-item">
-                            <WalletUserIcon className="staking-info-item-wallet-icon"/>
-                            <span className="staking-info-item-text">{AccountStore.accountAddress}</span>
+                <Fade bottom>
+                    <div className="staking-info-wrapper">
+                        <div className="staking-info">
+                            <div className="staking-info-item">
+                                <WalletUserIcon className="staking-info-item-wallet-icon"/>
+                                <span className="staking-info-item-text">{AccountStore.accountAddress}</span>
+                            </div>
+                            <div className="staking-info-item">
+                                <img src={require("../../assets/icons/wax-icon.png").default} alt="wax icon"
+                                     className="staking-info-item-image"/>
+                                <span className="staking-info-item-text">{balanceWax ? balanceWax : "Loading..."}</span>
+                            </div>
+                            <div className="staking-info-item">
+                                <img src={require("../../assets/icons/awc-icon.png").default} alt="awc icon"
+                                     className="staking-info-item-image"/>
+                                <span className="staking-info-item-text">{balanceAwc ? balanceAwc : "Loading..."}</span>
+                            </div>
                         </div>
-                        <div className="staking-info-item">
-                            <img src={require("../../assets/icons/wax-icon.png").default} alt="wax icon"
-                                 className="staking-info-item-image"/>
-                            <span className="staking-info-item-text">{balanceWax ? balanceWax : "Loading..."}</span>
-                        </div>
-                        <div className="staking-info-item">
-                            <img src={require("../../assets/icons/awc-icon.png").default} alt="awc icon"
-                                 className="staking-info-item-image"/>
-                            <span className="staking-info-item-text">{balanceAwc ? balanceAwc : "Loading..."}</span>
+                        <div className="staking-info">
+                            <div className="staking-info-item staking-info-item-apart">
+                                <span className="staking-info-item-title">Stake power</span>
+                                <span
+                                    className="staking-info-item-text">{stakePower ? String(stakePower).slice(0, 6) : "0.0000"} AWC</span>
+                            </div>
+                            <div className="staking-info-item staking-info-item-apart">
+                                <span className="staking-info-item-title">time to reward</span>
+                                <span
+                                    className="staking-info-item-text">{timeToReward ? timeToReward : stakedAssets.length > 0 ? "Loading..." : "No staked assets."}</span>
+                            </div>
+                            <button className="staking-info-claim" onClick={() => claimTokens()}>Claim</button>
                         </div>
                     </div>
-                    <div className="staking-info">
-                        <div className="staking-info-item staking-info-item-apart">
-                            <span className="staking-info-item-title">Stake power</span>
-                            <span
-                                className="staking-info-item-text">{stakePower ? String(stakePower).slice(0, 6) : "0.0000"} AWC</span>
-                        </div>
-                        <div className="staking-info-item staking-info-item-apart">
-                            <span className="staking-info-item-title">time to reward</span>
-                            <span
-                                className="staking-info-item-text">{timeToReward ? timeToReward : stakedAssets.length > 0 ? "Loading..." : "No staked assets."}</span>
-                        </div>
-                        <button className="staking-info-claim" onClick={() => claimTokens()}>Claim</button>
-                    </div>
-                </div>
+                </Fade>
                 <h2 className="page-title">Assets</h2>
-                <div className="staking-assets-wrapper">
-                    <div className="staking-assets-filters-wrapper">
-                        <div className="staking-assets-filters-buttons">
-                            <button className="staking-assets-filters-button staking-assets-filters-button-stake" disabled={loading} onClick={()=>{
-                                const assetIDs = [];
-                                unstakedAssets.forEach(asset => {
-                                    assetIDs.push(asset.asset_id)
-                                })
-                                stakeAssets(assetIDs)
-                            }}>Stake All</button>
-                            <button className="staking-assets-filters-button staking-assets-filters-button-unstake" disabled={loading} onClick={()=>{
-                                const assetIDs = [];
-                                stakedAssets.forEach(asset => {
-                                    assetIDs.push(asset.asset_id)
-                                })
-                                unStakeAssets(assetIDs);
-                            }}>Unstake All</button>
+                <Fade bottom>
+                    <div className="staking-assets-wrapper">
+                        <div className="staking-assets-filters-wrapper">
+                            <div className="staking-assets-filters-buttons">
+                                <button className="staking-assets-filters-button staking-assets-filters-button-stake"
+                                        disabled={loading} onClick={() => {
+                                    const assetIDs = [];
+                                    unstakedAssets.forEach(asset => {
+                                        assetIDs.push(asset.asset_id)
+                                    })
+                                    stakeAssets(assetIDs)
+                                }}>Stake All
+                                </button>
+                                <button className="staking-assets-filters-button staking-assets-filters-button-unstake"
+                                        disabled={loading} onClick={() => {
+                                    const assetIDs = [];
+                                    stakedAssets.forEach(asset => {
+                                        assetIDs.push(asset.asset_id)
+                                    })
+                                    unStakeAssets(assetIDs);
+                                }}>Unstake All
+                                </button>
+                            </div>
+                            <div className="staking-assets-filters">
+                                <button
+                                    className={`staking-assets-filter ${chosenAssets === "staked" ? "staking-assets-filter-active" : ""}`}
+                                    disabled={loading}
+                                    onClick={() => {
+                                        getAssets().then(() => {
+                                            setChosenAssets("staked")
+                                        })
+                                    }}>Staked
+                                </button>
+                                <div className="staking-assets-vertical-line"/>
+                                <button
+                                    className={`staking-assets-filter ${chosenAssets === "unstaked" ? "staking-assets-filter-active" : ""}`}
+                                    disabled={loading}
+                                    onClick={() => {
+                                        getAssets().then(() => {
+                                            setChosenAssets("unstaked")
+                                        })
+                                    }}>Unstaked
+                                </button>
+                            </div>
                         </div>
-                        <div className="staking-assets-filters">
-                            <button
-                                className={`staking-assets-filter ${chosenAssets === "staked" ? "staking-assets-filter-active" : ""}`}
-                                disabled={loading}
-                                onClick={() => {
-                                    getAssets().then(()=>{
-                                        setChosenAssets("staked")
-                                    })
-                                }}>Staked
-                            </button>
-                            <div className="staking-assets-vertical-line"/>
-                            <button
-                                className={`staking-assets-filter ${chosenAssets === "unstaked" ? "staking-assets-filter-active" : ""}`}
-                                disabled={loading}
-                                onClick={() => {
-                                    getAssets().then(()=>{
-                                        setChosenAssets("unstaked")
-                                    })
-                                }}>Unstaked
-                            </button>
+                        <div className="staking-assets-container">
+                            {loading ? <Preloader/> : renderAssets()}
                         </div>
                     </div>
-                    <div className="staking-assets">
-                        {loading ? <Preloader/> : renderAssets()}
-                        {/*<Pagination contentPerPage={assetsPerPage} totalContent={16}*/}
-                        {/*            paginate={(pageNum) => setCurrentPage(pageNum)} currentPage={currentPage}/>*/}
-                    </div>
-                </div>
+                </Fade>
             </div> :
-            <div className="wallet-warning"><h2 className="warning-message">Please connect your wallet first.</h2>
-            </div>
+            <Fade bottom>
+                <div className="wallet-warning">
+                    <h2 className="warning-message">Please connect your wallet first.</h2>
+                </div>
+            </Fade>
     )
 }
 

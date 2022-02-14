@@ -46,14 +46,68 @@
 
   .header-wallet
     @include flex-props-center
+    position: relative
+    cursor: pointer
+    @include phone
+      margin-right: 25px
 
     .header-wallet-icon
       width: 24px
       height: auto
       margin-right: 10px
+      z-index: 2
 
     .header-wallet-text
       font-weight: 700
+      z-index: 2
+
+    .header-wallet-logout-wrapper
+      position: absolute
+      width: 150%
+      height: 0
+      opacity: 0
+      top: -20px
+      left: -20px
+      background-color: #fff
+      @include flex-props-column-center
+      justify-content: flex-end
+      padding-bottom: 15px
+      z-index: 1
+      border-radius: 15px
+      transition: height .5s ease, opacity .5s ease
+
+      .header-wallet-logout-cross
+        position: absolute
+        top: 10px
+        right: 10px
+        width: 10px
+        height: 10px
+        .header-wallet-logout-cross-line
+          display: block
+          position: absolute
+          width: 2px
+          height: 100%
+          background-color: #000
+          transform: rotate(45deg)
+
+          &:last-child
+            transform: rotate(-45deg)
+
+      .header-wallet-logout
+        color: #fff
+        border: none
+        text-transform: uppercase
+        background-color: #8B80F9
+        padding: 5px 10px
+        font-size: 16px
+        border-radius: 7px
+        font-weight: 700
+        cursor: pointer
+
+    .header-wallet-logout-wrapper-active
+      height: 100px
+      opacity: 1
+
 
 // exported without nesting for it to work inside burger menu
 .header-link

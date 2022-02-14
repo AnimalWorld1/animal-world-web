@@ -16,15 +16,26 @@
 
   .main-page-banner
     width: 100vw
-    height: 100vh
-    background-size: cover
-    background-position: center
-    background-image: url("../../assets/images/main-banner.jpg")
-    @include tablet
-      height: 90vh
+    height: auto
+    //background-size: cover
+    //background-position: center
+    //background-image: url("../../assets/images/main-banner.jpg")
+    //@include tablet
+    //  height: 90vh
     @include phone
-      background-image: url("../../assets/images/main-banner-mobile.png")
+      display: none
 
+  .main-page-banner-mobile
+    display: none
+    width: 100vw
+    height: auto
+    @include phone
+      display: block
+      margin-top: -50vw
+    @include small-phone
+      margin-top: -30vw
+    @media (max-width: 400px)
+      margin-top: 0
 
   .main-description
     @include flex-props-column-center
@@ -168,7 +179,7 @@
         @include desktop
           right: 50px
         @include small-phone
-          right: 5px
+          display: none
 
       .main-game-feature-plant-2
         left: -50px
@@ -176,8 +187,7 @@
         @include desktop
           left: 50px
         @include small-phone
-          left: 5px
-          top: 50%
+          display: none
 
       .main-game-feature-plant-3
         right: -50px
@@ -185,10 +195,13 @@
         @include desktop
           right: 50px
         @include small-phone
-          right: 5px
+          display: none
 
   .main-tutorial
     margin-bottom: 80px
+
+    .slider:focus
+      outline: none
 
     .slider-control-bottomcenter
       bottom: -10% !important
@@ -343,6 +356,9 @@
 
   .main-game-preview
     margin-bottom: 80px
+
+    .slider:focus
+      outline: none
 
     .slider-control-bottomcenter
       @include small-phone
