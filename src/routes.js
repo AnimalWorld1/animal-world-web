@@ -1,7 +1,6 @@
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 import Header from "./components/header";
-import StakingPage from "./pages/staking";
 import App from './App'
 import Page404 from "./pages/404";
 import MainPage from "./pages/main";
@@ -19,7 +18,6 @@ export default function AppRoutes() {
                 <ParallaxProvider>
                     <Routes>
                         <Route path="/" element={<MainPage/>}/>
-                        <Route path="/staking" element={<StakingPage/>}/>
                         <Route path="/episodes" element={<EpisodesPage/>}/>
                         <Route path="/packs" element={<PacksPage/>}/>
                         <Route path="/roadmap" element={<RoadmapPage/>}/>

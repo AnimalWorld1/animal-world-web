@@ -52,12 +52,6 @@ function Header() {
                              className={({isActive}) => (isActive ? 'header-link header-link-active' : 'header-link')}>
                         Roadmap
                     </NavLink>
-                    {AccountStore.accountAddress ?
-                        <NavLink to="/staking" onClick={()=>setSidebarOpened(false)}
-                                 className={({isActive}) => (isActive ? 'header-link header-link-active' : 'header-link')}>
-                            Staking
-                        </NavLink>
-                        : ""}
                     <a href="https://animalworld-1.gitbook.io/animal-world/" target="_blank" rel="noreferrer" onClick={()=>setSidebarOpened(false)} className="header-link">
                         Whitepaper
                     </a>
@@ -80,12 +74,6 @@ function Header() {
                          className={({isActive}) => (isActive ? 'header-link header-link-active' : 'header-link')}>
                     Roadmap
                 </NavLink>
-                {AccountStore.accountAddress ?
-                    <NavLink to="/staking"
-                             className={({isActive}) => (isActive ? 'header-link header-link-active' : 'header-link')}>
-                        Staking
-                    </NavLink>
-                    : ""}
                 <a href="https://animalworld-1.gitbook.io/animal-world/" target="_blank" rel="noreferrer" onClick={()=>setSidebarOpened(false)} className="header-link">
                     Whitepaper
                 </a>
