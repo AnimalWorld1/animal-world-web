@@ -78,28 +78,9 @@ function Header() {
                     Whitepaper
                 </a>
             </nav>
-            {AccountStore.accountAddress ?
-                <div className="header-wallet" onClick={()=>setLogOutOpened(true)}>
-                    <WalletUserIcon className="header-wallet-icon"/>
-                    <span className="header-wallet-text">{AccountStore.accountAddress}</span>
-                    <div className={`header-wallet-logout-wrapper ${logOutOpened ? "header-wallet-logout-wrapper-active" : ""}`}>
-                        <div className="header-wallet-logout-cross" onClick={(e)=>{
-                            e.stopPropagation();
-                            setLogOutOpened(false);
-                        }}>
-                            <div className="header-wallet-logout-cross-line"/>
-                            <div className="header-wallet-logout-cross-line"/>
-                        </div>
-                        <button className="header-wallet-logout" onClick={(e)=> {
-                            e.stopPropagation();
-                            setLogOutOpened(false);
-                            AccountStore.setUserData([]);
-                            AccountStore.changeAccountAddress(null);
-                        }}>Log out</button>
-                    </div>
-                </div>
-                : <button className="header-log-in" onClick={() => setModalOpened(true)}>Log In</button>}
-            <ChooseWalletModal opened={modalOpened} setOpened={setModalOpened}/>
+                <a href="https://animalworldgame.io" target="_blank" rel="noreferrer" onClick={()=>setSidebarOpened(false)} className="page-title">
+                    Play Game
+                    </a>
         </div>
     )
 }

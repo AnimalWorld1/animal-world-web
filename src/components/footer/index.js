@@ -9,7 +9,10 @@ export default function Footer() {
     return (
         <footer className="footer">
             <div className="footer-wrapper">
-                <p className="footer-company-info">ALL RIGHTS RESERVED BY- SMS tech Corporation , REG NR:  890515712/ PS WARD / COMMERCIAL II,  601/A , Chandresh arcade , Lodha road , Mira road east . Mumbai - 401107.</p>
+                <p className="footer-company-info"> 
+ALL RIGHTS RESERVED BY- INFINITY TECH CORP
+REG NR 890577958/ HE Ward/ Commercial II
+408, PTL compound , 3rd road , khar west . Mumbai</p>
                 <div className="footer-social">
                     <span className="footer-social-text">Follow us on social media</span>
                     <div className="footer-social-links">
@@ -31,8 +34,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="footer-social-copyright">
-                    <a href="mailto:smstechcorp@gmail.com" target="_blank" rel="noreferrer"
-                       className="footer-social-copyright-email">smstechcorp@gmail.com</a>
+
                     <span className="footer-social-copyright-text">© 2022 Animalworld.io All rights reserved</span>
                 </div>
             </div>

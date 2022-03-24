@@ -45,12 +45,12 @@ export default function RoadmapPage() {
                                     <div className="roadmap-block-content">
                                         <span className="roadmap-block-content-item">✅ New whitepaper <br/> release</span>
                                         <span className="roadmap-block-content-item">✅ New website</span>
-                                        <span className="roadmap-block-content-item">🔳 Game Updates<br/> and sneak peeks</span>
+                                        <span className="roadmap-block-content-item">✅ Game Updates<br/> and sneak peeks</span>
                                     </div>
                                     <div className="roadmap-block-content">
-                                        <span className="roadmap-block-content-item">🔳 Animal, Machines and Crop<br/> fields drop in AWC (February<br/> 16th)</span>
-                                        <span className="roadmap-block-content-item">🔳 Trees staking for AWC stopped<br/> (February 28th)</span>
-                                        <span className="roadmap-block-content-item">🔳 Alpha game release and testing</span>
+                                        <span className="roadmap-block-content-item">✅  Machines and Crop<br/> fields drop in AWC (February 16th and 26th)</span>
+                                        <span className="roadmap-block-content-item">✅ Trees staking for AWC stopped<br/> (February 28th)</span>
+                                        <span className="roadmap-block-content-item">✅ Alpha game release and testing</span>
                                     </div>
                                 </div>
                             </div>
@@ -58,13 +58,13 @@ export default function RoadmapPage() {
                                 <h4 className="roadmap-block-title">Q2/2022</h4>
                                 <div className="roadmap-block-content-wrapper">
                                     <div className="roadmap-block-content">
-                                        <span className="roadmap-block-content-item">🔳 Upgrades to awc<br/> distribution system<br/> and market orders</span>
-                                        <span className="roadmap-block-content-item">🔳 Collaboration with <br/>other projects</span>
-                                        <span className="roadmap-block-content-item">🔳 Listing Partnerships</span>
+                                    <span className="roadmap-block-content-item">🔳 Animal, Shelters and Machine Pack V3 sale</span>
+                                        <span className="roadmap-block-content-item">🔳 Upgrades to awc distribution system<br/> and market orders</span>
+                                        <span className="roadmap-block-content-item">🔳 Bridge for tokens on BSC</span>
+                                        <span className="roadmap-block-content-item">🔳 Collaboration NFTs integrated with partner projects</span>
                                     </div>
                                     <div className="roadmap-block-content">
-                                        <span className="roadmap-block-content-item">🔳 Launch on BSC </span>
-                                        <span className="roadmap-block-content-item">🔳 Bridge for NFT and tokens</span>
+                                        <span className="roadmap-block-content-item">🔳 Listing Partnerships</span>
                                         <span className="roadmap-block-content-item">🔳 Land upgrade mechanics</span>
                                         <span className="roadmap-block-content-item">🔳 Next game mode announced</span>
                                     </div>
@@ -87,7 +87,7 @@ export default function RoadmapPage() {
                             <div className="roadmap-future-content">
                                 <span className="roadmap-future-content-item">🔳 New animal (Wolves, Lions, Eagle etc)</span>
                                 <span className="roadmap-future-content-item">🔳 PVP battle mode</span>
-                                <span className="roadmap-future-content-item">🔳 DAO and guild based system</span>
+                                <span className="roadmap-future-content-item">🔳 AnimalWorld governance model</span>
                                 <span className="roadmap-future-content-item">🔳 Metaverse Coming Soon...</span>
                                 <img src={require("../../assets/gifs/vr.gif").default} alt="vr gif" className="roadmap-future-content-item roadmap-future-content-item-image"/>
                             </div>
