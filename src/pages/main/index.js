@@ -136,45 +136,59 @@ export default function MainPage() {
                     <Carousel
                         withoutControls={true}
                         autoplay={true}
-                        autoplayInterval={2000}
+                        autoplayInterval={3000}
                         wrapAround={true}
                         pauseOnHover={false}
                         easing="easeQuadInOut"
                     >
                         <div className="main-collect-slide main-collect-slide-1">
                             <div className="main-collect-slide-plate">
-                                <p className="main-collect-slide-plate-text">Common</p>
+                                <p className="main-collect-slide-plate-text">DIVINE Trees</p>
                             </div>
-                            <img src={require("../../assets/images/tree-common.jpg").default} alt="common lemon tree"
+                            <img src={require("../../assets/images/Mango-tree.gif").default} alt="common lemon tree"
+                                 className="main-collect-image"/>
+                        </div>
+                        <div className="main-collect-slide main-collect-slide-1">
+                            <div className="main-collect-slide-plate">
+                                <p className="main-collect-slide-plate-text">DIVINE Trees</p>
+                            </div>
+                            <img src={require("../../assets/images/Coconut-tree.gif").default} alt="common lemon tree"
                                  className="main-collect-image"/>
                         </div>
                         <div className="main-collect-slide main-collect-slide-2">
                             <div className="main-collect-slide-plate">
-                                <p className="main-collect-slide-plate-text">Rare</p>
+                                <p className="main-collect-slide-plate-text">Crop fields</p>
                             </div>
-                            <img src={require("../../assets/images/tree-rare.jpg").default} alt="rare lemon tree"
+                            <img src={require("../../assets/images/cf.png").default} alt="rare lemon tree"
                                  className="main-collect-image"/>
                         </div>
                         <div className="main-collect-slide main-collect-slide-3">
                             <div className="main-collect-slide-plate">
-                                <p className="main-collect-slide-plate-text">Epic</p>
+                                <p className="main-collect-slide-plate-text">Common Machines</p>
                             </div>
-                            <img src={require("../../assets/images/tree-epic.gif").default} alt="epic fig tree"
+                            <img src={require("../../assets/images/comicecream.png").default} alt="epic fig tree"
                                  className="main-collect-image"/>
                         </div>
                         <div className="main-collect-slide main-collect-slide-4">
                             <div className="main-collect-slide-plate">
-                                <p className="main-collect-slide-plate-text">Legendary</p>
+                                <p className="main-collect-slide-plate-text">Rare Machines</p>
                             </div>
-                            <img src={require("../../assets/images/tree-legendary.gif").default}
+                            <img src={require("../../assets/images/rbbq.gif").default}
                                  alt="legendary coconut tree"
                                  className="main-collect-image"/>
                         </div>
                         <div className="main-collect-slide main-collect-slide-5">
                             <div className="main-collect-slide-plate">
-                                <p className="main-collect-slide-plate-text">Mythic</p>
+                                <p className="main-collect-slide-plate-text">Legendary Machines</p>
                             </div>
-                            <img src={require("../../assets/images/tree-mythic.gif").default} alt="mythic lemon tree"
+                            <img src={require("../../assets/images/legic.gif").default} alt="mythic lemon tree"
+                                 className="main-collect-image"/>
+                        </div>
+                        <div className="main-collect-slide main-collect-slide-5">
+                            <div className="main-collect-slide-plate">
+                                <p className="main-collect-slide-plate-text">Land</p>
+                            </div>
+                            <img src={require("../../assets/images/lands.png").default} alt="mythic lemon tree"
                                  className="main-collect-image"/>
                         </div>
                     </Carousel>
