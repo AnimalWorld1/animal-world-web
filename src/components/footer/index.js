@@ -10,7 +10,7 @@ export default function Footer() {
         <footer className="footer">
             <div className="footer-wrapper">
                 <p className="footer-company-info"> 
-ALL RIGHTS RESERVED BY- INFINITY TECH CORP
+CEO- FAHAD ANSARI ALL RIGHTS RESERVED BY- INFINITY TECH CORP
 REG NR 890577958/ HE Ward/ Commercial II
 408, PTL compound , 3rd road , khar west . Mumbai</p>
                 <div className="footer-social">
