@@ -28,7 +28,7 @@ REG NR 890577958/ HE Ward/ Commercial II
                         <a href="https://t.me/animalworldwax" target="_blank" rel="noreferrer" className="footer-social-link">
                             <TelegramLogo className="footer-social-link-image"/>
                         </a>
-                        <a href="https://discord.gg/nbeb6MN9hA" target="_blank" className="footer-social-link">
+                        <a href="https://discord.gg/RyUbbnag" target="_blank" className="footer-social-link">
                             <DiscordLogo className="footer-social-link-image"/>
                         </a>
                     </div>
