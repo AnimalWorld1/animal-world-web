@@ -286,6 +286,10 @@
       background-position: center
       @include flex-props-center
 
+      @include phone
+        height: 60vh
+        padding: 0 30px
+
       @include small-phone
         height: 80vh
         @include flex-props-column-center
@@ -301,8 +305,8 @@
         background-size: contain
         background-repeat: no-repeat
         @include tablet
-          width: 300px
-          height: 100px
+          width: 250px
+          height: 150px
 
         //custom endpoints
         @media (max-width: 650px)
@@ -314,12 +318,18 @@
 
         .main-collect-slide-plate-text
           font-weight: 900
-          font-size: 21px
+          font-size: 30px
           color: white
           text-transform: uppercase
           margin-bottom: 10px
+          text-align: center
+          padding: 20px 50px
           @include tablet
-            font-size: 30px
+            padding: 20px 30px
+            font-size: 24px
+
+          @include phone
+            font-size: 21px
 
       .main-collect-image
         width: 300px
@@ -327,10 +337,6 @@
         transform: rotate(-10deg)
         transition: all 1s ease
         @include tablet
-          width: 200px
-
-        //custom endpoints
-        @media (max-width: 650px)
           width: 150px
 
         @include small-phone
@@ -338,6 +344,19 @@
 
         &:hover
           transform: rotate(0deg) scale(1.2)
+
+      .main-collect-image-small
+        width: 400px
+
+        @include tablet
+          width: 250px
+
+        @include phone
+          width: 200px
+
+        @include small-phone
+          width: 300px
+
 
     .main-collect-slide-1
       background-image: url("../../assets/images/collect-slider-1.png")

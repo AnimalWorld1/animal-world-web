@@ -10,7 +10,6 @@ import {ReactComponent as BlackArrowRight} from '../../assets/images/slider-arro
 import {ReactComponent as BlackArrowLeft} from '../../assets/images/slider-arrow-left-black.svg';
 import gameplayScreenshot1 from '../../assets/images/game-preview-1.png'
 import gameplayScreenshot2 from '../../assets/images/game-preview-2.png'
-import Bounce from 'react-reveal/Bounce';
 import Fade from 'react-reveal/Fade';
 import Slide from 'react-reveal/Slide';
 import {Parallax} from "react-scroll-parallax";
@@ -157,10 +156,10 @@ export default function MainPage() {
                         </div>
                         <div className="main-collect-slide main-collect-slide-2">
                             <div className="main-collect-slide-plate">
-                                <p className="main-collect-slide-plate-text">Crop fields</p>
+                                <p className="main-collect-slide-plate-text">Crop fields *</p>
                             </div>
-                            <img src={require("../../assets/images/cf.png").default} alt="rare lemon tree"
-                                 className="main-collect-image"/>
+                            <img src={require("../../assets/images/crop-field.png").default} alt="rare lemon tree"
+                                 className="main-collect-image main-collect-image-small"/>
                         </div>
                         <div className="main-collect-slide main-collect-slide-3">
                             <div className="main-collect-slide-plate">
@@ -186,10 +185,10 @@ export default function MainPage() {
                         </div>
                         <div className="main-collect-slide main-collect-slide-5">
                             <div className="main-collect-slide-plate">
-                                <p className="main-collect-slide-plate-text">Land</p>
+                                <p className="main-collect-slide-plate-text">Land *</p>
                             </div>
                             <img src={require("../../assets/images/lands.png").default} alt="mythic lemon tree"
-                                 className="main-collect-image"/>
+                                 className="main-collect-image main-collect-image-small"/>
                         </div>
                     </Carousel>
                 </section>
