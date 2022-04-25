@@ -74,6 +74,9 @@
         &:nth-child(6)
           align-self: flex-start
           margin-left: 50px
+          @include small-phone
+            margin-top: 240px
+            align-self: flex-end
 
   .roadmap-video-wrapper
     width: 1280px
@@ -122,6 +125,10 @@
         align-items: flex-start
         @include phone
           background: rgba(255, 255, 255, 0.8)
+          max-width: 90vw
+
+        @include small-phone
+          width: 90vw
 
         &:nth-child(1)
           align-self: flex-end
@@ -131,7 +138,7 @@
 
         &:nth-child(2)
           align-self: flex-start
-          margin: -100px 0 100px
+          margin: 10px 0 100px
           @include tablet
             margin-bottom: 50px
           @include phone
@@ -148,10 +155,17 @@
           border-width: 40px 40px 0 40px
           border-color: rgba(255, 255, 255, 0.5) transparent transparent transparent
           bottom: -40px
-          left: 80px
+          left: 75px
           z-index: 2
           @include phone
             display: none
+
+        &:nth-child(3)
+          &:after
+            transform: rotate(-90deg)
+            right: -60px
+            bottom: 100px
+            left: initial
 
         &:hover
           background-color: #fff
