@@ -270,44 +270,27 @@
     @include flex-props-column-center
     margin-bottom: 80px
 
+    .roadmap-tokenomics-text
+      margin-bottom: 100px
+
     .roadmap-tokenomics-wrapper
       background-image: url("../../assets/images/tokenomics-background.png")
       background-size: cover
-      width: 70vw
+      width: 100vw
+      min-height: calc(100vw / 2.36)
       border-radius: 15px
       padding: 20px 0 40px 0
 
-      @include desktop
-        width: 85vw
-
-      .roadmap-tokenomics-title-wrapper
-        background-image: url("../../assets/images/tokenomics-title-background.png")
-        background-size: cover
-        max-width: 60vw
-        height: calc(60vw / 6.2)
-        margin: 0 auto 40px
-        @include flex-props-center
-        @include desktop
-          padding: 20px 0
-          max-width: 75vw
-          height: calc(75vw / 6.2)
-
-        @include tablet
-          padding: 60px 0
-
-        .page-title
-          margin-bottom: 0
-          @include desktop
-            font-size: 35px
-            line-height: 40px
-          @include small-phone
-            font-size: 25px
-
       .roadmap-tokenomics-content
+        max-width: 80%
+        margin: 50px auto 0
         padding: 0 50px
         @include flex-props-column-center
         @include phone
           padding: 0 20px
+          max-width: 90%
+        @include small-phone
+          max-width: 95%
 
         .roadmap-tokenomics-item
           margin-bottom: 25px
@@ -321,7 +304,7 @@
             font-weight: 500
             font-size: 30px
             margin-right: 8px
-            color: #fff
+            color: #000
             text-transform: uppercase
             @include tablet
               font-size: 21px
@@ -339,7 +322,7 @@
             margin-right: 8px
 
           .roadmap-tokenomics-item-value
-            color: #fff
+            color: #000
             font-size: 24px
             @include tablet
               font-size: 19px

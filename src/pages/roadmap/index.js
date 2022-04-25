@@ -100,15 +100,13 @@ export default function RoadmapPage() {
                 <Fade right>
                     <section className="roadmap-tokenomics">
                         <h2 className="page-title">Tokenomics</h2>
-                        <p className="roadmap-text">A highly prized token in the entire <span className="roadmap-text-emphasize">ANIMAL WORLD</span>. It is earned through a series
+                        <p className="roadmap-text roadmap-tokenomics-text">A highly prized token in the entire <span className="roadmap-text-emphasize">ANIMAL WORLD</span>. It is earned through a series
                             of processes. Whenever a particular Tree is planted it will reap the respective commodity
                             in a few hours’ time. That commodity is then sent for processing and a finished product
                             is manufactured. This processed commodity will be then listed for sale in the market.
                             IN return the player will receive AWC Tokens.</p>
+                        <h4 className="page-title">TOTAL SUPPLY- 10,000,000,000</h4>
                         <div className="roadmap-tokenomics-wrapper">
-                            <div className="roadmap-tokenomics-title-wrapper">
-                                <h4 className="page-title">TOTAL SUPPLY- 10,000,000,000</h4>
-                            </div>
                             <div className="roadmap-tokenomics-content">
                                 <div className="roadmap-tokenomics-item">
                                     <h6 className="roadmap-tokenomics-item-title">PLAY TO EARN 30%</h6>
