@@ -34,23 +34,23 @@ export default function RoadmapPage() {
                             <div className="roadmap-block">
                                 <h4 className="roadmap-block-title">Q4/2021</h4>
                                 <div className="roadmap-block-content">
-                                    <span className="roadmap-block-content-item">✅ Tree sale</span>
-                                    <span className="roadmap-block-content-item">✅ Trees staking for <br/> AWC started</span>
-                                    <span className="roadmap-block-content-item">✅ Land sale phase 1</span>
+                                    <span className="roadmap-block-content-item">✅ &nbsp;Tree sale</span>
+                                    <span className="roadmap-block-content-item">✅ &nbsp;Trees staking for <br/> AWC started</span>
+                                    <span className="roadmap-block-content-item">✅ &nbsp;Land sale phase 1</span>
                                 </div>
                             </div>
                             <div className="roadmap-block">
                                 <h4 className="roadmap-block-title">Q1/2022</h4>
                                 <div className="roadmap-block-content-wrapper">
                                     <div className="roadmap-block-content">
-                                        <span className="roadmap-block-content-item">✅ New whitepaper <br/> release</span>
-                                        <span className="roadmap-block-content-item">✅ New website</span>
-                                        <span className="roadmap-block-content-item">✅ Game Updates<br/> and sneak peeks</span>
+                                        <span className="roadmap-block-content-item">✅ &nbsp;New whitepaper <br/> release</span>
+                                        <span className="roadmap-block-content-item">✅ &nbsp;New website</span>
+                                        <span className="roadmap-block-content-item">✅ &nbsp;Game Updates<br/> and sneak peeks</span>
                                     </div>
                                     <div className="roadmap-block-content">
-                                        <span className="roadmap-block-content-item">✅  Machines and Crop<br/> fields drop in AWC (February 16th and 26th)</span>
-                                        <span className="roadmap-block-content-item">✅ Trees staking for AWC stopped<br/> (February 28th)</span>
-                                        <span className="roadmap-block-content-item">✅ Alpha game release and testing</span>
+                                        <span className="roadmap-block-content-item">✅ &nbsp;Machines and Crop<br/> fields drop in AWC (February 16th and 26th)</span>
+                                        <span className="roadmap-block-content-item">✅ &nbsp;Trees staking for AWC stopped<br/> (February 28th)</span>
+                                        <span className="roadmap-block-content-item">✅ &nbsp;Alpha game release and testing</span>
                                     </div>
                                 </div>
                             </div>
@@ -58,15 +58,15 @@ export default function RoadmapPage() {
                                 <h4 className="roadmap-block-title">Q2/2022</h4>
                                 <div className="roadmap-block-content-wrapper">
                                     <div className="roadmap-block-content">
-                                    <span className="roadmap-block-content-item">🔳 Animal, Shelters and Machine Pack V3 sale</span>
-                                        <span className="roadmap-block-content-item">🔳 Upgrades to awc distribution system<br/> and market orders</span>
-                                        <span className="roadmap-block-content-item">🔳 Bridge for tokens on BSC</span>
-                                        <span className="roadmap-block-content-item">🔳 Collaboration NFTs integrated with partner projects</span>
+                                        <span className="roadmap-block-content-item">✅ &nbsp;Animal, Shelters and Machine Pack V3 sale</span>
+                                        <span className="roadmap-block-content-item">✅ &nbsp;Upgrades to awc distribution system<br/> and market orders</span>
+                                        <span className="roadmap-block-content-item">✅ &nbsp;Collaboration NFTs integrated with partner projects</span>
+                                        <span className="roadmap-block-content-item">✅ &nbsp;Listing Partnerships</span>
                                     </div>
                                     <div className="roadmap-block-content">
-                                        <span className="roadmap-block-content-item">🔳 Listing Partnerships</span>
-                                        <span className="roadmap-block-content-item">🔳 Land upgrade mechanics</span>
-                                        <span className="roadmap-block-content-item">🔳 Next game mode announced</span>
+                                        <span className="roadmap-block-content-item">🔳 &nbsp;Bridge for tokens on BSC</span>
+                                        <span className="roadmap-block-content-item">🔳 &nbsp;Land upgrade mechanics</span>
+                                        <span className="roadmap-block-content-item">🔳 &nbsp;Next game mode announced</span>
                                     </div>
                                 </div>
                             </div>

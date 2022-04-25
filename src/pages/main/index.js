@@ -6,12 +6,13 @@ import {ReactComponent as PigImage} from '../../assets/images/pig.svg';
 import {ReactComponent as CowImage} from '../../assets/images/cow.svg';
 import {ReactComponent as WhiteArrowRight} from '../../assets/images/slider-arrow-right-white.svg';
 import {ReactComponent as WhiteArrowLeft} from '../../assets/images/slider-arrow-left-white.svg';
-import {ReactComponent as BlackArrowRight} from '../../assets/images/slider-arrow-right-black.svg';
-import {ReactComponent as BlackArrowLeft} from '../../assets/images/slider-arrow-left-black.svg';
-import gameplayScreenshot1 from '../../assets/images/game-preview-1.png'
-import gameplayScreenshot2 from '../../assets/images/game-preview-2.png'
+// import {ReactComponent as BlackArrowRight} from '../../assets/images/slider-arrow-right-black.svg';
+// import {ReactComponent as BlackArrowLeft} from '../../assets/images/slider-arrow-left-black.svg';
+// import gameplayScreenshot1 from '../../assets/images/game-preview-1.png'
+// import gameplayScreenshot2 from '../../assets/images/game-preview-2.png'
 import Fade from 'react-reveal/Fade';
 import Slide from 'react-reveal/Slide';
+import Bounce from "react-reveal/Bounce";
 import {Parallax} from "react-scroll-parallax";
 
 export default function MainPage() {
@@ -193,56 +194,56 @@ export default function MainPage() {
                     </Carousel>
                 </section>
             </Fade>
-            <Fade right>
-                <section className="main-game-preview">
-                    <h2 className="main-title">Game preview</h2>
-                    <Carousel
-                        renderCenterLeftControls={({previousSlide}) => (
-                            <BlackArrowLeft className="main-game-preview-slider-arrow" onClick={previousSlide}/>
-                        )}
-                        renderCenterRightControls={({nextSlide}) => (
-                            <BlackArrowRight className="main-game-preview-slider-arrow" onClick={nextSlide}/>
-                        )}
-                        easing="easeQuadInOut"
-                    >
-                        <div className="main-game-preview-slide">
-                            <div className="main-game-preview-slide-content">
-                                <img src={require("../../assets/images/game-preview-1.png").default}
-                                     alt="game screenshot 2"
-                                     className="main-game-preview-slide-image"/>
-                                <div className="main-game-preview-slide-image-phone"
-                                     style={{backgroundImage: `url(${gameplayScreenshot1})`}}/>
-                            </div>
+            <Bounce left>
+                <section className="main-gameplay">
+                    <h2 className="main-title">Gameplay demo</h2>
+                    <div className="main-gameplay-content">
+                        <div className="main-gameplay-frame">
+                            <iframe src="https://www.youtube.com/embed/MvCEEzdbCgs"
+                                    title="YouTube video player" frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen className="main-gameplay-frame-video"/>
                         </div>
-                        <div className="main-game-preview-slide">
-                            <div className="main-game-preview-slide-content">
-                                <img src={require("../../assets/images/game-preview-2.png").default}
-                                     alt="game screenshot 2"
-                                     className="main-game-preview-slide-image"/>
-                                <div className="main-game-preview-slide-image-phone"
-                                     style={{backgroundImage: `url(${gameplayScreenshot2})`}}/>
-                            </div>
-                        </div>
-                    </Carousel>
+                        <img className="main-gameplay-decorations"
+                             src={require("../../assets/images/main-gameplay-decorations.png").default}
+                             alt="decorations"/>
+                    </div>
                 </section>
-            </Fade>
-            {/* Will be replaced with a new video later on.*/}
-            {/*<Bounce left>*/}
-            {/*    <section className="main-gameplay">*/}
-            {/*        <h2 className="main-title">Gameplay demo</h2>*/}
-            {/*        <div className="main-gameplay-content">*/}
-            {/*            <div className="main-gameplay-frame">*/}
-            {/*                <iframe src="https://www.youtube.com/embed/MvCEEzdbCgs"*/}
-            {/*                        title="YouTube video player" frameBorder="0"*/}
-            {/*                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"*/}
-            {/*                        allowFullScreen className="main-gameplay-frame-video"/>*/}
+            </Bounce>
+            {/*Not needed at the moment*/}
+            {/*<Fade right>*/}
+            {/*    <section className="main-game-preview">*/}
+            {/*        <h2 className="main-title">Game preview</h2>*/}
+            {/*        <Carousel*/}
+            {/*            renderCenterLeftControls={({previousSlide}) => (*/}
+            {/*                <BlackArrowLeft className="main-game-preview-slider-arrow" onClick={previousSlide}/>*/}
+            {/*            )}*/}
+            {/*            renderCenterRightControls={({nextSlide}) => (*/}
+            {/*                <BlackArrowRight className="main-game-preview-slider-arrow" onClick={nextSlide}/>*/}
+            {/*            )}*/}
+            {/*            easing="easeQuadInOut"*/}
+            {/*        >*/}
+            {/*            <div className="main-game-preview-slide">*/}
+            {/*                <div className="main-game-preview-slide-content">*/}
+            {/*                    <img src={require("../../assets/images/game-preview-1.png").default}*/}
+            {/*                         alt="game screenshot 2"*/}
+            {/*                         className="main-game-preview-slide-image"/>*/}
+            {/*                    <div className="main-game-preview-slide-image-phone"*/}
+            {/*                         style={{backgroundImage: `url(${gameplayScreenshot1})`}}/>*/}
+            {/*                </div>*/}
             {/*            </div>*/}
-            {/*            <img className="main-gameplay-decorations"*/}
-            {/*                 src={require("../../assets/images/main-gameplay-decorations.png").default}*/}
-            {/*                 alt="decorations"/>*/}
-            {/*        </div>*/}
+            {/*            <div className="main-game-preview-slide">*/}
+            {/*                <div className="main-game-preview-slide-content">*/}
+            {/*                    <img src={require("../../assets/images/game-preview-2.png").default}*/}
+            {/*                         alt="game screenshot 2"*/}
+            {/*                         className="main-game-preview-slide-image"/>*/}
+            {/*                    <div className="main-game-preview-slide-image-phone"*/}
+            {/*                         style={{backgroundImage: `url(${gameplayScreenshot2})`}}/>*/}
+            {/*                </div>*/}
+            {/*            </div>*/}
+            {/*        </Carousel>*/}
             {/*    </section>*/}
-            {/*</Bounce>*/}
+            {/*</Fade>*/}
         </div>
     )
 }
