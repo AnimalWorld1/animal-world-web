@@ -24,7 +24,7 @@ export default function RoadmapPage() {
                             <img src={require("../../assets/gifs/fig-tree.gif").default} alt="fig tree gif" className="roadmap-mobile-background-item"/>
                             <RoadmapMobileCart className="roadmap-mobile-background-item"/>
                             <RoadmapMobilePlant className="roadmap-mobile-background-item"/>
-                            <img src={require("../../assets/images/roadmap-mango-tree.png").default} alt="mango tree" className="roadmap-mobile-background-item"/>
+                            <img src={require("../../assets/gifs/roadmap-mango-tree.gif").default} alt="mango tree" className="roadmap-mobile-background-item"/>
                             <img src={require("../../assets/gifs/windmill.gif").default} alt="windmill gif" className="roadmap-mobile-background-item"/>
                         </div>
                     </div>
