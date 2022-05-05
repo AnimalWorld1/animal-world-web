@@ -81,10 +81,9 @@ function Header() {
                     Buy Live Pack Sale
                     </a>
             </nav>
-                <a href="https://animalworldgame.io" target="_blank" rel="noreferrer" onClick={()=>setSidebarOpened(false)} className="page-title">
-                    Play Game
-                    </a>
-
+            <a href="https://animalworldgame.io" target="_blank" rel="noreferrer" onClick={()=>setSidebarOpened(false)} className="header-play-button">
+                Play Game
+            </a>
         </div>
     )
 }
