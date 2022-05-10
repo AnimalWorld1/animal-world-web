@@ -41,6 +41,10 @@
     font-size: 24px
     text-transform: uppercase
     animation: glow 1s ease-in-out infinite alternate
+    @include desktop
+      width: 180px
+      height: 63px
+      font-size: 24px
 
 
   .header-log-in
@@ -131,6 +135,9 @@
   color: #000
   padding-bottom: 4px
   text-transform: uppercase
+  @include desktop
+    margin-right: 20px
+    font-size: 18px
 
   @include tablet
     font-size: 24px
@@ -141,20 +148,6 @@
     margin-right: 0
     margin-bottom: 0
 
-.header-link-active
-  color: #8B80F9
-  border-bottom: 1px solid #8B80F9
-
-
-.header-link
-  font-weight: 900
-  font-size: 20px
-  margin-right: 40px
-  color: #000
-  padding-bottom: 4px
-  text-transform: uppercase
-
-  
 .header-link-active
   color: #8B80F9
   border-bottom: 1px solid #8B80F9

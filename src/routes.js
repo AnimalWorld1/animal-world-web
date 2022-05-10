@@ -14,17 +14,19 @@ export default function AppRoutes() {
     return (
         <App>
             <Router>
-                <Header/>
-                <ParallaxProvider>
-                    <Routes>
-                        <Route path="/" element={<MainPage/>}/>
-                        <Route path="/episodes" element={<EpisodesPage/>}/>
-                        <Route path="/packs" element={<PacksPage/>}/>
-                        <Route path="/roadmap" element={<RoadmapPage/>}/>
-                        <Route path="*" element={<Page404/>}/>
-                    </Routes>
-                </ParallaxProvider>
-                <Footer/>
+                <div className="relative-container">
+                    <Header/>
+                    <ParallaxProvider>
+                        <Routes>
+                            <Route path="/" element={<MainPage/>}/>
+                            <Route path="/episodes" element={<EpisodesPage/>}/>
+                            <Route path="/packs" element={<PacksPage/>}/>
+                            <Route path="/roadmap" element={<RoadmapPage/>}/>
+                            <Route path="*" element={<Page404/>}/>
+                        </Routes>
+                    </ParallaxProvider>
+                    <Footer/>
+                </div>
             </Router>
         </App>
     );

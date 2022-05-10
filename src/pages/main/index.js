@@ -1,19 +1,22 @@
 import "./index.sass"
 import Carousel from "nuka-carousel";
+import {ReactComponent as Hen} from '../../assets/images/hen.svg';
 import {ReactComponent as ChickenImage} from '../../assets/images/chicken.svg';
 import {ReactComponent as GoatImage} from '../../assets/images/goat.svg';
 import {ReactComponent as PigImage} from '../../assets/images/pig.svg';
 import {ReactComponent as CowImage} from '../../assets/images/cow.svg';
 import {ReactComponent as WhiteArrowRight} from '../../assets/images/slider-arrow-right-white.svg';
 import {ReactComponent as WhiteArrowLeft} from '../../assets/images/slider-arrow-left-white.svg';
+import Fade from 'react-reveal/Fade';
+import Slide from 'react-reveal/Slide';
+import Bounce from "react-reveal/Bounce";
+import {isMobile} from "react-device-detect";
+//Not being used atm
 // import {ReactComponent as BlackArrowRight} from '../../assets/images/slider-arrow-right-black.svg';
 // import {ReactComponent as BlackArrowLeft} from '../../assets/images/slider-arrow-left-black.svg';
 // import gameplayScreenshot1 from '../../assets/images/game-preview-1.png'
 // import gameplayScreenshot2 from '../../assets/images/game-preview-2.png'
-import Fade from 'react-reveal/Fade';
-import Slide from 'react-reveal/Slide';
-import Bounce from "react-reveal/Bounce";
-import {Parallax} from "react-scroll-parallax";
+// import {Parallax} from "react-scroll-parallax";
 
 export default function MainPage() {
     return (
@@ -38,56 +41,100 @@ export default function MainPage() {
                         farming. The project runs on a real-time basis, with user friendly accessibility.
                     </p>
                 </section>
+                <div className="main-description-dimensions"/>
             </Fade>
-            <Fade left>
-                <section className="main-game">
-                    <h2 className="main-title">The game</h2>
-                    <div className="main-game-features">
-                        <div className="main-game-feature">
-                            <ChickenImage className="main-game-feature-image"/>
-                            <h5 className="main-game-feature-title">Play to earn</h5>
-                            <p className="main-game-feature-text">Animal World is a Play to Earn game, where players are
-                                able to achieve real world earning opportunities through engaging in simulated farming
-                                to produce resources, which can then be manufactured into finished products.</p>
+            <div className="background">
+                <Fade right>
+                    <section className="main-statistics">
+                        <div className="title-wrapper">
+                            <img src={require("../../assets/images/wooden-sign-3.png").default} alt=""
+                                 className="title-sign"/>
+                            <h2 className="title">Statistics</h2>
                         </div>
-                        <div className="main-game-feature">
-                            <GoatImage className="main-game-feature-image"/>
-                            <h5 className="main-game-feature-title">Tradable nft</h5>
-                            <p className="main-game-feature-text">All cards are tokenized as NFTs, providing proof of
-                                digital ownership by the player. This means they can be traded, auctioned, or exchanged
-                                on 3rd party trading platforms.</p>
+                        <div className="main-statistics-wrapper">
+                            <div className="main-statistics-item">
+                                <h6 className="main-statistics-item-title">Total NFT's<br/>minted</h6>
+                                <Hen className="main-statistics-item-image"/>
+                                <span className="main-statistics-item-value">800k and counting</span>
+                            </div>
+                            <div className="main-statistics-item">
+                                <h6 className="main-statistics-item-title">Total volume<br/>traded in WAX</h6>
+                                <img src={require("../../assets/icons/wax-icon.png").default} alt="wax logo"
+                                     className="main-statistics-item-image"/>
+                                <span className="main-statistics-item-value">8m and counting</span>
+                            </div>
+                            <div className="main-statistics-item">
+                                <h6 className="main-statistics-item-title">Total volume<br/>traded in USDT</h6>
+                                <img src={require("../../assets/icons/usdt-icon.png").default} alt="usdt logo"
+                                     className="main-statistics-item-image"/>
+                                <span className="main-statistics-item-value">6m and counting</span>
+                            </div>
                         </div>
-                        <div className="main-game-feature">
-                            <PigImage className="main-game-feature-image"/>
-                            <h5 className="main-game-feature-title">Collectibles</h5>
-                            <p className="main-game-feature-text">Animal World offers exclusive lands, yield cards, and
-                                possession rights. Each is unique and scarce, and is held in the owner's wax wallet.</p>
+                    </section>
+                </Fade>
+                <Fade left>
+                    <section className="main-game">
+                        <div className="title-wrapper">
+                            <img src={require("../../assets/images/wooden-sign-4.png").default} alt=""
+                                 className="title-sign"/>
+                            <h2 className="title">The game</h2>
                         </div>
-                        <div className="main-game-feature">
-                            <CowImage className="main-game-feature-image"/>
-                            <h5 className="main-game-feature-title">Real life farm</h5>
-                            <p className="main-game-feature-text">Animal World is a representation of a REAL WORLD FARM.
-                                As such, players will not only earn from playing the game, but have opportunities to
-                                receive products and earn from the real world.</p>
+                        <div className="main-game-features">
+                            <div className="main-game-feature">
+                                <ChickenImage className="main-game-feature-image"/>
+                                <h5 className="main-game-feature-title">Play to earn</h5>
+                                <p className="main-game-feature-text">Animal World is a Play to Earn game, where players
+                                    are
+                                    able to achieve real world earning opportunities through engaging in simulated
+                                    farming
+                                    to produce resources, which can then be manufactured into finished products.</p>
+                            </div>
+                            <div className="main-game-feature">
+                                <GoatImage className="main-game-feature-image"/>
+                                <h5 className="main-game-feature-title">Tradable nft</h5>
+                                <p className="main-game-feature-text">All cards are tokenized as NFTs, providing proof
+                                    of
+                                    digital ownership by the player. This means they can be traded, auctioned, or
+                                    exchanged
+                                    on 3rd party trading platforms.</p>
+                            </div>
+                            <div className="main-game-feature">
+                                <PigImage className="main-game-feature-image"/>
+                                <h5 className="main-game-feature-title">Collectibles</h5>
+                                <p className="main-game-feature-text">Animal World offers exclusive lands, yield cards,
+                                    and
+                                    possession rights. Each is unique and scarce, and is held in the owner's wax
+                                    wallet.</p>
+                            </div>
+                            <div className="main-game-feature">
+                                <CowImage className="main-game-feature-image"/>
+                                <h5 className="main-game-feature-title">Real life farm</h5>
+                                <p className="main-game-feature-text">Animal World is a representation of a REAL WORLD
+                                    FARM.
+                                    As such, players will not only earn from playing the game, but have opportunities to
+                                    receive products and earn from the real world.</p>
+                            </div>
+                            {/*<Parallax speed={-10} className="main-game-feature-plant main-game-feature-plant-1">*/}
+                            {/*    <img src={require("../../assets/gifs/grass.gif").default} alt="grass"*/}
+                            {/*         className="main-game-feature-plant main-game-feature-plant-1"/>*/}
+                            {/*</Parallax>*/}
+                            {/*<Parallax speed={-10} className="main-game-feature-plant main-game-feature-plant-2">*/}
+                            {/*    <img src={require("../../assets/gifs/grass.gif").default} alt="grass"*/}
+                            {/*         className="main-game-feature-plant main-game-feature-plant-2"/>*/}
+                            {/*</Parallax>*/}
+                            {/*<Parallax speed={-10} className="main-game-feature-plant main-game-feature-plant-3">*/}
+                            {/*    <img src={require("../../assets/gifs/grass.gif").default} alt="grass"*/}
+                            {/*         className="main-game-feature-plant main-game-feature-plant-3"/>*/}
+                            {/*</Parallax>*/}
                         </div>
-                        <Parallax speed={-10} className="main-game-feature-plant main-game-feature-plant-1">
-                            <img src={require("../../assets/gifs/grass.gif").default} alt="grass"
-                                 className="main-game-feature-plant main-game-feature-plant-1"/>
-                        </Parallax>
-                        <Parallax speed={-10} className="main-game-feature-plant main-game-feature-plant-2">
-                            <img src={require("../../assets/gifs/grass.gif").default} alt="grass"
-                                 className="main-game-feature-plant main-game-feature-plant-2"/>
-                        </Parallax>
-                        <Parallax speed={-10} className="main-game-feature-plant main-game-feature-plant-3">
-                            <img src={require("../../assets/gifs/grass.gif").default} alt="grass"
-                                 className="main-game-feature-plant main-game-feature-plant-3"/>
-                        </Parallax>
-                    </div>
-                </section>
-            </Fade>
-            <Fade bottom>
+                    </section>
+                </Fade>
                 <section className="main-tutorial">
-                    <h2 className="main-title">How to play</h2>
+                    <div className="title-wrapper">
+                        <img src={require("../../assets/images/wooden-sign-1.png").default} alt=""
+                             className="title-sign"/>
+                        <h2 className="title title-long">How<br/>to play</h2>
+                    </div>
                     <Carousel
                         renderCenterLeftControls={({previousSlide}) => (
                             <WhiteArrowLeft className="main-tutorial-slider-arrow" onClick={previousSlide}/>
@@ -129,91 +176,184 @@ export default function MainPage() {
                         </div>
                     </Carousel>
                 </section>
-            </Fade>
-            <Fade bottom>
-                <section className="main-collect">
-                    <h2 className="main-title">Collect them all</h2>
-                    <Carousel
-                        withoutControls={true}
-                        autoplay={true}
-                        autoplayInterval={3000}
-                        wrapAround={true}
-                        pauseOnHover={false}
-                        easing="easeQuadInOut"
-                    >
-                        <div className="main-collect-slide main-collect-slide-1">
-                            <div className="main-collect-slide-plate">
-                                <p className="main-collect-slide-plate-text">DIVINE Trees</p>
+                <div className="tutorial-dimensions"/>
+                <Fade bottom>
+                    <section className="main-collect">
+                        <div className="title-wrapper">
+                            <img src={require("../../assets/images/wooden-sign-1.png").default} alt=""
+                                 className="title-sign"/>
+                            <h2 className="title title-long">Collect<br/>them all</h2>
+                        </div>
+                        <Carousel
+                            withoutControls={true}
+                            autoplay={true}
+                            autoplayInterval={3000}
+                            wrapAround={true}
+                            pauseOnHover={false}
+                            easing="easeQuadInOut"
+                        >
+                            <div className="main-collect-slide">
+                                <div className="main-collect-slide-plate">
+                                    <p className="main-collect-slide-plate-text">DIVINE Trees</p>
+                                </div>
+                                <img src={require("../../assets/images/Mango-tree.gif").default} alt="common lemon tree"
+                                     className="main-collect-image"/>
                             </div>
-                            <img src={require("../../assets/images/Mango-tree.gif").default} alt="common lemon tree"
-                                 className="main-collect-image"/>
-                        </div>
-                        <div className="main-collect-slide main-collect-slide-1">
-                            <div className="main-collect-slide-plate">
-                                <p className="main-collect-slide-plate-text">DIVINE Trees</p>
+                            <div className="main-collect-slide">
+                                <div className="main-collect-slide-plate">
+                                    <p className="main-collect-slide-plate-text">DIVINE Trees</p>
+                                </div>
+                                <img src={require("../../assets/images/Coconut-tree.gif").default}
+                                     alt="common lemon tree"
+                                     className="main-collect-image"/>
                             </div>
-                            <img src={require("../../assets/images/Coconut-tree.gif").default} alt="common lemon tree"
-                                 className="main-collect-image"/>
-                        </div>
-                        <div className="main-collect-slide main-collect-slide-2">
-                            <div className="main-collect-slide-plate">
-                                <p className="main-collect-slide-plate-text">Crop fields *</p>
+                            <div className="main-collect-slide">
+                                <div className="main-collect-slide-plate">
+                                    <p className="main-collect-slide-plate-text">Crop fields *</p>
+                                </div>
+                                <img src={require("../../assets/images/crop-field.png").default} alt="rare lemon tree"
+                                     className="main-collect-image main-collect-image-small"/>
                             </div>
-                            <img src={require("../../assets/images/crop-field.png").default} alt="rare lemon tree"
-                                 className="main-collect-image main-collect-image-small"/>
-                        </div>
-                        <div className="main-collect-slide main-collect-slide-3">
-                            <div className="main-collect-slide-plate">
-                                <p className="main-collect-slide-plate-text">Common Machines</p>
+                            <div className="main-collect-slide">
+                                <div className="main-collect-slide-plate">
+                                    <p className="main-collect-slide-plate-text">Common Machines</p>
+                                </div>
+                                <img src={require("../../assets/images/comicecream.png").default} alt="epic fig tree"
+                                     className="main-collect-image"/>
                             </div>
-                            <img src={require("../../assets/images/comicecream.png").default} alt="epic fig tree"
-                                 className="main-collect-image"/>
-                        </div>
-                        <div className="main-collect-slide main-collect-slide-4">
-                            <div className="main-collect-slide-plate">
-                                <p className="main-collect-slide-plate-text">Rare Machines</p>
+                            <div className="main-collect-slide">
+                                <div className="main-collect-slide-plate">
+                                    <p className="main-collect-slide-plate-text">Rare Machines</p>
+                                </div>
+                                <img src={require("../../assets/images/rbbq.gif").default}
+                                     alt="legendary coconut tree"
+                                     className="main-collect-image"/>
                             </div>
-                            <img src={require("../../assets/images/rbbq.gif").default}
-                                 alt="legendary coconut tree"
-                                 className="main-collect-image"/>
-                        </div>
-                        <div className="main-collect-slide main-collect-slide-5">
-                            <div className="main-collect-slide-plate">
-                                <p className="main-collect-slide-plate-text">Legendary Machines</p>
+                            <div className="main-collect-slide">
+                                <div className="main-collect-slide-plate">
+                                    <p className="main-collect-slide-plate-text">Legendary Machines</p>
+                                </div>
+                                <img src={require("../../assets/images/legic.gif").default} alt="mythic lemon tree"
+                                     className="main-collect-image"/>
                             </div>
-                            <img src={require("../../assets/images/legic.gif").default} alt="mythic lemon tree"
-                                 className="main-collect-image"/>
-                        </div>
-                        <div className="main-collect-slide main-collect-slide-5">
-                            <div className="main-collect-slide-plate">
-                                <p className="main-collect-slide-plate-text">Land *</p>
+                            <div className="main-collect-slide">
+                                <div className="main-collect-slide-plate">
+                                    <p className="main-collect-slide-plate-text">Land *</p>
+                                </div>
+                                <img src={require("../../assets/images/lands.png").default} alt="mythic lemon tree"
+                                     className="main-collect-image main-collect-image-small"/>
                             </div>
-                            <img src={require("../../assets/images/lands.png").default} alt="mythic lemon tree"
-                                 className="main-collect-image main-collect-image-small"/>
+                        </Carousel>
+                    </section>
+                </Fade>
+                <Bounce left>
+                    <section className="main-gameplay">
+                        <div className="title-wrapper">
+                            <img src={require("../../assets/images/wooden-sign-1.png").default} alt=""
+                                 className="title-sign"/>
+                            <h2 className="title title-long">Gameplay<br/>demo</h2>
                         </div>
-                    </Carousel>
-                </section>
-            </Fade>
-            <Bounce left>
-                <section className="main-gameplay">
-                    <h2 className="main-title">Gameplay demo</h2>
-                    <div className="main-gameplay-content">
-                        <div className="main-gameplay-frame">
-                            <iframe src="https://www.youtube.com/embed/MvCEEzdbCgs"
-                                    title="YouTube video player" frameBorder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowFullScreen className="main-gameplay-frame-video"/>
+                        <div className="main-gameplay-content">
+                            <div className="main-gameplay-frame">
+                                <iframe src="https://www.youtube.com/embed/MvCEEzdbCgs"
+                                        title="YouTube video player" frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen className="main-gameplay-frame-video"/>
+                            </div>
+                            <img className="main-gameplay-decorations"
+                                 src={require("../../assets/images/main-gameplay-decorations.png").default}
+                                 alt="decorations"/>
                         </div>
-                        <img className="main-gameplay-decorations"
-                             src={require("../../assets/images/main-gameplay-decorations.png").default}
-                             alt="decorations"/>
-                    </div>
-                </section>
-            </Bounce>
+                    </section>
+                </Bounce>
+                <Fade right>
+                    <section className="partners">
+                        <div className="title-wrapper title-wrapper-big">
+                            <img src={require("../../assets/images/wooden-sign-4.png").default} alt=""
+                                 className="title-sign"/>
+                            <h2 className="title title-long">Partners and<br/>collaborations</h2>
+                        </div>
+                        <Carousel
+                            renderCenterLeftControls={({previousSlide}) => (
+                                <WhiteArrowLeft className="partners-slider-arrow" onClick={previousSlide}/>
+                            )}
+                            renderCenterRightControls={({nextSlide}) => (
+                                <WhiteArrowRight className="partners-slider-arrow" onClick={nextSlide}/>
+                            )}
+                            easing="easeQuadInOut"
+                            wrapAround={true}
+                            slidesToShow={isMobile ? 1 : 3}
+                            cellAlign={isMobile ? "left" : "center"}
+                            renderBottomCenterControls={null}
+                        >
+                            <div className="partners-slider-item">
+                                <img src={require("../../assets/images/partner-1.svg").default} alt="partners logo"
+                                     className="partners-slider-item-image"/>
+                            </div>
+                            <div className="partners-slider-item">
+                                <img src={require("../../assets/images/partner-2.png").default} alt="partners logo"
+                                     className="partners-slider-item-image"/>
+                            </div>
+                            <div className="partners-slider-item">
+                                <img src={require("../../assets/images/partner-3.png").default} alt="partners logo"
+                                     className="partners-slider-item-image"/>
+                            </div>
+                            <div className="partners-slider-item">
+                                <img src={require("../../assets/images/partner-4.png").default} alt="partners logo"
+                                     className="partners-slider-item-image"/>
+                            </div>
+                            <div className="partners-slider-item">
+                                <img src={require("../../assets/images/partner-5.png").default} alt="partners logo"
+                                     className="partners-slider-item-image"/>
+                            </div>
+                        </Carousel>
+                    </section>
+                </Fade>
+                <Fade left>
+                    <section className="available">
+                        <div className="title-wrapper">
+                            <img src={require("../../assets/images/wooden-sign-5.png").default} alt=""
+                                 className="title-sign"/>
+                            <h2 className="title">Available on</h2>
+                        </div>
+                        {isMobile ?
+                            <Carousel
+                                renderCenterLeftControls={({previousSlide}) => (
+                                    <WhiteArrowLeft className="partners-slider-arrow" onClick={previousSlide}/>
+                                )}
+                                renderCenterRightControls={({nextSlide}) => (
+                                    <WhiteArrowRight className="partners-slider-arrow" onClick={nextSlide}/>
+                                )}
+                                wrapAround={true}
+                            >
+                                <div className="partners-slide">
+                                    <img src={require("../../assets/icons/nefty-logo.png").default} alt="NeftyBlocks logo"
+                                         className="partners-slide-image"/>
+                                </div>
+                                <div className="partners-slide">
+                                    <img src={require("../../assets/icons/nfthive-logo.png").default} alt="NeftyBlocks logo"
+                                         className="partners-slide-image"/>
+                                </div>
+                                <div className="partners-slide">
+                                    <img src={require("../../assets/icons/atomicassets-logo.png").default} alt="NeftyBlocks logo"
+                                         className="partners-slide-image"/>
+                                </div>
+                            </Carousel> :
+                        <div className="available-wrapper">
+                            <img src={require("../../assets/icons/nefty-logo.png").default} alt="NeftyBlocks logo"
+                                 className="available-platform-image"/>
+                            <img src={require("../../assets/icons/nfthive-logo.png").default} alt="NFTHive logo"
+                                 className="available-platform-image"/>
+                            <img src={require("../../assets/icons/atomicassets-logo.png").default}
+                                 alt="AtomicAssets logo" className="available-platform-image"/>
+                        </div>}
+                    </section>
+                </Fade>
+            </div>
             {/*Not needed at the moment*/}
             {/*<Fade right>*/}
             {/*    <section className="main-game-preview">*/}
-            {/*        <h2 className="main-title">Game preview</h2>*/}
+            {/*        <h2 className="title">Game preview</h2>*/}
             {/*        <Carousel*/}
             {/*            renderCenterLeftControls={({previousSlide}) => (*/}
             {/*                <BlackArrowLeft className="main-game-preview-slider-arrow" onClick={previousSlide}/>*/}

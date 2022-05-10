@@ -3,16 +3,50 @@
 .main-page
   background-color: #F3ECE2
 
-  .main-title
-    color: #8B80F9
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
-    text-align: center
-    font-size: 45px
-    font-weight: 900
-    text-transform: uppercase
-    margin-bottom: 40px
-    @include small-phone
-      font-size: 35px
+  .title-wrapper
+    position: relative
+    margin: 0 auto 40px
+    width: fit-content
+
+    .title
+      color: #fff
+      text-align: center
+      font-size: 45px
+      font-weight: 900
+      text-transform: uppercase
+      position: absolute
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
+      width: 400px
+      top: 30%
+      left: 0
+      margin: 0 auto
+      @include small-phone
+        font-size: 35px
+        width: 300px
+
+    .title-long
+      top: 20%
+
+    .title-sign
+      width: 400px
+      @include small-phone
+        width: 300px
+
+  .title-wrapper-big
+    .title
+      width: 600px
+      @include phone
+        width: 400px
+        font-size: 32px
+      @include small-phone
+        width: 300px
+        font-size: 26px
+    .title-sign
+      width: 600px
+      @include phone
+        width: 400px
+      @include small-phone
+        width: 300px
 
   .main-page-banner
     width: 100vw
@@ -37,21 +71,33 @@
     @media (max-width: 400px)
       margin-top: 0
 
+  .main-description-dimensions
+    width: 100vw
+    height: calc(100vw / 4 - 150px)
+    @include desktop
+      height: 30vw
+    @include phone
+      height: 65vw
+    // custom endpoints
+    @media (max-width: 600px)
+      height: 80vw
+    @include small-phone
+      height: 65vh
+
   .main-description
     @include flex-props-column-center
     padding-top: 120px
     padding-bottom: 40px
-    margin-bottom: 80px
-    position: relative
+    position: absolute
     background-image: url("../../assets/images/main-description-background.png")
     background-size: cover
     background-repeat: no-repeat
     background-position: center
     width: 100vw
-    height: calc(100vw/4)
+    height: calc(100vw / 4)
     @include desktop
       background-image: url("../../assets/images/main-description-background-tablet.png")
-      height: calc(100vw/2.5)
+      height: calc(100vw / 2.5)
 
     @include phone
       height: 70vw
@@ -109,9 +155,86 @@
       .main-description-text-emphasize
         color: #FDED23
 
+  .main-statistics
+    padding-top: 180px
+    margin-bottom: 80px
+    font-family: "MuseoSans", sans-serif
+
+    .main-statistics-wrapper
+      width: 100vw
+      padding: 0 75px
+      @include flex-props-space-between
+      @include desktop
+        flex-wrap: wrap
+        justify-content: center
+      @include tablet
+        @include flex-props-column-center
+      @include phone
+        width: 90vw
+        margin: 0 auto
+        padding: 0
+
+      .main-statistics-item
+        width: 400px
+        height: 350px
+        border: 2px solid #DA9859
+        border-radius: 15px
+        position: relative
+        background-color: #EBDBC0
+        @include flex-props-column-space-between
+        @include desktop
+          margin-bottom: 30px
+          &:first-child
+            margin-right: 30px
+        @include tablet
+          &:first-child
+            margin-right: 0
+        @include small-phone
+          width: 300px
+          height: 250px
+        @include smallest-phone
+          width: 250px
+          height: 200px
+
+        &:before
+          content: ""
+          position: absolute
+          top: -4px
+          left: -4px
+          bottom: -4px
+          right: -4px
+          border-radius: 15px
+          background-color: #7C5438
+          z-index: -1
+
+        .main-statistics-item-title
+          background-color: #DA9859
+          border-radius: 0 0 15px 15px
+          padding: 25px 15px 5px
+          color: #fff
+          font-size: 40px
+          font-weight: 700
+          text-align: center
+          @include small-phone
+            font-size: 23px
+
+        .main-statistics-item-image
+          width: 100px
+          @include small-phone
+            width: 60px
+
+        .main-statistics-item-value
+          color: #7C5438
+          font-size: 35px
+          font-weight: 700
+          padding-bottom: 25px
+          @include small-phone
+            font-size: 20px
+
+
   .main-game
     @include flex-props-column-center
-    margin-bottom: 80px
+    margin: 80px 0
     overflow-x: hidden
 
     .main-game-features
@@ -197,8 +320,19 @@
         @include small-phone
           display: none
 
+  .tutorial-dimensions
+    width: 100vw
+    height: calc(100vw / 4.63)
+    @include phone
+      height: 50vw
+    @include small-phone
+      height: 70vw
+
   .main-tutorial
+    position: absolute
+    width: 100%
     margin-bottom: 80px
+    z-index: 2
 
     .slider:focus
       outline: none
@@ -276,6 +410,7 @@
         display: none
 
   .main-collect
+    padding-top: 300px
     margin-bottom: 80px
 
     .main-collect-slide
@@ -440,7 +575,7 @@
             display: block
 
   .main-gameplay
-    padding-bottom: 150px
+    margin-bottom: 150px
 
     .main-gameplay-content
       @include flex-props-center
@@ -476,3 +611,126 @@
 
         @include small-phone
           width: 120px
+
+  .partners
+    margin-bottom: 80px
+    padding: 0 50px
+    @include small-phone
+      padding: 0 25px
+
+    .slider
+      outline: none
+
+    .partners-slider-arrow
+      @include small-phone
+        width: 30px
+
+    .slider-slide
+      @include flex-props-center
+      display: flex !important
+
+    .partners-slider-item
+      width: 300px
+      height: 300px
+      border-radius: 15px
+      position: relative
+      transition: background-color .5s ease, width .5s ease, height .5s ease, margin-left .5s ease, margin-right .5s ease
+      @include flex-props-center
+      @include tablet
+        width: 200px
+        height: 200px
+
+      &:focus
+        outline: none
+
+      &:before
+        content: ""
+        position: absolute
+        top: -4px
+        left: -4px
+        bottom: -4px
+        right: -4px
+        border-radius: 15px
+        z-index: -1
+
+      .partners-slider-item-image
+        width: 90%
+        max-height: 250px
+
+    .slide-visible, .slider-slide
+      .partners-slider-item
+        width: 150px
+        height: 150px
+        opacity: .5
+        @include desktop
+          width: 100px
+          height: 100px
+        @include phone
+          opacity: 1
+
+    .slider-slide
+      .partners-slider-item
+        margin-left: 200px
+        @include desktop
+          margin-left: 100px
+
+    .slide-visible
+      .partners-slider-item
+        margin-left: 0
+        margin-right: 200px
+        @include desktop
+          margin-right: 100px
+
+    .slide-current
+      .partners-slider-item
+        opacity: 1
+        margin: 0
+        width: 300px
+        height: 300px
+        border: 2px solid #DA9859
+        background-color: #EBDBC0
+        &:before
+          background-color: #7C5438
+        @include tablet
+          width: 200px
+          height: 200px
+
+  .available
+    padding-bottom: 180px
+    @include phone
+      padding: 0 10px 300px 10px
+    @include small-phone
+      padding-bottom: 350px
+
+    .available-wrapper
+      margin: 0 auto
+      background-image: url("../../assets/images/available-on-background.png")
+      background-size: cover
+      width: 80vw
+      height: calc(80vw / 4.14)
+      @include flex-props-space-between
+      padding: 0 5%
+      .available-platform-image
+        width: 30%
+
+    .slider
+      outline: none
+
+      .partners-slide
+        background-image: url("../../assets/images/available-on-background.png")
+        background-size: contain
+        margin: 0 auto
+        width: 70vw
+        height: calc(70vw / 4.14)
+        padding: 0 5%
+        @include flex-props-center
+
+        .partners-slide-image
+          width: 80%
+
+      .slider-control-bottomcenter
+        bottom: -35px !important
+
+      .partners-slider-arrow
+        width: 25px
+

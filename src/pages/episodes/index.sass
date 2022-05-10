@@ -1,13 +1,20 @@
 @import "../../global"
 
 .episodes-page
+  @include background
+  color: #fff
   background-color: #F3ECE2
+  padding-bottom: 150px
+  @include phone
+    padding-bottom: 100px
+  @include small-phone
+    padding-bottom: 200px
 
   .episodes-introduction
-    margin: 80px 0
+    padding: 80px 0
     @include flex-props-center
     @include tablet
-      padding: 0 20px
+      padding: 80px 20px
 
     @include phone
       flex-direction: column
@@ -84,13 +91,16 @@
             width: 270px
 
         .episode-text-title
-          color: rgba(255, 94, 57, 0.3)
+          color: #fff
           font-size: 60px
           font-weight: 700
           margin-bottom: 20px
           text-transform: uppercase
           @include phone
             font-size: 52px
+
+        .episode-text-title-blue
+          color: #8B80F9
 
         .episode-text
           font-size: 21px

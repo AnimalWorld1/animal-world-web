@@ -1,10 +1,16 @@
 @import "../../global"
 
 .packs-page
+  @include background
   background-color: #F3ECE2
+  padding-bottom: 150px
+  @include phone
+    padding-bottom: 250px
+  @include small-phone
+    padding-bottom: 300px
 
   .packs
-    margin-top: 80px
+    padding-top: 80px
 
     .packs-title
       color: #8B80F9

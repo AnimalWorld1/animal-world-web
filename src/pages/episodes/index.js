@@ -21,7 +21,9 @@ export default function EpisodesPage() {
                             Episodes refer to the sequence of events as to how the real-life utility counterpart of animal world is projected to be built over the course of time.
                         </p>
                     </div>
-                    <img src={require("../../assets/gifs/episodes-farmer.gif").default} className="episodes-introduction-image"/>
+                    <video autoPlay loop muted playsInline className="episodes-introduction-image">
+                        <source src={require("../../assets/videos/farmer.webm").default} type="video/webm"/>
+                    </video>
                 </section>
             </Fade>
             <section className="episodes">
@@ -32,7 +34,7 @@ export default function EpisodesPage() {
                 <Fade bottom>
                     <div className="episode">
                         <div className="episode-text-wrapper">
-                            <h1 className="episode-text-title">Episode 1</h1>
+                            <h1 className="episode-text-title episode-text-title-blue">Episode 1</h1>
                             <p className="episode-text">
                                 During the initial stage, ANIMAL WORLD will witness laying down of a robust foundational infrastructure for a real life farm. The real life farm will start being built after the game economy is set up and active.
                             </p>
