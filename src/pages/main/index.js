@@ -209,7 +209,7 @@ export default function MainPage() {
                             </div>
                             <div className="main-collect-slide">
                                 <div className="main-collect-slide-plate">
-                                    <p className="main-collect-slide-plate-text">Crop fields *</p>
+                                    <p className="main-collect-slide-plate-text">Crop fields</p>
                                 </div>
                                 <img src={require("../../assets/images/crop-field.png").default} alt="rare lemon tree"
                                      className="main-collect-image main-collect-image-small"/>
@@ -238,7 +238,7 @@ export default function MainPage() {
                             </div>
                             <div className="main-collect-slide">
                                 <div className="main-collect-slide-plate">
-                                    <p className="main-collect-slide-plate-text">Land *</p>
+                                    <p className="main-collect-slide-plate-text">Land</p>
                                 </div>
                                 <img src={require("../../assets/images/lands.png").default} alt="mythic lemon tree"
                                      className="main-collect-image main-collect-image-small"/>
