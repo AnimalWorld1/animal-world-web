@@ -280,6 +280,8 @@ export default function MainPage() {
                             renderCenterRightControls={({nextSlide}) => (
                                 <WhiteArrowRight className="partners-slider-arrow" onClick={nextSlide}/>
                             )}
+                            autoplay={true}
+                            autoplayInterval={3000}
                             easing="easeQuadInOut"
                             wrapAround={true}
                             slidesToShow={isMobile ? 1 : 3}
@@ -325,6 +327,8 @@ export default function MainPage() {
                                     <WhiteArrowRight className="partners-slider-arrow" onClick={nextSlide}/>
                                 )}
                                 wrapAround={true}
+                                autoplay={true}
+                                autoplayInterval={3000}
                             >
                                 <div className="partners-slide">
                                     <img src={require("../../assets/icons/nefty-logo.png").default} alt="NeftyBlocks logo"
