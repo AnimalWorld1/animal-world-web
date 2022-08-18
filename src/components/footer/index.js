@@ -32,7 +32,7 @@ export default function Footer() {
                            className="footer-social-link">
                             <TelegramLogo className="footer-social-link-image"/>
                         </a>
-                        <a href="https://discord.gg/RyUbbnag" target="_blank" className="footer-social-link">
+                        <a href="https://discord.gg/SmT4H28u" target="_blank" className="footer-social-link">
                             <DiscordLogo className="footer-social-link-image"/>
                         </a>
                     </div>
