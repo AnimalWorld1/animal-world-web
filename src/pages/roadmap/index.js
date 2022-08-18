@@ -59,9 +59,9 @@ export default function RoadmapPage() {
                                 <div className="roadmap-block-content-wrapper">
                                     <div className="roadmap-block-content">
                                         <span className="roadmap-block-content-item">✅ &nbsp;Animal, Shelters and Machine Pack V3 sale</span>
-                                        <span className="roadmap-block-content-item">🔳 &nbsp;Upgrades to awc distribution system<br/> and market orders</span>
-                                        <span className="roadmap-block-content-item">🔳 &nbsp;Collaboration NFTs integrated with partner projects</span>
-                                        <span className="roadmap-block-content-item">🔳 &nbsp;Listing Partnerships</span>
+                                        <span className="roadmap-block-content-item">✅ &nbsp;Upgrades to awc distribution system<br/> and market orders</span>
+                                        <span className="roadmap-block-content-item">✅ &nbsp;Collaboration NFTs integrated with partner projects</span>
+                                        <span className="roadmap-block-content-item">✅ &nbsp;Listing Partnerships</span>
                                     </div>
                                     <div className="roadmap-block-content">
                                         <span className="roadmap-block-content-item">🔳 &nbsp;Bridge for tokens on BSC</span>
@@ -88,7 +88,7 @@ export default function RoadmapPage() {
                                 <span className="roadmap-future-content-item">🔳 New animal (Wolves, Lions, Eagle etc)</span>
                                 <span className="roadmap-future-content-item">🔳 PVP battle mode</span>
                                 <span className="roadmap-future-content-item">🔳 AnimalWorld governance model</span>
-                                <span className="roadmap-future-content-item">🔳 Metaverse Extensions</span>
+                                <span className="roadmap-future-content-item">🔳 Metaverse Coming Soon...</span>
                                 <img src={require("../../assets/gifs/vr.gif").default} alt="vr gif" className="roadmap-future-content-item roadmap-future-content-item-image"/>
                             </div>
                             <div className="roadmap-future-content-image-container">
