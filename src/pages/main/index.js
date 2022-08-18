@@ -53,11 +53,6 @@ export default function MainPage() {
                         </div>
                         <div className="main-statistics-wrapper">
                             <div className="main-statistics-item">
-                                <h6 className="main-statistics-item-title">Total NFT's<br/>minted</h6>
-                                <Hen className="main-statistics-item-image"/>
-                                <span className="main-statistics-item-value">800k and counting</span>
-                            </div>
-                            <div className="main-statistics-item">
                                 <h6 className="main-statistics-item-title">Total volume<br/>traded in WAX</h6>
                                 <img src={require("../../assets/icons/wax-icon.png").default} alt="wax logo"
                                      className="main-statistics-item-image"/>
@@ -289,23 +284,7 @@ export default function MainPage() {
                             renderBottomCenterControls={null}
                         >
                             <div className="partners-slider-item">
-                                <img src={require("../../assets/images/partner-1.svg").default} alt="partners logo"
-                                     className="partners-slider-item-image"/>
-                            </div>
-                            <div className="partners-slider-item">
                                 <img src={require("../../assets/images/partner-2.png").default} alt="partners logo"
-                                     className="partners-slider-item-image"/>
-                            </div>
-                            <div className="partners-slider-item">
-                                <img src={require("../../assets/images/partner-3.png").default} alt="partners logo"
-                                     className="partners-slider-item-image"/>
-                            </div>
-                            <div className="partners-slider-item">
-                                <img src={require("../../assets/images/partner-4.png").default} alt="partners logo"
-                                     className="partners-slider-item-image"/>
-                            </div>
-                            <div className="partners-slider-item">
-                                <img src={require("../../assets/images/partner-5.png").default} alt="partners logo"
                                      className="partners-slider-item-image"/>
                             </div>
                         </Carousel>
