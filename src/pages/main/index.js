@@ -46,30 +46,6 @@ export default function MainPage() {
             <div className="background">
                 <Fade right>
                     <section className="main-statistics">
-                        <div className="title-wrapper">
-                            <img src={require("../../assets/images/wooden-sign-3.png").default} alt=""
-                                 className="title-sign"/>
-                            <h2 className="title">Statistics</h2>
-                        </div>
-                        <div className="main-statistics-wrapper">
-                            <div className="main-statistics-item">
-                                <h6 className="main-statistics-item-title">Total NFT's<br/>minted</h6>
-                                <Hen className="main-statistics-item-image"/>
-                                <span className="main-statistics-item-value">800k and counting</span>
-                            </div>
-                            <div className="main-statistics-item">
-                                <h6 className="main-statistics-item-title">Total volume<br/>traded in WAX</h6>
-                                <img src={require("../../assets/icons/wax-icon.png").default} alt="wax logo"
-                                     className="main-statistics-item-image"/>
-                                <span className="main-statistics-item-value">8m and counting</span>
-                            </div>
-                            <div className="main-statistics-item">
-                                <h6 className="main-statistics-item-title">Total volume<br/>traded in USDT</h6>
-                                <img src={require("../../assets/icons/usdt-icon.png").default} alt="usdt logo"
-                                     className="main-statistics-item-image"/>
-                                <span className="main-statistics-item-value">6m and counting</span>
-                            </div>
-                        </div>
                     </section>
                 </Fade>
                 <Fade left>
@@ -105,14 +81,6 @@ export default function MainPage() {
                                     and
                                     possession rights. Each is unique and scarce, and is held in the owner's wax
                                     wallet.</p>
-                            </div>
-                            <div className="main-game-feature">
-                                <CowImage className="main-game-feature-image"/>
-                                <h5 className="main-game-feature-title">Real life farm</h5>
-                                <p className="main-game-feature-text">Animal World is a representation of a REAL WORLD
-                                    FARM.
-                                    As such, players will not only earn from playing the game, but have opportunities to
-                                    receive products and earn from the real world.</p>
                             </div>
                             {/*<Parallax speed={-10} className="main-game-feature-plant main-game-feature-plant-1">*/}
                             {/*    <img src={require("../../assets/gifs/grass.gif").default} alt="grass"*/}
@@ -165,7 +133,7 @@ export default function MainPage() {
                         <div className="tutorial-slide tutorial-slide-4">
                             <img src={require("../../assets/images/tutorial-slider-order.png").default} alt="Tree"
                                  className="tutorial-slide-image"/>
-                            <h4 className="tutorial-slide-title">Complete daily market order</h4>
+                            <h4 className="tutorial-slide-title">Complete daily market orders</h4>
                             <div className="tutorial-slide-helper-block"/>
                         </div>
                         <div className="tutorial-slide tutorial-slide-5">
