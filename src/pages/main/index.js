@@ -53,21 +53,10 @@ export default function MainPage() {
                         </div>
                         <div className="main-statistics-wrapper">
                             <div className="main-statistics-item">
-                                <h6 className="main-statistics-item-title">Total NFT's<br/>minted</h6>
-                                <Hen className="main-statistics-item-image"/>
-                                <span className="main-statistics-item-value">800k and counting</span>
-                            </div>
-                            <div className="main-statistics-item">
                                 <h6 className="main-statistics-item-title">Total volume<br/>traded in WAX</h6>
                                 <img src={require("../../assets/icons/wax-icon.png").default} alt="wax logo"
                                      className="main-statistics-item-image"/>
-                                <span className="main-statistics-item-value">8m and counting</span>
-                            </div>
-                            <div className="main-statistics-item">
-                                <h6 className="main-statistics-item-title">Total volume<br/>traded in USDT</h6>
-                                <img src={require("../../assets/icons/usdt-icon.png").default} alt="usdt logo"
-                                     className="main-statistics-item-image"/>
-                                <span className="main-statistics-item-value">6m and counting</span>
+                                <span className="main-statistics-item-value">8m+</span>
                             </div>
                         </div>
                     </section>
