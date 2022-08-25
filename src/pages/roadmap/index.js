@@ -4,7 +4,7 @@ import {ReactComponent as RoadmapMobileImage} from "../../assets/images/roadmap-
 import {ReactComponent as RoadmapMobileHaystack} from "../../assets/images/roadmap-haystack.svg";
 import {ReactComponent as RoadmapMobileCart} from "../../assets/images/roadmap-cart.svg";
 import {ReactComponent as RoadmapMobilePlant} from "../../assets/images/roadmap-plant.svg";
-import Fade from "react-awesome-reveal/Fade";
+import {Fade} from 'react-awesome-reveal';
 
 export default function RoadmapPage() {
 

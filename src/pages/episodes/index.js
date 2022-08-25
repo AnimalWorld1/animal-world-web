@@ -7,7 +7,7 @@ import {ReactComponent as Episode4Image} from "../../assets/images/episode-4.svg
 import {ReactComponent as Episode5Image} from "../../assets/images/episode-5.svg";
 import {ReactComponent as DashedLine} from "../../assets/images/episodes-dashed-line.svg";
 import {ReactComponent as DashedLineMobile} from "../../assets/images/episodes-dashed-line-mobile.svg";
-import Fade from 'react-awesome-reveal/Fade';
+import {Fade} from 'react-awesome-reveal';
 import {Parallax} from "react-scroll-parallax";
 
 export default function EpisodesPage() {

@@ -1,7 +1,7 @@
 import './index.sass'
 import {ReactComponent as Image404} from "../../assets/images/404-image.svg";
 import {NavLink} from "react-router-dom";
-import Fade from 'react-awesome-reveal/Fade';
+import {Fade} from 'react-awesome-reveal';
 
 export default function Page404() {
     return (
