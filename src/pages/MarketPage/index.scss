@@ -1,0 +1,11 @@
+.drops-page {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding-top: 10em;
+
+  &__container {
+    min-width: 70vw;
+    max-width: 80vw;
+  }
+}

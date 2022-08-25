@@ -33,12 +33,10 @@ export default function MainPage() {
                 <section className="main-description">
                     <h4 className="main-description-title">NFT Farming Simulation Game</h4>
                     <p className="main-description-text">
-                        <span className="main-description-text-emphasize">Animal world</span> is a dynamic, tokenized
-                        project built on the carbon-neutral WAX blockchain. It offers fun simulated gameplay in which
-                        players can collect, own, trade, and exchange farming assets, as well as our token, AWC. We at
-                        Animal World are committed towards building and enabling a diverse community of ecologically
-                        aware individuals who will contribute towards self-sustainable and ecologically positive
-                        farming. The project runs on a real-time basis, with user friendly accessibility.
+                        <span className="main-description-text-emphasize">Animal world</span> is a 3D web simulation game using NFTs on the WAX Blockchain. 
+Strategize to build and grow your farm. Use trees ,cropfields animals and machines to make delicious recipes! Make your way to the top, collecting AWC, XP and NFT rewards by filling daily market orders.
+The ever-expanding Animal World is full of surprises for the hard working farmers as they grow their farms and get ready to embark on new adventures.
+
                     </p>
                 </section>
                 <div className="main-description-dimensions"/>
@@ -57,6 +55,12 @@ export default function MainPage() {
                                 <img src={require("../../assets/icons/wax-icon.png").default} alt="wax logo"
                                      className="main-statistics-item-image"/>
                                 <span className="main-statistics-item-value">8m+</span>
+                            </div>
+                            <div className="main-statistics-item">
+                                <h6 className="main-statistics-item-title">Total volume<br/>traded in USDT</h6>
+                                <img src={require("../../assets/icons/usdt-icon.png").default} alt="wax logo"
+                                     className="main-statistics-item-image"/>
+                                <span className="main-statistics-item-value">6m+</span>
                             </div>
                         </div>
                     </section>
@@ -97,11 +101,9 @@ export default function MainPage() {
                             </div>
                             <div className="main-game-feature">
                                 <CowImage className="main-game-feature-image"/>
-                                <h5 className="main-game-feature-title">Real life farm</h5>
-                                <p className="main-game-feature-text">Animal World is a representation of a REAL WORLD
-                                    FARM.
-                                    As such, players will not only earn from playing the game, but have opportunities to
-                                    receive products and earn from the real world.</p>
+                                <h5 className="main-game-feature-title">Expand your farm</h5>
+                                <p className="main-game-feature-text">Animal World is a simulation of a real
+                                    farming envrionment. Use your own strategies to evolve and grow your farming assets</p>
                             </div>
                             {/*<Parallax speed={-10} className="main-game-feature-plant main-game-feature-plant-1">*/}
                             {/*    <img src={require("../../assets/gifs/grass.gif").default} alt="grass"*/}
@@ -136,7 +138,7 @@ export default function MainPage() {
                         <div className="tutorial-slide tutorial-slide-1">
                             <img src={require("../../assets/images/tutorial-slider-tree.png").default} alt="Tree"
                                  className="tutorial-slide-image"/>
-                            <h4 className="tutorial-slide-title">Plant a tree</h4>
+                            <h4 className="tutorial-slide-title">Plant a<br/> tree<br/>Crop Field<br/>Animal</h4>
                             <div className="tutorial-slide-helper-block"/>
                         </div>
                         <div className="tutorial-slide tutorial-slide-2">
@@ -148,7 +150,7 @@ export default function MainPage() {
                         <div className="tutorial-slide tutorial-slide-3">
                             <img src={require("../../assets/images/tutorial-slider-juice.png").default} alt="Tree"
                                  className="tutorial-slide-image"/>
-                            <h4 className="tutorial-slide-title">Processed commodity</h4>
+                            <h4 className="tutorial-slide-title">Make delicious recipes using machines</h4>
                             <div className="tutorial-slide-helper-block"/>
                         </div>
                         <div className="tutorial-slide tutorial-slide-4">
@@ -160,7 +162,7 @@ export default function MainPage() {
                         <div className="tutorial-slide tutorial-slide-5">
                             <img src={require("../../assets/images/tutorial-slider-awc.png").default} alt="Tree"
                                  className="tutorial-slide-image"/>
-                            <h4 className="tutorial-slide-title">Earn reward in the form of awc token</h4>
+                            <h4 className="tutorial-slide-title">Earn reward in AWC and NFTs!</h4>
                             <div className="tutorial-slide-helper-block"/>
                         </div>
                     </Carousel>
@@ -236,7 +238,7 @@ export default function MainPage() {
                     </section>
                 </Fade>
                 <Bounce left>
-                    <section className="main-gameplay">
+                    {/* <section className="main-gameplay">
                         <div className="title-wrapper">
                             <img src={require("../../assets/images/wooden-sign-1.png").default} alt=""
                                  className="title-sign"/>
@@ -253,7 +255,7 @@ export default function MainPage() {
                                  src={require("../../assets/images/main-gameplay-decorations.png").default}
                                  alt="decorations"/>
                         </div>
-                    </section>
+                    </section> */}
                 </Bounce>
                 <Fade left>
                     <section className="available">

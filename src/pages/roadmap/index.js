@@ -35,7 +35,7 @@ export default function RoadmapPage() {
                                 <h4 className="roadmap-block-title">Q4/2021</h4>
                                 <div className="roadmap-block-content">
                                     <span className="roadmap-block-content-item">✅ &nbsp;Tree sale</span>
-                                    <span className="roadmap-block-content-item">✅ &nbsp;Trees staking for <br/> AWC started</span>
+                                    <span className="roadmap-block-content-item">✅ &nbsp;Trees staking for <br/> AWC </span>
                                     <span className="roadmap-block-content-item">✅ &nbsp;Land sale phase 1</span>
                                 </div>
                             </div>
@@ -49,24 +49,22 @@ export default function RoadmapPage() {
                                     </div>
                                     <div className="roadmap-block-content">
                                         <span className="roadmap-block-content-item">✅ &nbsp;Machines and Crop<br/> fields drop in AWC (February 16th and 26th)</span>
-                                        <span className="roadmap-block-content-item">✅ &nbsp;Trees staking for AWC stopped<br/> (February 28th)</span>
                                         <span className="roadmap-block-content-item">✅ &nbsp;Alpha game release and testing</span>
                                     </div>
                                 </div>
                             </div>
                             <div className="roadmap-block">
-                                <h4 className="roadmap-block-title">Q2/2022</h4>
+                                <h4 className="roadmap-block-title">Q2-Q4/2022</h4>
                                 <div className="roadmap-block-content-wrapper">
                                     <div className="roadmap-block-content">
                                         <span className="roadmap-block-content-item">✅ &nbsp;Animal, Shelters and Machine Pack V3 sale</span>
-                                        <span className="roadmap-block-content-item">✅ &nbsp;Upgrades to awc distribution system<br/> and market orders</span>
+                                        <span className="roadmap-block-content-item">✅ &nbsp;Upgrades to AWC distribution system</span>
                                         <span className="roadmap-block-content-item">✅ &nbsp;Collaboration NFTs integrated with partner projects</span>
-                                        <span className="roadmap-block-content-item">✅ &nbsp;Listing Partnerships</span>
+                                        <span className="roadmap-block-content-item">🔳 &nbsp;New Machines and Recipes</span>
                                     </div>
                                     <div className="roadmap-block-content">
-                                        <span className="roadmap-block-content-item">🔳 &nbsp;Bridge for tokens on BSC</span>
                                         <span className="roadmap-block-content-item">🔳 &nbsp;Land upgrade mechanics</span>
-                                        <span className="roadmap-block-content-item">🔳 &nbsp;Next game mode announced</span>
+                                        <span className="roadmap-block-content-item">🔳 &nbsp;Next game modes- Free To Play, Land Expansion +</span>
                                     </div>
                                 </div>
                             </div>
@@ -85,10 +83,9 @@ export default function RoadmapPage() {
                                 <RoadmapGreenhouse className="roadmap-future-content-image-1"/>
                             </div>
                             <div className="roadmap-future-content">
-                                <span className="roadmap-future-content-item">🔳 New animal (Wolves, Lions, Eagle etc)</span>
+                                <span className="roadmap-future-content-item">🔳 New animals (Wolves, Lions, Eagle etc)</span>
                                 <span className="roadmap-future-content-item">🔳 PVP battle mode</span>
-                                <span className="roadmap-future-content-item">🔳 AnimalWorld governance model</span>
-                                <span className="roadmap-future-content-item">🔳 Metaverse Coming Soon...</span>
+                                <span className="roadmap-future-content-item">🔳 Metaverse Extensions </span>
                                 <img src={require("../../assets/gifs/vr.gif").default} alt="vr gif" className="roadmap-future-content-item roadmap-future-content-item-image"/>
                             </div>
                             <div className="roadmap-future-content-image-container">
@@ -100,11 +97,6 @@ export default function RoadmapPage() {
                 <Fade right>
                     <section className="roadmap-tokenomics">
                         <h2 className="page-title">Tokenomics</h2>
-                        <p className="roadmap-text roadmap-tokenomics-text">A highly prized token in the entire <span className="roadmap-text-emphasize">ANIMAL WORLD</span>. It is earned through a series
-                            of processes. Whenever a particular Tree is planted it will reap the respective commodity
-                            in a few hours’ time. That commodity is then sent for processing and a finished product
-                            is manufactured. This processed commodity will be then listed for sale in the market.
-                            IN return the player will receive AWC Tokens.</p>
                         <h4 className="page-title">TOTAL SUPPLY- 10,000,000,000</h4>
                         <div className="roadmap-tokenomics-wrapper">
                             <div className="roadmap-tokenomics-content">
