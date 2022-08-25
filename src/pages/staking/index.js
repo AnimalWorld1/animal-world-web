@@ -9,7 +9,7 @@ import Pagination from "../../components/pagination";
 import Notification from "../../components/notification";
 import {NotificationManager} from "react-notifications";
 import Preloader from "../../components/preloader";
-import Fade from "react-reveal/Fade";
+import Fade from "react-awesome-reveal/Fade";
 
 function StakingPage() {
     const {AccountStore} = StoreContext();

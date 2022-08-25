@@ -7,9 +7,9 @@ import {ReactComponent as PigImage} from '../../assets/images/pig.svg';
 import {ReactComponent as CowImage} from '../../assets/images/cow.svg';
 import {ReactComponent as WhiteArrowRight} from '../../assets/images/slider-arrow-right-white.svg';
 import {ReactComponent as WhiteArrowLeft} from '../../assets/images/slider-arrow-left-white.svg';
-import Fade from 'react-reveal/Fade';
-import Slide from 'react-reveal/Slide';
-import Bounce from "react-reveal/Bounce";
+import Fade from 'react-awesome-reveal/Fade';
+import Slide from 'react-awesome-reveal/Slide';
+import Bounce from "react-awesome-reveal/Bounce";
 import {isMobile} from "react-device-detect";
 //Not being used atm
 // import {ReactComponent as BlackArrowRight} from '../../assets/images/slider-arrow-right-black.svg';

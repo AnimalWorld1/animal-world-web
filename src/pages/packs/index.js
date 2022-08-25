@@ -1,6 +1,6 @@
 import './index.sass'
 import {ReactComponent as Roadmap} from "../../assets/images/roadmap.svg";
-import Fade from "react-reveal/Fade";
+import Fade from "react-awesome-reveal/Fade";
 
 export default function PacksPage() {
 
