@@ -278,23 +278,7 @@ export default function MainPage() {
                             renderBottomCenterControls={null}
                         >
                             <div className="partners-slider-item">
-                                <img src={require("../../assets/images/partner-1.svg").default} alt="partners logo"
-                                     className="partners-slider-item-image"/>
-                            </div>
-                            <div className="partners-slider-item">
                                 <img src={require("../../assets/images/partner-2.png").default} alt="partners logo"
-                                     className="partners-slider-item-image"/>
-                            </div>
-                            <div className="partners-slider-item">
-                                <img src={require("../../assets/images/partner-3.png").default} alt="partners logo"
-                                     className="partners-slider-item-image"/>
-                            </div>
-                            <div className="partners-slider-item">
-                                <img src={require("../../assets/images/partner-4.png").default} alt="partners logo"
-                                     className="partners-slider-item-image"/>
-                            </div>
-                            <div className="partners-slider-item">
-                                <img src={require("../../assets/images/partner-5.png").default} alt="partners logo"
                                      className="partners-slider-item-image"/>
                             </div>
                         </Carousel>
