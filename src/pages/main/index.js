@@ -31,7 +31,7 @@ export default function MainPage() {
             </Slide>
             <Fade bottom>
                 <section className="main-description">
-                    <h4 className="main-description-title">when nft meets real world utility</h4>
+                    <h4 className="main-description-title">NFT Farming Simulation Game</h4>
                     <p className="main-description-text">
                         <span className="main-description-text-emphasize">Animal world</span> is a dynamic, tokenized
                         project built on the carbon-neutral WAX blockchain. It offers fun simulated gameplay in which
@@ -52,6 +52,11 @@ export default function MainPage() {
                             <h2 className="title">Statistics</h2>
                         </div>
                         <div className="main-statistics-wrapper">
+                            <div className="main-statistics-item">
+                                <h6 className="main-statistics-item-title">Total NFT's<br/>minted</h6>
+                                <Hen className="main-statistics-item-image"/>
+                                <span className="main-statistics-item-value">800k and counting</span>
+                            </div>
                             <div className="main-statistics-item">
                                 <h6 className="main-statistics-item-title">Total volume<br/>traded in WAX</h6>
                                 <img src={require("../../assets/icons/wax-icon.png").default} alt="wax logo"
@@ -284,7 +289,23 @@ export default function MainPage() {
                             renderBottomCenterControls={null}
                         >
                             <div className="partners-slider-item">
+                                <img src={require("../../assets/images/partner-1.svg").default} alt="partners logo"
+                                     className="partners-slider-item-image"/>
+                            </div>
+                            <div className="partners-slider-item">
                                 <img src={require("../../assets/images/partner-2.png").default} alt="partners logo"
+                                     className="partners-slider-item-image"/>
+                            </div>
+                            <div className="partners-slider-item">
+                                <img src={require("../../assets/images/partner-3.png").default} alt="partners logo"
+                                     className="partners-slider-item-image"/>
+                            </div>
+                            <div className="partners-slider-item">
+                                <img src={require("../../assets/images/partner-4.png").default} alt="partners logo"
+                                     className="partners-slider-item-image"/>
+                            </div>
+                            <div className="partners-slider-item">
+                                <img src={require("../../assets/images/partner-5.png").default} alt="partners logo"
                                      className="partners-slider-item-image"/>
                             </div>
                         </Carousel>

@@ -66,10 +66,6 @@ function Header() {
                          className={({isActive}) => (isActive ? 'header-link header-link-active' : 'header-link')}>
                     Packs
                 </NavLink>
-                <NavLink to="/episodes"
-                         className={({isActive}) => (isActive ? 'header-link header-link-active' : 'header-link')}>
-                    Episodes
-                </NavLink>
                 <NavLink to="/roadmap"
                          className={({isActive}) => (isActive ? 'header-link header-link-active' : 'header-link')}>
                     Roadmap
