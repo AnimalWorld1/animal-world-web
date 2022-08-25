@@ -255,35 +255,6 @@ export default function MainPage() {
                         </div>
                     </section>
                 </Bounce>
-                <Fade right>
-                    <section className="partners">
-                        <div className="title-wrapper title-wrapper-big">
-                            <img src={require("../../assets/images/wooden-sign-4.png").default} alt=""
-                                 className="title-sign"/>
-                            <h2 className="title title-long">Partners and<br/>collaborations</h2>
-                        </div>
-                        <Carousel
-                            renderCenterLeftControls={({previousSlide}) => (
-                                <WhiteArrowLeft className="partners-slider-arrow" onClick={previousSlide}/>
-                            )}
-                            renderCenterRightControls={({nextSlide}) => (
-                                <WhiteArrowRight className="partners-slider-arrow" onClick={nextSlide}/>
-                            )}
-                            autoplay={true}
-                            autoplayInterval={3000}
-                            easing="easeQuadInOut"
-                            wrapAround={true}
-                            slidesToShow={isMobile ? 1 : 3}
-                            cellAlign={isMobile ? "left" : "center"}
-                            renderBottomCenterControls={null}
-                        >
-                            <div className="partners-slider-item">
-                                <img src={require("../../assets/images/partner-2.png").default} alt="partners logo"
-                                     className="partners-slider-item-image"/>
-                            </div>
-                        </Carousel>
-                    </section>
-                </Fade>
                 <Fade left>
                     <section className="available">
                         <div className="title-wrapper">
