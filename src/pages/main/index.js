@@ -7,8 +7,9 @@ import {ReactComponent as PigImage} from '../../assets/images/pig.svg';
 import {ReactComponent as CowImage} from '../../assets/images/cow.svg';
 import {ReactComponent as WhiteArrowRight} from '../../assets/images/slider-arrow-right-white.svg';
 import {ReactComponent as WhiteArrowLeft} from '../../assets/images/slider-arrow-left-white.svg';
-import {Fade} from 'react-awesome-reveal';
-import {Slide} from 'react-awesome-reveal';
+import Fade from 'react-reveal/Fade';
+import Slide from 'react-reveal/Slide';
+import Bounce from "react-reveal/Bounce";
 import {isMobile} from "react-device-detect";
 //Not being used atm
 // import {ReactComponent as BlackArrowRight} from '../../assets/images/slider-arrow-right-black.svg';
@@ -236,7 +237,26 @@ The ever-expanding Animal World is full of surprises for the hard working farmer
                         </Carousel>
                     </section>
                 </Fade>
-
+                <Bounce left>
+                    {/* <section className="main-gameplay">
+                        <div className="title-wrapper">
+                            <img src={require("../../assets/images/wooden-sign-1.png").default} alt=""
+                                 className="title-sign"/>
+                            <h2 className="title title-long">Gameplay<br/>demo</h2>
+                        </div>
+                        <div className="main-gameplay-content">
+                            <div className="main-gameplay-frame">
+                                <iframe src="https://www.youtube.com/embed/MvCEEzdbCgs"
+                                        title="YouTube video player" frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen className="main-gameplay-frame-video"/>
+                            </div>
+                            <img className="main-gameplay-decorations"
+                                 src={require("../../assets/images/main-gameplay-decorations.png").default}
+                                 alt="decorations"/>
+                        </div>
+                    </section> */}
+                </Bounce>
                 <Fade left>
                     <section className="available">
                         <div className="title-wrapper">
