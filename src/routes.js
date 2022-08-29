@@ -10,6 +10,7 @@ import EpisodesPage from "./pages/episodes";
 import DropsPage from "./pages/DropsPage";
 import MarketPage from "./pages/MarketPage";
 import RoadmapPage from "./pages/roadmap";
+import TutorialPage from "./pages/tutorial";
 import {ParallaxProvider} from "react-scroll-parallax";
 
 export default function AppRoutes() {
@@ -24,6 +25,7 @@ export default function AppRoutes() {
                             <Route path="/episodes" element={<EpisodesPage/>}/>
                             <Route path="/packs" element={<DropsPage/>}/>
                             <Route path="/roadmap" element={<RoadmapPage/>}/>
+                            <Route path="/tutorial" element={<TutorialPage/>}/>
                             <Route path="/market" element={<MarketPage/>}/>
                             <Route path="*" element={<Page404/>}/>
                         </Routes>

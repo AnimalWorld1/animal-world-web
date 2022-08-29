@@ -187,14 +187,14 @@ The ever-expanding Animal World is full of surprises for the hard working farmer
                                 <div className="main-collect-slide-plate">
                                     <p className="main-collect-slide-plate-text">DIVINE Trees</p>
                                 </div>
-                                <img src={require("../../assets/images/Mango-tree.gif").default} alt="common lemon tree"
+                                <img src={`https://animalworld.mypinata.cloud/ipfs/QmeU8xiGtGHSiA88d9Ssmd8Gg5uUyJKy23VE8vuAq5Skqp`}
                                      className="main-collect-image"/>
                             </div>
                             <div className="main-collect-slide">
                                 <div className="main-collect-slide-plate">
                                     <p className="main-collect-slide-plate-text">DIVINE Trees</p>
                                 </div>
-                                <img src={require("../../assets/images/Coconut-tree.gif").default}
+                                <img src={`https://animalworld.mypinata.cloud/ipfs/QmP9BSGWsiJa2gjapJnu8h2KRaVnjQCZeQDJb5rUuphieM`}
                                      alt="common lemon tree"
                                      className="main-collect-image"/>
                             </div>
@@ -216,7 +216,7 @@ The ever-expanding Animal World is full of surprises for the hard working farmer
                                 <div className="main-collect-slide-plate">
                                     <p className="main-collect-slide-plate-text">Rare Machines</p>
                                 </div>
-                                <img src={require("../../assets/images/rbbq.gif").default}
+                                <img src={`https://animalworld.mypinata.cloud/ipfs/QmR4wkuppqhc73NodhzR5m7JJh2u4GCMi5D2shoa5xfwSF`}
                                      alt="legendary coconut tree"
                                      className="main-collect-image"/>
                             </div>
@@ -224,7 +224,7 @@ The ever-expanding Animal World is full of surprises for the hard working farmer
                                 <div className="main-collect-slide-plate">
                                     <p className="main-collect-slide-plate-text">Legendary Machines</p>
                                 </div>
-                                <img src={require("../../assets/images/legic.gif").default} alt="mythic lemon tree"
+                                <img src={`https://animalworld.mypinata.cloud/ipfs/QmU4bX7aGxxNhsqF71oKvto9FMfKrd44Bc2sXWvoy1Zay6`}
                                      className="main-collect-image"/>
                             </div>
                             <div className="main-collect-slide">
