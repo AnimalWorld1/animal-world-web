@@ -300,40 +300,6 @@ The ever-expanding Animal World is full of surprises for the hard working farmer
                     </section>
                 </Fade>
             </div>
-            {/*Not needed at the moment*/}
-            {/*<Fade right>*/}
-            {/*    <section className="main-game-preview">*/}
-            {/*        <h2 className="title">Game preview</h2>*/}
-            {/*        <Carousel*/}
-            {/*            renderCenterLeftControls={({previousSlide}) => (*/}
-            {/*                <BlackArrowLeft className="main-game-preview-slider-arrow" onClick={previousSlide}/>*/}
-            {/*            )}*/}
-            {/*            renderCenterRightControls={({nextSlide}) => (*/}
-            {/*                <BlackArrowRight className="main-game-preview-slider-arrow" onClick={nextSlide}/>*/}
-            {/*            )}*/}
-            {/*            easing="easeQuadInOut"*/}
-            {/*        >*/}
-            {/*            <div className="main-game-preview-slide">*/}
-            {/*                <div className="main-game-preview-slide-content">*/}
-            {/*                    <img src={require("../../assets/images/game-preview-1.png").default}*/}
-            {/*                         alt="game screenshot 2"*/}
-            {/*                         className="main-game-preview-slide-image"/>*/}
-            {/*                    <div className="main-game-preview-slide-image-phone"*/}
-            {/*                         style={{backgroundImage: `url(${gameplayScreenshot1})`}}/>*/}
-            {/*                </div>*/}
-            {/*            </div>*/}
-            {/*            <div className="main-game-preview-slide">*/}
-            {/*                <div className="main-game-preview-slide-content">*/}
-            {/*                    <img src={require("../../assets/images/game-preview-2.png").default}*/}
-            {/*                         alt="game screenshot 2"*/}
-            {/*                         className="main-game-preview-slide-image"/>*/}
-            {/*                    <div className="main-game-preview-slide-image-phone"*/}
-            {/*                         style={{backgroundImage: `url(${gameplayScreenshot2})`}}/>*/}
-            {/*                </div>*/}
-            {/*            </div>*/}
-            {/*        </Carousel>*/}
-            {/*    </section>*/}
-            {/*</Fade>*/}
         </div>
     )
 }

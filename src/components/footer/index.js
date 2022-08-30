@@ -9,31 +9,27 @@ export default function Footer() {
     return (
         <footer className="footer">
             <div className="footer-wrapper">
-                <p className="footer-company-info">
+                {/* <p className="footer-company-info">
                     CEO- FAHAD ANSARI ALL RIGHTS RESERVED BY- INFINITY TECH CORP
                     REG NR 890577958/ HE Ward/ Commercial II
-                    408, PTL compound , 3rd road , khar west . Mumbai</p>
+                    408, PTL compound , 3rd road , khar west, Mumbai</p> */}
                 <div className="footer-social">
                     <span className="footer-social-text">Follow us on social media</span>
                     <div className="footer-social-links">
-                        <a href="https://twitter.com/animalworldwax?t=tuy6WxG7Xq2AigaGZasE_g&s=09" target="_blank"
-                           rel="noreferrer" className="footer-social-link">
-                            <TwitterLogo className="footer-social-link-image"/>
-                        </a>
-                        <a href="https://www.instagram.com/animalworldwax/?utm_medium=copy_link" target="_blank"
-                           rel="noreferrer" className="footer-social-link">
-                            <InstagramLogo className="footer-social-link-image"/>
-                        </a>
-                        <a href="https://medium.com/@animalworldwax" target="_blank" rel="noreferrer"
-                           className="footer-social-link">
-                            <MediumLogo className="footer-social-link-image"/>
+                        <a href="https://discord.gg/SmT4H28u" target="_blank" className="footer-social-link">
+                            <DiscordLogo className="footer-social-link-image"/>
                         </a>
                         <a href="https://t.me/animalworldwax" target="_blank" rel="noreferrer"
                            className="footer-social-link">
                             <TelegramLogo className="footer-social-link-image"/>
                         </a>
-                        <a href="https://discord.gg/SmT4H28u" target="_blank" className="footer-social-link">
-                            <DiscordLogo className="footer-social-link-image"/>
+                        <a href="https://twitter.com/animalworldwax?t=tuy6WxG7Xq2AigaGZasE_g&s=09" target="_blank"
+                           rel="noreferrer" className="footer-social-link">
+                            <TwitterLogo className="footer-social-link-image"/>
+                        </a>
+                        <a href="https://medium.com/@animalworldwax" target="_blank" rel="noreferrer"
+                           className="footer-social-link">
+                            <MediumLogo className="footer-social-link-image"/>
                         </a>
                     </div>
                 </div>

@@ -40,7 +40,7 @@ export default function TutorialPage() {
                         <div className="tutorial-slide tutorial-slide-1">
                             <img src={require("../../assets/images/tutorial-slider-tree.png").default} alt="Tree"
                                  className="tutorial-slide-image"/>
-                            <h4 className="tutorial-slide-title">Plant a<br/> tree<br/>Crop Field<br/>Animal</h4>
+                            <h4 className="tutorial-slide-title">Plant a<br/> tree/<br/>Crop Field/<br/>Animal</h4>
                             <div className="tutorial-slide-helper-block"/>
                         </div>
                         <div className="tutorial-slide tutorial-slide-2">
@@ -68,53 +68,80 @@ export default function TutorialPage() {
                             <div className="tutorial-slide-helper-block"/>
                         </div>
                     </Carousel>
+                
+                
                 </section>
-                <div className="tutorial-dimensions"/>
-
-                <Fade left>
-                    <section className="available">
+                <Fade bottom>
+                 <div className="tutorial-dimensions"/>
+                    <section className="main-collect">
                         <div className="title-wrapper">
-                            <img src={require("../../assets/images/wooden-sign-5.png").default} alt=""
+                            <img src={require("../../assets/images/wooden-sign-1.png").default} alt=""
                                  className="title-sign"/>
-                            <h2 className="title">Available on</h2>
+                            <h2 className="title title-long">Collect<br/>them all</h2>
                         </div>
-                    </section>
+                        <Carousel
+                            withoutControls={true}
+                            autoplay={true}
+                            autoplayInterval={3000}
+                            wrapAround={true}
+                            pauseOnHover={false}
+                            easing="easeQuadInOut"
+                        >
+                            <div className="main-collect-slide">
+                                <div className="main-collect-slide-plate">
+                                    <p className="main-collect-slide-plate-text">DIVINE Trees</p>
+                                </div>
+                                <img src={`https://animalworld.mypinata.cloud/ipfs/QmeU8xiGtGHSiA88d9Ssmd8Gg5uUyJKy23VE8vuAq5Skqp`}
+                                     className="main-collect-image"/>
+                            </div>
+                            <div className="main-collect-slide">
+                                <div className="main-collect-slide-plate">
+                                    <p className="main-collect-slide-plate-text">DIVINE Trees</p>
+                                </div>
+                                <img src={`https://animalworld.mypinata.cloud/ipfs/QmP9BSGWsiJa2gjapJnu8h2KRaVnjQCZeQDJb5rUuphieM`}
+                                     alt="common lemon tree"
+                                     className="main-collect-image"/>
+                            </div>
+                            <div className="main-collect-slide">
+                                <div className="main-collect-slide-plate">
+                                    <p className="main-collect-slide-plate-text">Crop fields</p>
+                                </div>
+                                <img src={require("../../assets/images/crop-field.png").default} alt="rare lemon tree"
+                                     className="main-collect-image main-collect-image-small"/>
+                            </div>
+                            <div className="main-collect-slide">
+                                <div className="main-collect-slide-plate">
+                                    <p className="main-collect-slide-plate-text">Common Machines</p>
+                                </div>
+                                <img src={require("../../assets/images/comicecream.png").default} alt="epic fig tree"
+                                     className="main-collect-image"/>
+                            </div>
+                            <div className="main-collect-slide">
+                                <div className="main-collect-slide-plate">
+                                    <p className="main-collect-slide-plate-text">Rare Machines</p>
+                                </div>
+                                <img src={`https://animalworld.mypinata.cloud/ipfs/QmR4wkuppqhc73NodhzR5m7JJh2u4GCMi5D2shoa5xfwSF`}
+                                     alt="legendary coconut tree"
+                                     className="main-collect-image"/>
+                            </div>
+                            <div className="main-collect-slide">
+                                <div className="main-collect-slide-plate">
+                                    <p className="main-collect-slide-plate-text">Legendary Machines</p>
+                                </div>
+                                <img src={`https://animalworld.mypinata.cloud/ipfs/QmU4bX7aGxxNhsqF71oKvto9FMfKrd44Bc2sXWvoy1Zay6`}
+                                     className="main-collect-image"/>
+                            </div>
+                            <div className="main-collect-slide">
+                                <div className="main-collect-slide-plate">
+                                    <p className="main-collect-slide-plate-text">Land</p>
+                                </div>
+                                <img src={require("../../assets/images/lands.png").default} alt="mythic lemon tree"
+                                     className="main-collect-image main-collect-image-small"/>
+                            </div>
+                        </Carousel>
+                        </section>
                 </Fade>
             </div>
-            {/*Not needed at the moment*/}
-            {/*<Fade right>*/}
-            {/*    <section className="main-game-preview">*/}
-            {/*        <h2 className="title">Game preview</h2>*/}
-            {/*        <Carousel*/}
-            {/*            renderCenterLeftControls={({previousSlide}) => (*/}
-            {/*                <BlackArrowLeft className="main-game-preview-slider-arrow" onClick={previousSlide}/>*/}
-            {/*            )}*/}
-            {/*            renderCenterRightControls={({nextSlide}) => (*/}
-            {/*                <BlackArrowRight className="main-game-preview-slider-arrow" onClick={nextSlide}/>*/}
-            {/*            )}*/}
-            {/*            easing="easeQuadInOut"*/}
-            {/*        >*/}
-            {/*            <div className="main-game-preview-slide">*/}
-            {/*                <div className="main-game-preview-slide-content">*/}
-            {/*                    <img src={require("../../assets/images/game-preview-1.png").default}*/}
-            {/*                         alt="game screenshot 2"*/}
-            {/*                         className="main-game-preview-slide-image"/>*/}
-            {/*                    <div className="main-game-preview-slide-image-phone"*/}
-            {/*                         style={{backgroundImage: `url(${gameplayScreenshot1})`}}/>*/}
-            {/*                </div>*/}
-            {/*            </div>*/}
-            {/*            <div className="main-game-preview-slide">*/}
-            {/*                <div className="main-game-preview-slide-content">*/}
-            {/*                    <img src={require("../../assets/images/game-preview-2.png").default}*/}
-            {/*                         alt="game screenshot 2"*/}
-            {/*                         className="main-game-preview-slide-image"/>*/}
-            {/*                    <div className="main-game-preview-slide-image-phone"*/}
-            {/*                         style={{backgroundImage: `url(${gameplayScreenshot2})`}}/>*/}
-            {/*                </div>*/}
-            {/*            </div>*/}
-            {/*        </Carousel>*/}
-            {/*    </section>*/}
-            {/*</Fade>*/}
         </div>
     )
 }
