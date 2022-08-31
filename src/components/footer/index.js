@@ -16,7 +16,7 @@ export default function Footer() {
                 <div className="footer-social">
                     <span className="footer-social-text">Follow us on social media</span>
                     <div className="footer-social-links">
-                        <a href="https://discord.gg/SmT4H28u" target="_blank" className="footer-social-link">
+                        <a href="https://discord.gg/yamQDpZvUT" target="_blank" className="footer-social-link">
                             <DiscordLogo className="footer-social-link-image"/>
                         </a>
                         <a href="https://t.me/animalworldwax" target="_blank" rel="noreferrer"
