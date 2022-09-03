@@ -168,7 +168,7 @@ The ever-expanding Animal World is full of surprises for the hard working farmer
                     </Carousel>
                 </section>
                 <div className="tutorial-dimensions"/>
-                {/* <Fade bottom>
+                <Fade bottom>
                     <section className="main-collect">
                         <div className="title-wrapper">
                             <img src={require("../../assets/images/wooden-sign-1.png").default} alt=""
@@ -236,7 +236,7 @@ The ever-expanding Animal World is full of surprises for the hard working farmer
                             </div>
                         </Carousel>
                     </section>
-                </Fade> */}
+                </Fade>
                 <Bounce left>
                     {/* <section className="main-gameplay">
                         <div className="title-wrapper">
