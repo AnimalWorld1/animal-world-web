@@ -96,58 +96,10 @@ export default function RoadmapPage() {
                                 <RoadmapGreenhouse className="roadmap-future-content-image-1"/>
                             </div>
                             <div className="roadmap-future-content">
-                                <span className="roadmap-future-content-item">🔳 New animals (Wolves, Lions, Eagle etc)</span>
-                                <span className="roadmap-future-content-item">🔳 PVP battle mode</span>
-                                <span className="roadmap-future-content-item">🔳 Metaverse Extensions </span>
                                 <img src={require("../../assets/gifs/vr.gif").default} alt="vr gif" className="roadmap-future-content-item roadmap-future-content-item-image"/>
                             </div>
                             <div className="roadmap-future-content-image-container">
                                 <img alt="tractor gif" src={require("../../assets/gifs/tractor.gif").default} className="roadmap-future-content-image-2"/>
-                            </div>
-                        </div>
-                    </section>
-                </Fade>
-                <Fade right>
-                    <section className="roadmap-tokenomics">
-                        <h2 className="page-title">Tokenomics</h2>
-                        <h4 className="page-title">TOTAL SUPPLY- 10,000,000,000</h4>
-                        <div className="roadmap-tokenomics-wrapper">
-                            <div className="roadmap-tokenomics-content">
-                                <div className="roadmap-tokenomics-item">
-                                    <h6 className="roadmap-tokenomics-item-title">PLAY TO EARN 30%</h6>
-                                    <hr className="roadmap-tokenomics-item-line"/>
-                                    <span className="roadmap-tokenomics-item-value">3,000,000,000</span>
-                                </div>
-                                <div className="roadmap-tokenomics-item">
-                                    <h6 className="roadmap-tokenomics-item-title">RESEARCH & DEVELOPMENT 25%</h6>
-                                    <hr className="roadmap-tokenomics-item-line"/>
-                                    <span className="roadmap-tokenomics-item-value">2,500,000,000</span>
-                                </div>
-                                <div className="roadmap-tokenomics-item">
-                                    <h6 className="roadmap-tokenomics-item-title">TEAM 15%</h6>
-                                    <hr className="roadmap-tokenomics-item-line"/>
-                                    <span className="roadmap-tokenomics-item-value">1,500,000,000</span>
-                                </div>
-                                <div className="roadmap-tokenomics-item">
-                                    <h6 className="roadmap-tokenomics-item-title">MARKETING / PROMOTION 18%</h6>
-                                    <hr className="roadmap-tokenomics-item-line"/>
-                                    <span className="roadmap-tokenomics-item-value">1,800,000,000</span>
-                                </div>
-                                <div className="roadmap-tokenomics-item">
-                                    <h6 className="roadmap-tokenomics-item-title">legal 5%</h6>
-                                    <hr className="roadmap-tokenomics-item-line"/>
-                                    <span className="roadmap-tokenomics-item-value">500,000,000</span>
-                                </div>
-                                <div className="roadmap-tokenomics-item">
-                                    <h6 className="roadmap-tokenomics-item-title">advisor 5%</h6>
-                                    <hr className="roadmap-tokenomics-item-line"/>
-                                    <span className="roadmap-tokenomics-item-value">500,000,000</span>
-                                </div>
-                                <div className="roadmap-tokenomics-item">
-                                    <h6 className="roadmap-tokenomics-item-title">airdrop/lp rewards 2%</h6>
-                                    <hr className="roadmap-tokenomics-item-line"/>
-                                    <span className="roadmap-tokenomics-item-value">200,000,000</span>
-                                </div>
                             </div>
                         </div>
                     </section>
