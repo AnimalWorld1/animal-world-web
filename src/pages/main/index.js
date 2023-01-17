@@ -214,7 +214,26 @@ The ever-expanding Animal World is full of surprises for the hard working farmer
                         </Carousel>
                     </section>
                 </Fade> */}
-
+                <Bounce left>
+                     <section className="main-gameplay">
+                        <div className="title-wrapper">
+                            <img src={require("../../assets/images/wooden-sign-1.png").default} alt=""
+                                 className="title-sign"/>
+                            <h2 className="title title-long">Gameplay<br/>demo</h2>
+                        </div>
+                        <div className="main-gameplay-content">
+                            <div className="main-gameplay-frame">
+                                <iframe src="https://www.youtube.com/embed/MvCEEzdbCgs"
+                                        title="YouTube video player" frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen className="main-gameplay-frame-video"/>
+                            </div>
+                            <img className="main-gameplay-decorations"
+                                 src={require("../../assets/images/main-gameplay-decorations.png").default}
+                                 alt="decorations"/>
+                        </div>
+                    </section> 
+                </Bounce>
             </div>
         </div>
     )
