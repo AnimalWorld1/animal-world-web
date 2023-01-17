@@ -85,11 +85,11 @@ function Header() {
                 <a href="https://animalworld-1.gitbook.io/animal-world/" target="_blank" rel="noreferrer" onClick={()=>setSidebarOpened(false)} className="header-link">
                     Whitepaper
                 </a>
-                <a href="https://neftyblocks.com/c/animalworld1" target="_blank" rel="noreferrer" onClick={()=>setSidebarOpened(false)} className="header-link" >
+                <a href="https://neftyblocks.com/c/animalworld1/drops" target="_blank" rel="noreferrer" onClick={()=>setSidebarOpened(false)} className="header-link" >
                     Buy Live Pack Sale
                     </a>
             </nav>
-            <a href="https://animalworldgame.io" target="_blank" rel="noreferrer" onClick={()=>setSidebarOpened(false)} className="header-play-button">
+            <a href="https://animalworldmobile.io" target="_blank" rel="noreferrer" onClick={()=>setSidebarOpened(false)} className="header-play-button">
                 Play Game
             </a>
         </div>
