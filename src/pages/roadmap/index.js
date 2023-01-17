@@ -71,8 +71,10 @@ export default function RoadmapPage() {
                                     <span className="roadmap-block-content-item">🔳 &nbsp;Land upgrade mechanics</span>
                                         <span className="roadmap-block-content-item">🔳 &nbsp;Animal and Shelter Upgrades</span>
                                         <span className="roadmap-block-content-item">🔳 &nbsp;New game modes- Restuarants, PVP Battle Stations, Land Expansions </span>
+                                        {/* <span className="roadmap-block-content-item">🔳 &nbsp;New Animals and training coop NFTs </span> */}
                                         </div>
                                     <div className="roadmap-block-content">
+                                        <span className="roadmap-block-content-item">🔳 &nbsp;3D Game Expansion , Tournaments, AutoFarm and AutoBattle system</span>
                                         <span className="roadmap-block-content-item">🔳 &nbsp;Collaboration NFTs integrated with partner projects</span>
                                         <span className="roadmap-block-content-item">🔳 &nbsp;New Machines and Recipes</span>
                                         <span className="roadmap-block-content-item">🔳 &nbsp;AWC staking and voting systems</span>
