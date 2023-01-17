@@ -214,68 +214,7 @@ The ever-expanding Animal World is full of surprises for the hard working farmer
                         </Carousel>
                     </section>
                 </Fade> */}
-                <Bounce left>
-                    {/* <section className="main-gameplay">
-                        <div className="title-wrapper">
-                            <img src={require("../../assets/images/wooden-sign-1.png").default} alt=""
-                                 className="title-sign"/>
-                            <h2 className="title title-long">Gameplay<br/>demo</h2>
-                        </div>
-                        <div className="main-gameplay-content">
-                            <div className="main-gameplay-frame">
-                                <iframe src="https://www.youtube.com/embed/MvCEEzdbCgs"
-                                        title="YouTube video player" frameBorder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowFullScreen className="main-gameplay-frame-video"/>
-                            </div>
-                            <img className="main-gameplay-decorations"
-                                 src={require("../../assets/images/main-gameplay-decorations.png").default}
-                                 alt="decorations"/>
-                        </div>
-                    </section> */}
-                </Bounce>
-                <Fade left>
-                    <section className="available">
-                        <div className="title-wrapper">
-                            <img src={require("../../assets/images/wooden-sign-5.png").default} alt=""
-                                 className="title-sign"/>
-                            <h2 className="title">Available on</h2>
-                        </div>
-                        {isMobile ?
-                            <Carousel
-                                renderCenterLeftControls={({previousSlide}) => (
-                                    <WhiteArrowLeft className="partners-slider-arrow" onClick={previousSlide}/>
-                                )}
-                                renderCenterRightControls={({nextSlide}) => (
-                                    <WhiteArrowRight className="partners-slider-arrow" onClick={nextSlide}/>
-                                )}
-                                wrapAround={true}
-                                autoplay={true}
-                                autoplayInterval={3000}
-                            >
-                                <div className="partners-slide">
-                                    <img src={require("../../assets/icons/nefty-logo.png").default} alt="NeftyBlocks logo"
-                                         className="partners-slide-image"/>
-                                </div>
-                                <div className="partners-slide">
-                                    <img src={require("../../assets/icons/nfthive-logo.png").default} alt="NeftyBlocks logo"
-                                         className="partners-slide-image"/>
-                                </div>
-                                <div className="partners-slide">
-                                    <img src={require("../../assets/icons/atomicassets-logo.png").default} alt="NeftyBlocks logo"
-                                         className="partners-slide-image"/>
-                                </div>
-                            </Carousel> :
-                        <div className="available-wrapper">
-                            <img src={require("../../assets/icons/nefty-logo.png").default} alt="NeftyBlocks logo"
-                                 className="available-platform-image"/>
-                            <img src={require("../../assets/icons/nfthive-logo.png").default} alt="NFTHive logo"
-                                 className="available-platform-image"/>
-                            <img src={require("../../assets/icons/atomicassets-logo.png").default}
-                                 alt="AtomicAssets logo" className="available-platform-image"/>
-                        </div>}
-                    </section>
-                </Fade>
+
             </div>
         </div>
     )
