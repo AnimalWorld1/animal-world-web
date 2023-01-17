@@ -68,14 +68,14 @@ export default function RoadmapPage() {
                                 <div className="roadmap-block-content-wrapper">
                                     <div className="roadmap-block-content">
                                     <span className="roadmap-block-content-item">✅ &nbsp;In-Game Shop for Resource Trading</span>
-                                        <span className="roadmap-block-content-item">🔳 &nbsp;Collaboration NFTs integrated with partner projects</span>
+                                    <span className="roadmap-block-content-item">🔳 &nbsp;Land upgrade mechanics</span>
                                         <span className="roadmap-block-content-item">🔳 &nbsp;Animal and Shelter Upgrades</span>
-                                        <span className="roadmap-block-content-item">🔳 &nbsp;New Machines and Recipes</span>
-                                    </div>
-                                    <div className="roadmap-block-content">
-                                        <span className="roadmap-block-content-item">🔳 &nbsp;Land upgrade mechanics</span>
-                                        <span className="roadmap-block-content-item">🔳 &nbsp;AWC staking and voting systems</span>
                                         <span className="roadmap-block-content-item">🔳 &nbsp;New game modes- Restuarants, PVP Battle Stations, Land Expansions </span>
+                                        </div>
+                                    <div className="roadmap-block-content">
+                                        <span className="roadmap-block-content-item">🔳 &nbsp;Collaboration NFTs integrated with partner projects</span>
+                                        <span className="roadmap-block-content-item">🔳 &nbsp;New Machines and Recipes</span>
+                                        <span className="roadmap-block-content-item">🔳 &nbsp;AWC staking and voting systems</span>
                                     </div>
                                 </div>
                             </div>
