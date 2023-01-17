@@ -59,15 +59,23 @@ export default function RoadmapPage() {
                                     <div className="roadmap-block-content">
                                         <span className="roadmap-block-content-item">✅ &nbsp;Animal, Shelters and Machine Pack V3 sale</span>
                                         <span className="roadmap-block-content-item">✅ &nbsp;Upgrades to AWC distribution system</span>
-                                        <span className="roadmap-block-content-item">🔳 &nbsp;Free to Play Packs Launch</span>
+                                        <span className="roadmap-block-content-item">✅ &nbsp;Free to Play Packs Launch</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="roadmap-block">
+                                <h4 className="roadmap-block-title">Q1-Q2/2022</h4>
+                                <div className="roadmap-block-content-wrapper">
+                                    <div className="roadmap-block-content">
+                                    <span className="roadmap-block-content-item">✅ &nbsp;In-Game Shop for Resource Trading</span>
                                         <span className="roadmap-block-content-item">🔳 &nbsp;Collaboration NFTs integrated with partner projects</span>
+                                        <span className="roadmap-block-content-item">🔳 &nbsp;Animal and Shelter Upgrades</span>
                                         <span className="roadmap-block-content-item">🔳 &nbsp;New Machines and Recipes</span>
                                     </div>
                                     <div className="roadmap-block-content">
                                         <span className="roadmap-block-content-item">🔳 &nbsp;Land upgrade mechanics</span>
-                                        <span className="roadmap-block-content-item">🔳 &nbsp;In-Game Shop for Resource Trading</span>
                                         <span className="roadmap-block-content-item">🔳 &nbsp;AWC staking and voting systems</span>
-                                        <span className="roadmap-block-content-item">🔳 &nbsp;Next game modes- Restuarants, PVP Battle Stations, Land Expansions +</span>
+                                        <span className="roadmap-block-content-item">🔳 &nbsp;New game modes- Restuarants, PVP Battle Stations, Land Expansions </span>
                                     </div>
                                 </div>
                             </div>
