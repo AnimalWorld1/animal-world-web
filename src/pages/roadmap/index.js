@@ -64,7 +64,7 @@ export default function RoadmapPage() {
                                 </div>
                             </div>
                             <div className="roadmap-block">
-                                <h4 className="roadmap-block-title">Q1-Q2/2022</h4>
+                                <h4 className="roadmap-block-title">Q1-Q2/2023</h4>
                                 <div className="roadmap-block-content-wrapper">
                                     <div className="roadmap-block-content">
                                     <span className="roadmap-block-content-item">✅ &nbsp;In-Game Shop for Resource Trading</span>
