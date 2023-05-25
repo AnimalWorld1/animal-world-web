@@ -5,7 +5,7 @@
 
   .title-wrapper
     position: relative
-    margin: 0 auto 40px
+    margin: 1vh
     width: fit-content
 
     .title
@@ -51,11 +51,11 @@
   .main-page-banner
     width: 100vw
     height: auto
-    //background-size: cover
-    //background-position: center
-    //background-image: url("../../assets/images/main-banner.jpg")
-    //@include tablet
-    //  height: 90vh
+    background-size: cover
+    background-position: center
+    background-image: url("../../assets/images/main-banner.jpg")
+    @include tablet
+    height: 90vh
     @include phone
       display: none
 
@@ -109,7 +109,6 @@
     @include small-phone
       background-image: url("../../assets/images/main-description-background-phone.png")
       height: 80vh
-
 
     .main-description-title
       color: #fff
@@ -230,7 +229,6 @@
           padding-bottom: 25px
           @include small-phone
             font-size: 20px
-
 
   .main-game
     @include flex-props-column-center
@@ -429,7 +427,6 @@
         height: 80vh
         @include flex-props-column-center
 
-
       .main-collect-slide-plate
         background-image: url("../../assets/images/collect-plate.svg")
         width: 400px
@@ -491,7 +488,6 @@
 
         @include small-phone
           width: 300px
-
 
     .main-collect-slide-1
       background-image: url("../../assets/images/collect-slider-1.png")
@@ -733,4 +729,3 @@
 
       .partners-slider-arrow
         width: 25px
-

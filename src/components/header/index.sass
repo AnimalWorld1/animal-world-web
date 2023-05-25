@@ -31,21 +31,20 @@
 
   .header-play-button
     background-image: url("../../assets/images/play-button.gif")
-    background-size: contain
-    width: 200px
-    height: 70px
+    background-size: 100% 100%
     @include flex-props-center
+    width: 250px
+    height: 50px
     color: white
     font-family: "MuseoSans", sans-serif
     font-weight: 900
-    font-size: 24px
+    font-size: 12px
     text-transform: uppercase
     animation: glow 1s ease-in-out infinite alternate
     @include desktop
       width: 180px
       height: 63px
       font-size: 24px
-
 
   .header-log-in
     background-color: #F05D5E
@@ -126,7 +125,6 @@
       height: 100px
       opacity: 1
 
-
 // exported without nesting for it to work inside burger menu
 .header-link
   font-weight: 900
@@ -158,4 +156,3 @@
 
   to
     text-shadow: 0 0 4px #fff
-
