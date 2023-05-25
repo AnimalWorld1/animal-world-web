@@ -70,15 +70,6 @@ function Header() {
           >
             Roadmap
           </NavLink>
-          <NavLink
-            to="/tutorial"
-            onClick={() => setSidebarOpened(false)}
-            className={({ isActive }) =>
-              isActive ? "header-link header-link-active" : "header-link"
-            }
-          >
-            Tutorial
-          </NavLink>
           <a
             href="https://animalworld-1.gitbook.io/animal-world/"
             target="_blank"
