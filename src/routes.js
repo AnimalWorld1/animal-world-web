@@ -9,6 +9,7 @@ import EpisodesPage from "./pages/episodes";
 import DropsPage from "./pages/DropsPage";
 import MarketPage from "./pages/MarketPage";
 import RoadmapPage from "./pages/roadmap";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 export default function AppRoutes() {
   return (
